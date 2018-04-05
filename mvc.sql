@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 05 avr. 2018 à 16:53
+-- Généré le :  jeu. 05 avr. 2018 à 19:52
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -25,17 +25,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `capteur`
+-- Structure de la table `actionneur`
 --
 
-DROP TABLE IF EXISTS `capteur`;
-CREATE TABLE IF NOT EXISTS `capteur` (
-  `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
-  `type` varchar(255) NOT NULL,
-  `reference` varchar(255) NOT NULL,
-  `etat` tinyint(1) NOT NULL,
-  `id_place` int(11) NOT NULL,
-  PRIMARY KEY (`id_capteur`)
+DROP TABLE IF EXISTS `actionneur`;
+CREATE TABLE IF NOT EXISTS `actionneur` (
+  `id_actionneur` int(11) NOT NULL AUTO_INCREMENT,
+  `etat` varchar(255) NOT NULL,
+  `type` varchar(60) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  `id_capteur` int(11) NOT NULL,
+  PRIMARY KEY (`id_actionneur`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
