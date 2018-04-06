@@ -33,7 +33,8 @@ while ($donnees = $reponse->fetch())
         <strong>Nom</strong> : <?php echo $donnees['nom']; ?><br />
         <strong> Prenom </strong> : <?php echo $donnees['prenom']; ?><br />
         <strong> Numéro </strong> : <?php echo $donnees['numero']; ?><br />
-        <strong> Mail   </strong> : <?php echo $donnees['mail'];   ?><br />
+        <strong> Mail </strong> : <?php echo $donnees['mail'];   ?><br />
+
     </p>
     <?php
 }
