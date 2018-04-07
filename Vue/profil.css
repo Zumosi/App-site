@@ -1,0 +1,38 @@
+h1
+{
+    font-size: xx-large;
+    text-align: center;
+}
+
+strong
+{
+    font-size: x-large;
+}
+body
+{
+    font-family: "Calibri Light";
+}
+
+td
+{
+    border: 1px solid black;
+    padding-right: 380px;
+}
+table
+{
+    margin-left: 35%;
+    border-collapse: collapse;
+
+}
+#Modifier
+{
+    border:1px solid black;
+    padding : 4px;
+    border-radius: 15%;
+}
+#Modif{
+    position : relative;
+    left: 250%;
+    bottom : 25px;
+
+}

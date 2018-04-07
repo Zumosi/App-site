@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b37343d7-728b-4f6d-a94d-35bb954fc31f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Vue/profil.php" afterPath="$PROJECT_DIR$/Vue/profil.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +17,12 @@
       <file leaf-file-name="profil.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/profil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="87">
+              <caret line="37" column="54" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
               <folding>
-                <marker date="1522961033798" expanded="true" signature="475:500" ph="SELECT * FRO... utilisateur" />
+                <marker date="1523114029123" expanded="true" signature="223:294" ph="..." />
+                <marker date="1523114029123" expanded="true" signature="234:285" ph="..." />
+                <marker date="1523114029123" expanded="true" signature="694:733" ph="SELECT * FRO... utilisateur" />
               </folding>
             </state>
           </provider>
@@ -75,9 +78,9 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,11 +223,12 @@
       <workItem from="1522953460652" duration="1260000" />
       <workItem from="1522958106296" duration="1488000" />
       <workItem from="1522960541029" duration="503000" />
+      <workItem from="1523113984354" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3251000" />
+    <option name="totallyTimeSpent" value="3368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -274,7 +278,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522961033798" expanded="true" signature="475:500" ph="SELECT * FRO... utilisateur" />
+            <marker date="1523114029123" expanded="true" signature="223:294" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="234:285" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="694:733" ph="SELECT * FRO... utilisateur" />
           </folding>
         </state>
       </provider>
@@ -284,7 +290,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522961033798" expanded="true" signature="475:500" ph="SELECT * FRO... utilisateur" />
+            <marker date="1523114029123" expanded="true" signature="223:294" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="234:285" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="694:733" ph="SELECT * FRO... utilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523114029123" expanded="true" signature="223:294" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="234:285" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="694:733" ph="SELECT * FRO... utilisateur" />
           </folding>
         </state>
       </provider>
@@ -298,10 +318,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="87">
+          <caret line="37" column="54" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
           <folding>
-            <marker date="1522961033798" expanded="true" signature="475:500" ph="SELECT * FRO... utilisateur" />
+            <marker date="1523114029123" expanded="true" signature="223:294" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="234:285" ph="..." />
+            <marker date="1523114029123" expanded="true" signature="694:733" ph="SELECT * FRO... utilisateur" />
           </folding>
         </state>
       </provider>

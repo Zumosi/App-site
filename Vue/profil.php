@@ -3,10 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <title>Profil</title>
+    <link rel="stylesheet" href="profil.css" />
 </head>
 <body>
 
 
+<h1>Profil</h1>
+
+<?php
+function Modifier()
+{
+
+    echo '<table id="Modif" > 
+    <tr> 
+        <td id="Modifier">Modifier</td>
+    </tr> </table>';
+}
+?>
 
 <?php
 try
@@ -19,23 +32,37 @@ catch(Exception $e)
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : '.$e->getMessage());
 }
-
+$user='Nguyen';
 // Si tout va bien, on peut continuer
 
-// On récupère tout le contenu de la table jeux_video
-$reponse = $bdd->query('SELECT * FROM utilisateur');
-
+// On récupère tout le contenu de la table utilisateur
+$reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE nom = ? ');
+$reponse ->execute(array($user));
 // On affiche chaque entrée une à une
 while ($donnees = $reponse->fetch())
 {
     ?>
     <p>
-        <strong>Nom</strong> : <?php echo $donnees['nom']; ?><br />
-        <strong> Prenom </strong> : <?php echo $donnees['prenom']; ?><br />
-        <strong> Numéro </strong> : <?php echo $donnees['numero']; ?><br />
-        <strong> Mail </strong> : <?php echo $donnees['mail'];   ?><br />
+    <table>
+        <tr>
+            <td><strong>Nom</strong> : <br /><br /> <?php echo $donnees['nom']; ?><?php Modifier() ?><br /></td>
+        </tr>
+        <tr>
+            <td><strong> Prenom </strong> :<br /><br /> <?php echo $donnees['prenom']; ?> <?php Modifier() ?><br /></td>
 
+        </tr>
+        <tr>
+            <td><strong> Numéro </strong> :<br /><br /> <?php echo $donnees['numero']; ?><?php Modifier() ?><br /></td>
+        </tr>
+        <tr>
+            <td><strong> Mail </strong> :<br /><br /> <?php echo $donnees['mail'];   ?><?php Modifier() ?><br /></td>
+        </tr>
+        <tr>
+            <td><strong> Mot de Passe </strong> :<br /><br /> ****** <?php Modifier() ?><br /></td>
+        </tr>
+    </table>
     </p>
+
     <?php
 }
 
