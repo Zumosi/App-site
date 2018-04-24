@@ -4,7 +4,7 @@ article,aside {
     vertical-align: top;
 }
 article{
-    width : 60%;
+    width : 50%;
     text-align : justify;
 }
 aside{
@@ -12,6 +12,7 @@ aside{
     width : 20%;
     border-radius: 5px;
     font-size: 0.9em;
+
     margin-left: 7%;
 }
 
@@ -30,6 +31,7 @@ aside img {
     padding-left: 17%;
     padding-bottom: 3%;
     padding-top: 3%;
+    margin-bottom: 3%;
 }
 #im2 img{
     width: 30%;
@@ -37,8 +39,9 @@ aside img {
     border : 1px solid black;
     padding-right: 7%;
     padding-left: 7%;
-    padding-bottom: 10%;
+    padding-bottom: 13%;
     padding-top: 10%;
+    margin-bottom: 3%;
 }
 #im3 img{
     width: 30%;
@@ -48,6 +51,7 @@ aside img {
     padding-left: 7%;
     padding-bottom: 10%;
     padding-top: 10%;
+    margin-bottom: 3%;
 }
 #im4 img{
     width: 30%;
@@ -57,7 +61,45 @@ aside img {
     padding-left: 7%;
     padding-bottom: 10%;
     padding-top: 10%;
+    margin-bottom: 3%;
 }
 #imboutique{
-    text-align: center;
+    text-align: right;
 }
+
+#txt1{
+    margin-right : 5%;
+    padding-right: 2%;
+    text-align : justify;
+    padding-bottom: 0.5%;
+    margin-bottom: 1.3%;
+}
+
+#txt2{
+    margin-right : 5%;
+    padding-right: 2%;
+    text-align : justify;
+
+    padding-bottom: 1.9%;
+    padding-top: 1%;
+    margin-bottom: 1.4%;
+
+}
+#txt3{
+    margin-right : 5%;
+    padding-right: 2%;
+    text-align : justify;
+    padding-top: 0.1%;
+    margin-bottom: 1.5%;
+
+}
+#txt4{
+    margin-right : 5%;
+    padding-right: 2%;
+    text-align : justify;
+
+    padding-top: 2%;
+    padding-bottom: 4.6%;
+}
+
+
