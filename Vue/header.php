@@ -3,18 +3,16 @@
 * Vue : Header HTML
 */
 ?>
-<!doctype html>
-<html>
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="header.css" />
   </head>
-<body>
+
 	<div class="headerfixe">
 	<header>
 	
-		<img src="bandeHaut.jpg" id="bande"/>
-		<a href="index"><img src="AtHomeTransparent.png" id="logo" /></a>
+		<img src="image/bandeHaut.jpg" id="bande"/>
+		<a href="index"><img src="image/AtHomeTransparent.png" id="logo" /></a>
 		
 <nav>
 		<ul id="menu">
