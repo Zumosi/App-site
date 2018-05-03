@@ -35,19 +35,19 @@
 
 
         <div id="txt2">
-            <a href="capteur2.php?nc=2"><h1><?php titreshop($im - 2) ?></h1></a>
+            <a href="capteur1.php?nc=2"><h1><?php titreshop($im - 2) ?></h1></a>
 
             <?php textshop($im - 2) ?>
         </div>
 
         <div id="txt3">
-            <h1><?php titreshop($im - 1) ?></h1>
+            <a href="capteur1.php?nc=3"><h1><?php titreshop($im - 1) ?></h1></a>
 
             <?php textshop($im - 1) ?>
         </div>
 
         <div id="txt4">
-            <h1><?php titreshop($im) ?></h1>
+            <a href="capteur1.php?nc=4"><h1><?php titreshop($im) ?></h1></a>
 
             <?php textshop($im) ?>
         </div>

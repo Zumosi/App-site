@@ -10,16 +10,38 @@
 
 
 <body>
-<?php $i= $_GET['nc']; ?>
-<?php $q=q($i) ?>
+
+<?php if ($_GET['nc'] == 1) {
+    $i = (i() - 3);
+} elseif ($_GET['nc'] == 2) {
+    $i = (i() - 2);
+} elseif ($_GET['nc'] == 3) {
+    $i = (i() - 1);
+} elseif ($_GET['nc'] == 4) {
+    $i = (i());
+}
+?>
+
+
+<?php $q = q($i) ?>
+
 
 <section>
     <aside>
-        <div id="image"><img src="image/inf1.png"></div>
+        <?php if ($_GET['nc'] == 1) {
+            echo '<div id="image"><img src="image/inf1.png"></div>';
+        } elseif ($_GET['nc'] == 2) {
+            echo '<div id="image2"><img src="image/im2.jpg"></div>';
+        } elseif ($_GET['nc'] == 3) {
+            echo '<div id="image3"><img src="image/im3.jpg"></div>';
+        } elseif ($_GET['nc'] == 4) {
+            echo '<div id="image4"><img src="image/im4.jpg"></div>';
+        }
+        ?>
     </aside>
 
     <article>
-        <h1><?php titreshop($i) ?>  </h1>
+        <h1><?php titreshop($i) ?> </h1>
 
         <div id="txtim1">
             <?php textshop($i) ?>
