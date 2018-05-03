@@ -6,15 +6,7 @@
     font-style: normal;
     font-size:50px;
 }
-.date {
-    position: absolute;
-    top: 20%;
-    left: 85%;
-    color:black;
-    font-style: normal;
-    font-size: 25px;
 
-}
 .allumage {
     position: absolute;
     top: 20%;
@@ -53,9 +45,11 @@
     width:98%;
 
 }
+/**
 body{
     background: url("traitforum.png") no-repeat left;
     background: url("traitforum.png") no-repeat top;
     top:50%;
 
 }
+*/
