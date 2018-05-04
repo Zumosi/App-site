@@ -19,7 +19,9 @@ echo '<body>
     ON/OFF
 </p>
 
-<p class="subject"><td colspan="5" align="right" bgcolor="#E6E6E6"><a href="poster.php"><strong>Create New Topic</strong> </a></td></p>
+<p class="subject"><td colspan="5" align="right" bgcolor="#E6E6E6"><a href="poster.php"><strong>poster</strong> </a></td></p>
+<br><br/>
+<p class="subject2"><td colspan="5" align="right" bgcolor="#E6E6E6"><a href="postok.php"><strong>Creer nouveau Topic</strong> </a></td></p>
 <div class = topic>
     <table  width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
         <tr>

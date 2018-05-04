@@ -1,0 +1,72 @@
+h1{
+    position:absolute;
+    top:5%;
+    Left:45%;
+    font-size:500%;
+}
+.chambre{
+    position:absolute;
+    top:20%;
+    Left:30%;
+    font-size:250%;
+}
+.sdb{
+    position:absolute;
+    top:20%;
+    Left:45%;
+    font-size:250%;
+}
+.cuisine{
+    position:absolute;
+    top:20%;
+    Left:65%;
+    font-size:250%;
+}
+.salon{
+    position:absolute;
+    top:50%;
+    Left:30%;
+    font-size:250%;
+}
+.wc{
+    position:absolute;
+    top:50%;
+    Left:45%;
+    font-size:250%;
+}
+
+.chambri{
+    position:absolute;
+    top:33%;
+    Left:30%;
+    width:10%;
+    height:10%;
+}
+.sdbi{
+    position:absolute;
+    top:33%;
+    Left:45%;
+    width:10%;
+    height:10%;
+}
+.cuisini{
+    position:absolute;
+    top:33%;
+    Left:65%;
+    width:10%;
+    height:10%;
+}
+.saloni{
+    position:absolute;
+    top:63%;
+    Left:30%;
+    width:10%;
+    height:10%;
+}
+.wci{
+    position:absolute;
+    top:63%;
+    Left:45%;
+    width:10%;
+    height:13%;
+}
