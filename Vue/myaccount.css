@@ -1,0 +1,47 @@
+.section{
+    font-size:300%
+
+    
+}
+
+img{
+    width:15%;
+
+
+}
+
+.Profile{
+    border:1px solid black;
+    list-style-type: none;
+    background-image:Vue/image/profil.png;
+    background-repeat: no-repeat
+    background-position: left;
+    padding:20px;
+    text-align: center;
+    top:auto;
+    margin-left:500px;
+    margin-right:488px;
+
+}
+
+.Logoute{
+    border:1px solid black;
+    list-style-type: none;
+    background-image:Vue/image/logout.png;
+    background-repeat: no-repeat
+    background-position: left;
+    top:auto;
+    text-align: center;
+    padding: 20px;
+    margin-left:500px;
+    margin-right:480px;
+
+
+
+
+}
+
+
+
+
+
