@@ -45,8 +45,7 @@
 
 </head>
 <body>
-<?php include ("header.php")
-?>
+
 
 <table>
     <caption> Les capteurs </caption>
@@ -56,9 +55,9 @@
         <td><p>Infra-rouge</p></td>
     </tr>
     <tr>
-        <td><p><a href="pageluminosité.html" title="Luminositée"><img src="image/brightness.png"></a></p></td>
-        <td><p><a href="pagehumidité.html" title="Humiditée"><img src="image/humidity.png"></a></p></td>
-        <td><p><a href="pageinfrarouge.html" title="Infra-rouge"><img src="image/infrared.png"></a></p></td>
+        <td><p><a href="index.php?cible=page17" title="Luminositée"><img src="Vue/image/brightness.png"></a></p></td>
+        <td><p><a href="pagehumidité.html" title="Humiditée"><img src="Vue/image/humidity.png"></a></p></td>
+        <td><p><a href="pageinfrarouge.html" title="Infra-rouge"><img src="Vue/image/infrared.png"></a></p></td>
     </tr>
     <tr>
         <td><p>Micro</td>
@@ -66,14 +65,13 @@
         <td><p>Temperature</p></td>
     </tr>
     <tr>
-        <td><p><a href="pagemicro.html" title="Micro"><img src="image/micro.png"></a></p></td>
-        <td><p><a href="pagevideocamera.html" title="Video-camera"><img src="image/video-camera.png"></a></p></td>
-        <td><p><a href="pagetemperature.html" title="Temperature"><img src="image/temperature.png"></a></p></td>
+        <td><p><a href="pagemicro.html" title="Micro"><img src="Vue/image/micro.png"></a></p></td>
+        <td><p><a href="pagevideocamera.html" title="Video-camera"><img src="Vue/image/video-camera.png"></a></p></td>
+        <td><p><a href="pagetemperature.html" title="Temperature"><img src="Vue/image/temperature.png"></a></p></td>
     </tr>
 </table>
 
-<?php include ("footer.html");
-?>
+
 
 </body>
 </html>

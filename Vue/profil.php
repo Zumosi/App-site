@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
-    <link rel="stylesheet" href="profil.css"/>
+    <link rel="stylesheet" href="Vue/profil.css"/>
 </head>
 <body>
 
@@ -24,21 +24,13 @@ function Modifier()
 
 <?php
 try {
-    // On se connecte à MySQL
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 } catch (Exception $e) {
-    // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
 }
 $user = 1;
-
-
-// Si tout va bien, on peut continuer
-
-// On récupère tout le contenu de la table utilisateur
 $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
-// On affiche chaque entrée une à une
 while ($donnees = $reponse->fetch()) {
     ?>
     <p>
@@ -47,7 +39,7 @@ while ($donnees = $reponse->fetch()) {
             <td><strong>Nom</strong> : <br/><br/>
 
                 <?php if (isset($_GET['nom'])) {
-                    echo '<form method="post" action="liste.php">
+                    echo '<form method="post" action="Vue/liste.php">
                               <input type="text" name="nom" />
                               <input id="Modif" type="submit" name="Valider">
                               </form>';
@@ -56,8 +48,10 @@ while ($donnees = $reponse->fetch()) {
 
                 }
                 ?>
+
+
                 <?php if (!isset($_GET['nom'])) {
-                    echo '<a href="profil.php?nom=1">
+                    echo '<a href="index.php?nom=1&cible=profil">
                     <table id="Modif">
                         <tr>
                             <td id="Modifier">Modifier</td>
@@ -68,11 +62,13 @@ while ($donnees = $reponse->fetch()) {
                 }
 
                 ?>
+
+
         </tr>
         <tr>
             <td><strong> Prenom </strong> :<br/><br/>
                 <?php if (isset($_GET['prenom'])) {
-                    echo '<form method="post" action="liste.php">
+                    echo '<form method="post" action="Vue/liste.php">
                               <input type="text" name="prenom" />
                               <input  id="Modif" type="submit" name="Valider">
                               </form>';
@@ -82,7 +78,7 @@ while ($donnees = $reponse->fetch()) {
                 }
                 ?>
                 <?php if (!isset($_GET['prenom'])) {
-                    echo '<a href="profil.php?prenom=1">
+                    echo '<a href="index.php?prenom=1&cible=profil">
                     <table id="Modif">
                         <tr>
                             <td id="Modifier">Modifier</td>
