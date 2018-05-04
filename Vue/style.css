@@ -1,0 +1,109 @@
+
+body {
+
+    background-color: #FFF;
+}
+
+h1 {
+    font-size: 20px;
+    color: black;
+}
+
+p {
+    font-family: cursive;
+    color: blue;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#Maison {
+    display: block;
+    top: 65px;
+    margin-left: -7px;
+    width: 101.1%;
+}
+
+#home {
+    font-size: 50px;
+    color: #005376;
+    text-align: center;
+}
+
+
+
+
+
+
+#menu {
+    position: relative;
+    margin-top: -30px;
+    margin-left: 45%;
+}
+
+#menu li {
+    display: inline;
+    color: white;
+    background: grey;
+
+}
+
+#menu li a {
+
+    padding: 4px 20px;
+    background: #9f9f9f;
+    color: white;
+    font: 1em "Trebuchet MS", Arial, sans-serif;
+    font-size: 150%;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background: #8c8c8c;
+    text-decoration: underline;;
+}
+
+#presentation {
+    font-family: Myriad Pro;
+    color: #005376;
+    font-size: 50px;
+}
+
+
+
+#world {
+    font-size: 50px;
+    margin-left: 600px;
+    color: #005376;
+    text-align: center;
+}
+
+#banner {
+    width: 50%;
+
+}
+
+nav {
+    display: flex;
+
+}
+
+
+
+nav ul {
+    display: flex;
+
+}
+
+nav li {
+    display: flex;
+}
+
+

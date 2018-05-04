@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <title>page 17</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php include ("header.php")
-    ?>
     <style>
         caption
         {
@@ -134,6 +132,4 @@
         <th style="text-align: left">Ajouter un capteur</th>
     </tr>
 </table>
-<?php include ("footer.html");
-?>
 </body>
