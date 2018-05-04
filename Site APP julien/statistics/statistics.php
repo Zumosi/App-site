@@ -5,17 +5,28 @@
     <title>Title</title>
     <link rel="stylesheet" href="stat.css" />
 </head>
+
+<?php include ("statChambre.php"); ?>
+
+
+
 <body>
+<?php consopuissance(1)  ?>
 <h1>Statistics</h1>
-<h3 class="wc">WC</h3>
+
+<a href="statWC.php" class="wc">WC</a>
 <img class="wci" src="wc.png" >
-<h3 class="sdb">salle de bain</h3>
+
+<a href="statSdb.php" class="sdb">salle de bain</a>
 <img class="sdbi" src="sdb.png" >
-<h3 class="salon">salon</h3>
+
+<a href="statSalon.php" class="salon">salon</a>
 <img class="saloni" src="salon.png" >
-<h3 class="chambre">chambre</h3>
+
+<a href="statChambre.php" class="chambre">chambre</a>
 <img class="chambri" src="chambre.png" >
-<h3 class="cuisine">cuisine</h3>
+
+<a href="statCuisine.php" class="cuisine">cuisine</a>
 <img class="cuisini" src="cuisine.jpg" >
 </body>
 </html>
@@ -26,3 +37,4 @@
  * Date: 03/05/2018
  * Time: 11:51
  */
+
