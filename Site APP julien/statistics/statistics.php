@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="stat.css" />
 </head>
 
-<?php include ("statChambre.php"); ?>
 
 
 
 <body>
-<?php consopuissance(1)  ?>
-<h1>Statistics</h1>
 
+<h1>Statistiques</h1>
+<img class="cadre" src="encadre.png" >
 <a href="statWC.php" class="wc">WC</a>
 <img class="wci" src="wc.png" >
 

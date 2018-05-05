@@ -14,7 +14,7 @@ CREATE TABLE `consommation_jour` (
   `piece_id` mediumint(9) NOT NULL,
   `piece_name` varchar(30) collate latin1_general_ci NOT NULL,
   `consommation_value` mediumint(9) NOT NULL,
-  `date` date NOT NULL
+  `consommation_date` date NOT NULL
 
 
 );
@@ -24,7 +24,7 @@ CREATE TABLE `puissance_jour` (
   `piece_id` mediumint(9) NOT NULL,
   `piece_name` varchar(30) collate latin1_general_ci NOT NULL,
   `puissance_value` mediumint(9) NOT NULL,
-  `date` date NOT NULL
+  `consommation_date` date NOT NULL
 
 
 );

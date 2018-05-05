@@ -12,23 +12,46 @@
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stat.css" />
+</head>
+
+<?php include ("functions.php"); ?>
 
 
 
-<?php
-function consopuissance($im)
-{
-    $bdd= new PDO('mysql:host=localhost;dbname=athome;charset=utf8',"root","");
-$conso=$bdd->prepare('SELECT * FROM boutique WHERE id_boutique= ?');
-$conso->execute(array($im));
-//$puissance=$bdd-->prepare('SELECT puissance_value FROM puissance_jour WHERE date=CURRENT_DATE()');
-while($donnees = $conso->fetch()) {
-    echo 'consommation : <strong>' . $donnees['stock'] . '</strong><br/>';
-    echo $donnees['stock'];
-}
-}
+<body>
+<?php consopuissanceChambre(1)  ?>
+<div class="nav">
+    <img class="cadre" src="encadre.png" >
+    <p class="stat">Statistiques Chambre</p>
+    <p class="consommation">Consommation:</p>
+    <p class="puissance">Puissance:</p>
+</div>
+<h1>Statistiques</h1>
 
-//echo 'puissance : <strong>' . $puissance . '</strong><br/>';
-?>
+<a href="statWC.php" class="wc">WC</a>
+<img class="wci" src="wc.png" >
+
+<a href="statSdb.php" class="sdb">salle de bain</a>
+<img class="sdbi" src="sdb.png" >
+
+<a href="statSalon.php" class="salon">salon</a>
+<img class="saloni" src="salon.png" >
+
+<a href="statChambre.php" class="chambre">chambre</a>
+<img class="chambri" src="chambre.png" >
+
+<a href="statCuisine.php" class="cuisine">cuisine</a>
+<img class="cuisini" src="cuisine.jpg" >
+</body>
+</html>
+
+
+
 
 

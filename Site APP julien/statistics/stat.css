@@ -1,6 +1,16 @@
+/*body{
+    background: url("encadre.png") no-repeat left;
+    background: url("encadre.png") no-repeat top;
+    top:5%;
+    left:1%;
+    width: 20%;
+    height: 50%;
+
+
+}*/
 h1{
     position:absolute;
-    top:5%;
+    top:0;
     Left:45%;
     font-size:500%;
 }
@@ -69,4 +79,42 @@ h1{
     Left:45%;
     width:10%;
     height:13%;
+}
+.stat{
+    font-size:200%;
+    position:absolute;
+    top:5%;
+    left:5%;
+
+}
+.consommation{
+    font-size:125%;
+    position:absolute;
+    top:20%;
+    left:5%;
+
+}
+.puissance{
+    font-size:125%;
+    position:absolute;
+    top:35%;
+    left:5%;
+}
+
+.consoValue{
+    font-size:125%;
+    position:absolute;
+    top:25%;
+    left:5%
+}
+.powerValue{
+    font-size:125%;
+    position:absolute;
+    top:40%;
+    left:5%
+}
+.cadre{
+    left:1%;
+    width: 20%;
+    height: 50%;
 }
