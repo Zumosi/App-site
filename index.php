@@ -7,7 +7,7 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = $_GET['cible'];
 }
 else {
-    $url='header';
+    $url='style';
 }
 
 

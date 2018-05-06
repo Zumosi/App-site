@@ -103,7 +103,7 @@ while ($donnees = $reponse->fetch()) {
                 }
                 ?>
                 <?php if (!isset($_GET['numéro'])) {
-                    echo '<a href="profil.php?numéro=1">
+                    echo '<a href="index.php?numéro=1&cible=profil">
                     <table id="Modif">
                         <tr>
                             <td id="Modifier">Modifier</td>

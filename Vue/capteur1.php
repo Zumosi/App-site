@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8"/>
     <title>Capteur</title>
-    <link rel="stylesheet" href="capteur1.css"/>
+    <link rel="stylesheet" href="Vue/capteur1.css"/>
 </head>
 
-<?php include("../Modèle/requete.boutique.php") ?>
+
 
 
 <body>
@@ -29,13 +29,13 @@
 <section>
     <aside>
         <?php if ($_GET['nc'] == 1) {
-            echo '<div id="image"><img src="image/inf1.png"></div>';
+            echo '<div id="image"><img src="Vue/image/inf1.png"></div>';
         } elseif ($_GET['nc'] == 2) {
-            echo '<div id="image2"><img src="image/im2.jpg"></div>';
+            echo '<div id="image2"><img src="Vue/image/im2.jpg"></div>';
         } elseif ($_GET['nc'] == 3) {
-            echo '<div id="image3"><img src="image/im3.jpg"></div>';
+            echo '<div id="image3"><img src="Vue/image/im3.jpg"></div>';
         } elseif ($_GET['nc'] == 4) {
-            echo '<div id="image4"><img src="image/im4.jpg"></div>';
+            echo '<div id="image4"><img src="Vue/image/im4.jpg"></div>';
         }
         ?>
     </aside>

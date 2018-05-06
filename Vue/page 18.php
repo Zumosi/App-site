@@ -3,13 +3,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>page 18</title>
+    <title>Gestion Capteur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="page%2018.css" />
+    <link rel="stylesheet" href="Vue/page%2018.css" />
 </head>
 
-<?php include ("header.php")
-?>
+
 
 <body>
 <form method="post">
@@ -47,6 +46,4 @@
             </div>
     </fieldset>
 
-    <?php include ("footer.html");
-    ?>
 </body>

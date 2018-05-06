@@ -3,14 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>page 17</title>
+    <title>Capteurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="page%2017.css" />
+    <link rel="stylesheet" href="Vue/page%2017.css" />
 </head>
 <body>
-<?php include ("header.php")
-?>
+
 <?php if ($_GET['capteur']== 'lux') {
     echo
     '<table >
@@ -33,7 +32,7 @@
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "index.php?cible=page 18" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -271,6 +270,5 @@ elseif ($_GET['capteur']== 'temp') {
 }
 
 ?>
-<?php include ("footer.html");
-?>
+
 </body>

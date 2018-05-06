@@ -29,25 +29,25 @@
 
         <div id="txt1">
 
-           <a href="Vue/capteur1.php?nc=1"> <h1><?php titreshop($im - 3) ?>  </h1></a>
+           <a href="index.php?nc=1&cible=capteur1"> <h1><?php titreshop($im - 3) ?>  </h1></a>
             <?php textshop($im - 3) ?>
         </div>
 
 
         <div id="txt2">
-            <a href="Vue/capteur1.php?nc=2"><h1><?php titreshop($im - 2) ?></h1></a>
+            <a href="index.php?nc=2&cible=capteur1"><h1><?php titreshop($im - 2) ?></h1></a>
 
             <?php textshop($im - 2) ?>
         </div>
 
         <div id="txt3">
-            <a href="Vue/capteur1.php?nc=3"><h1><?php titreshop($im - 1) ?></h1></a>
+            <a href="index.php?nc=3&cible=capteur1"><h1><?php titreshop($im - 1) ?></h1></a>
 
             <?php textshop($im - 1) ?>
         </div>
 
         <div id="txt4">
-            <a href="Vue/capteur1.php?nc=4"><h1><?php titreshop($im) ?></h1></a>
+            <a href="index.php?nc=4&cible=capteur1"><h1><?php titreshop($im) ?></h1></a>
 
             <?php textshop($im) ?>
         </div>

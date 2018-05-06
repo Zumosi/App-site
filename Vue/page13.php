@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>P 13</title>
-        <link rel="stylesheet" type="text/css" href="CSS p 13.css">
+        <link rel="stylesheet" type="text/css" href="Vue/CSS p 13.css">
     </head>
     <body>
 	<h1>Foire aux Questions</h1>
@@ -16,7 +16,7 @@
     <br>
     <div id="question2">Question 2</p></div>
     <img class="line" src="Vue/image/line2.png" width="3000" height="150" alt=""  />
-	<script src="jquery-3.3.1.min.js"></script>
-	<script src="jscode.js"></script>
+	<script src="Vue/jquery-3.3.1.min.js"></script>
+	<script src="Vue/jscode.js"></script>
 	</body>
 </html>
