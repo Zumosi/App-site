@@ -1,0 +1,27 @@
+#mact,#jact,#aact{
+    display: inline-block;
+}
+
+#jactuel{
+    font-size: x-large;
+    text-align: right;
+
+}
+#newmess,#jactuel,#rechercher{
+    display: inline-block;
+}
+
+#titretoptic{
+    color : rgb( 155,207,249);
+    font-size: x-large;
+    margin-top: 5%;
+}
+
+#jtopic,#mtopic,#atopic,#le,#nom{
+    display: inline-block;
+}
+
+a:visited{
+    color: rgb( 155,207,249);
+}
+
