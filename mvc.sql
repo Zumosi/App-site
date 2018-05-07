@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 23 avr. 2018 à 14:42
+-- Généré le :  lun. 07 mai 2018 à 11:54
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -97,6 +97,27 @@ INSERT INTO `capteur` (`id_capteur`, `type`, `reference`, `etat`, `id_place`) VA
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `consommation_jour`
+--
+
+DROP TABLE IF EXISTS `consommation_jour`;
+CREATE TABLE IF NOT EXISTS `consommation_jour` (
+  `piece_id` mediumint(9) NOT NULL,
+  `piece_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `consommation_value` mediumint(9) NOT NULL,
+  `consommation_date` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+--
+-- Déchargement des données de la table `consommation_jour`
+--
+
+INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`) VALUES
+(1, 'wc', 10, '2018-05-05');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `facture`
 --
 
@@ -176,14 +197,17 @@ CREATE TABLE IF NOT EXISTS `message` (
   `commentaire` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `date_commentaire` datetime NOT NULL,
   PRIMARY KEY (`id_message`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `message`
 --
 
 INSERT INTO `message` (`id_message`, `id_topic`, `id_user`, `commentaire`, `date_commentaire`) VALUES
-(1, 1, 1, 'Voici les règles d\'usage de ce forum.', '2018-04-06 14:00:00');
+(1, 2, 1, 'Voici les règles d\'usage de ce forum.\r\n-Le forum est destiné à répondre à des problèmes tout autre utilisation sera puni\r\n-Regardez si il y a des topics répondant à votre question\r\n-Pas de flood inutile', '2018-04-06 14:00:00'),
+(2, 3, 2, 'Pour les soucis techniques veuillez nous envoyez un mail.', '2018-05-02 00:00:00'),
+(3, 4, 3, 'Kappa ou kippo.', '2018-05-08 00:00:00'),
+(4, 4, 2, 'Nous allons supprimer ce topic il semblerait que vous soyez stupide.', '2018-05-09 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -207,6 +231,31 @@ CREATE TABLE IF NOT EXISTS `piece` (
 
 INSERT INTO `piece` (`id_piece`, `nom`, `superficie`, `id_maison`, `type`) VALUES
 (1, 'Chambre A', 15, 1, 'Chambre');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `puissance_jour`
+--
+
+DROP TABLE IF EXISTS `puissance_jour`;
+CREATE TABLE IF NOT EXISTS `puissance_jour` (
+  `piece_id` mediumint(9) NOT NULL,
+  `piece_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `puissance_value` mediumint(9) NOT NULL,
+  `consommation_date` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
+
+--
+-- Déchargement des données de la table `puissance_jour`
+--
+
+INSERT INTO `puissance_jour` (`piece_id`, `piece_name`, `puissance_value`, `consommation_date`) VALUES
+(1, 'wc', 10, '2018-05-05'),
+(1, 'chambre', 50, '2018-05-05'),
+(1, 'salon', 60, '2018-05-05'),
+(1, 'sdb', 25, '2018-05-05'),
+(1, 'cuisine', 69, '2018-05-05');
 
 -- --------------------------------------------------------
 
@@ -243,14 +292,17 @@ CREATE TABLE IF NOT EXISTS `topic` (
   `id_utilisateur` int(11) NOT NULL,
   `date_crea` datetime NOT NULL,
   PRIMARY KEY (`id_topic`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `topic`
 --
 
 INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
-(1, 'Regle du Forum', 1, '2018-04-06 14:00:00');
+(2, 'Regle du Forum', 1, '2018-04-06 14:00:00'),
+(1, 'Jour actuel', 1, '2018-05-05 00:00:00'),
+(3, 'Soucis Technique', 2, '2018-05-05 00:00:00'),
+(4, 'Kappa', 3, '2018-05-06 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -268,14 +320,16 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `type` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `mail` varchar(255) NOT NULL,
   PRIMARY KEY (`id_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`) VALUES
-(1, 'Nguyen', 'Franck', 0675849966, '*515A0BACA39EC47E92679CCAF3548F2A06F59EAC', 'admin', 'franck.nguyen@isep.fr');
+(1, 'Nguyen', 'Franck', 0675849566, 'Shizumo1', 'admin', 'franck.nguyen@isep.fr'),
+(2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr'),
+(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client', 'jean.bernard@jvc.com');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
