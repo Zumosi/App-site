@@ -10,14 +10,12 @@
 
 .section{
     font-size:300%;
-    color:white;
 }
 nav{
     position: absolute;
     top: 20%;
     left: 40%;
-    color: white;
-
+    
 }
 a:visited /* Quand le visiteur a déjà vu la page concernée */
 
