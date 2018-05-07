@@ -10,14 +10,12 @@
 
 .section{
     font-size:300%;
-    color:white;
 }
 nav{
     position: absolute;
     top: 20%;
     left: 40%;
-    color: white;
-
+    
 }
 a:visited /* Quand le visiteur a déjà vu la page concernée */
 
@@ -45,7 +43,7 @@ a:hover /* Apparence au survol des liens */
     position: absolute;
     width:5%;
     height:5%;
-    top: 42%;
+    top: 43%;
     left: 55%;
 }
 .case
