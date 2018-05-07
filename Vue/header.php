@@ -19,7 +19,7 @@
                     <ul>
                         <li><a href="#">Plan</a></li>
                         <li><a href="index.php?cible=page 16">capteurs</a></li>
-                        <li><a href="#">statistiques</a></li>
+                        <li><a href="site app julien/statistics/statistics.php">statistiques</a></li>
                     </ul>
                 </li>
                 <li><a href="index.php?cible=shop">Magasin</a>
