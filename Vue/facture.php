@@ -6,5 +6,4 @@
     <link rel="stylesheet" href="facture.css"/>
 </head>
 <body>
-<?php include ("footer.html") ?>
 </body>

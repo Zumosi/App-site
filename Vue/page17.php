@@ -11,8 +11,8 @@
 <body>
 
 <?php if ($_GET['capteur']== 'lux') {
-    echo
-    '<table >
+    echo'
+    <table >
     <caption > Luminosité </caption >
     <tr >
         <th >

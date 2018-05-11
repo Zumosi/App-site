@@ -36,42 +36,8 @@ img {
 }
 
 
-
-
-
-
-#menu {
-    position: relative;
-    margin-top: -30px;
-    margin-left: 45%;
-}
-
-#menu li {
-    display: inline;
-    color: white;
-    background: grey;
-
-}
-
-#menu li a {
-
-    padding: 4px 20px;
-    background: #9f9f9f;
-    color: white;
-    font: 1em "Trebuchet MS", Arial, sans-serif;
-    font-size: 150%;
-    line-height: 1em;
-    text-align: center;
-    text-decoration: none;
-}
-
-#menu li a:hover {
-    background: #8c8c8c;
-    text-decoration: underline;;
-}
-
 #presentation {
-    font-family: Myriad Pro;
+    font-family: Myriad Pro, sans-serif;
     color: #005376;
     font-size: 50px;
 }
@@ -85,25 +51,6 @@ img {
     text-align: center;
 }
 
-#banner {
-    width: 50%;
 
-}
-
-nav {
-    display: flex;
-
-}
-
-
-
-nav ul {
-    display: flex;
-
-}
-
-nav li {
-    display: flex;
-}
 
 

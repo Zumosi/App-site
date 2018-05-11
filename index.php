@@ -7,12 +7,12 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = $_GET['cible'];
 }
 else {
-    $url='style';
+    $url='header';
 }
 
 
 include ('Vue/' .$url.'.php');
 
-include ("Vue/footer.html");
+include ("Vue/footer.php");
 
 ?>

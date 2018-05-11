@@ -1,0 +1,32 @@
+.footer_font {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    height: 4vw;
+    width: 100%;
+    background-color: darkgrey;
+}
+.footer2 {
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+    width: 100%;
+    background-color:transparent;
+    color: black;
+    text-align: left;
+}
+.footer1 {
+    position:fixed;
+    right:5%;
+    bottom: 0.5vw;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    text-align: right;
+}
+.footer1 p{
+    font-size:1vw
+}
+.footer2 p{
+    font-size:1vw
+}
