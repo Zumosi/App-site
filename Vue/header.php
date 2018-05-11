@@ -1,19 +1,13 @@
-
-
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="Vue/header.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
-
-
-    <header>
-
-        <img src="Vue/image/bandeHaut.jpg" id="bande"/>
+<header>
+        <div id="header_font"><p> </p>
+        </div>
         <a href="index.php?cible=style"><img src="Vue/image/AtHomeTransparent.png" id="logo"/></a>
-
-        <nav>
             <ul id="menu">
                 <li><a href="index.php?cible=plan">Ma Maison</a>
                     <ul>
@@ -43,6 +37,4 @@
                     </ul>
                 </li>
             </ul>
-
-</nav>
 </header>
