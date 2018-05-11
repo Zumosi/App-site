@@ -12,6 +12,6 @@ require("forgot.php");
       <input type="submit" value="Envoyer" name="send" class="btn btn-block btn-primary" />
 
     </form>
-     <a href ="login.php"> <input type="button" value="Se connecter" name="connexion" class="btn btn-block btn-primary">  </a>
+     <a href ="connexion.php"> <input type="button" value="Se connecter" name="connexion" class="btn btn-block btn-primary">  </a>
   </div>
 </div>

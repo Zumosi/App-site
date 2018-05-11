@@ -37,7 +37,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
         mail($to, $subject, $message_body);
 
-        header("location:reset.php");
+        header("location:mdp_reset.php");
   }
 }
 ?>
