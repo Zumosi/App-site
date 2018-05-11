@@ -152,8 +152,17 @@ function blockmessage($id_top)
                 echo $donnees['commentaire'][$i];
             }
         }
+
         echo '</br>';
-        echo $donnees['id_user'];
+        $req = $bdd->prepare('SELECT nom,prenom, id_user FROM utilisateur, message WHERE id_utilisateur=?');
+        $req->execute(array($donnees['id_user']));
+        while($don=$req->fetch()){
+            echo $don['nom'];
+            echo $don['prenom'];
+            $req->closeCursor();
+        }
+
+
         echo '</br>';
         echo $donnees['date_commentaire'];
         echo '</br>';
