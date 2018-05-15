@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['message'] = '';
-$mysqli = new mysqli("localhost", "root", "root", "accounts_complete");
+$mysqli = new mysqli("localhost", "root", "", "accounts_complete");
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) { 
 if( isset($_GET['email']) && !empty($_GET['email']))

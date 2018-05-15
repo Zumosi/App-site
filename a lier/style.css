@@ -62,9 +62,7 @@ display:inherit;
   color: #fff;
 border-radius:0;
 }
-#menu ul li:last-child{
 
-}
 #menu ul{
   display: inline-block;
 position:absolute;
@@ -144,7 +142,6 @@ text-transform:inherit;
 #menu li:hover a, #menu li li:hover a{
 color:#fff;
 } 
-/*---------*/
 
 
 

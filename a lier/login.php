@@ -2,7 +2,7 @@
 require("Encryption.php");
 session_start();
 $_SESSION['message'] = '';
-$mysqli = new mysqli("localhost", "root", "root", "accounts_complete");
+$mysqli = new mysqli("localhost", "root", "", "accounts_complete");
 
 
 $email = $mysqli->escape_string($_POST['email']);

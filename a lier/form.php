@@ -3,7 +3,7 @@ require("Encryption.php");
 
 session_start();
 $_SESSION['message'] = '';
-$mysqli = new mysqli("localhost", "root", "root", "accounts_complete");
+$mysqli = new mysqli("localhost", "root", "", "accounts_complete");
 
 //le formulaire a bien été envoyer
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
