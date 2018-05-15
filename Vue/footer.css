@@ -1,15 +1,19 @@
+footer{
+    margin-top: 6vw;
+}
+
 #footer_font {
     position:fixed;
     bottom: 0;
     left: 0;
     height: 4vw;
     width: 100%;
-    background-color: darkgrey;
+    background-color: #9f9f9f;
 }
 #footer2 {
     position: fixed;
     left: 5%;
-    bottom: 0;
+    bottom: 1vw;
     width: 100%;
     background-color:transparent;
     color: black;
@@ -18,7 +22,7 @@
 #footer1 {
     position:fixed;
     right:5%;
-    bottom: 0.5vw;
+    bottom: 1vw;
     width: 100%;
     background-color: transparent;
     color: black;
