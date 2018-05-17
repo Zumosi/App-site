@@ -15,7 +15,7 @@
 
 <h1> Forum</h1>
 
-<a id="newmess" href="message.php"> Nouveau Sujet</a>
+<a id="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>
 
 <form id="rechercher" action="liste.php" method="post">
     <input type="text" name="titre" placeholder="rechercher dans le forum">
