@@ -12,7 +12,6 @@ img {
 }
 #banner{
     display: block;
-    position: sticky;
     margin-bottom: 0vw;
     width: 100%;
 }

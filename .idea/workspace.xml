@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b37343d7-728b-4f6d-a94d-35bb954fc31f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Vue/footer.css" afterPath="$PROJECT_DIR$/Vue/footer.css" />
+      <change beforePath="$PROJECT_DIR$/Vue/style.css" afterPath="$PROJECT_DIR$/Vue/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="560">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/footer.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
@@ -105,8 +105,8 @@
         <option value="$PROJECT_DIR$/Vue/myaccount.css" />
         <option value="$PROJECT_DIR$/Vue/myaccount.php" />
         <option value="$PROJECT_DIR$/Vue/style.php" />
-        <option value="$PROJECT_DIR$/Vue/style.css" />
         <option value="$PROJECT_DIR$/Vue/footer.css" />
+        <option value="$PROJECT_DIR$/Vue/style.css" />
       </list>
     </option>
   </component>
@@ -313,12 +313,12 @@
       <workItem from="1525436936412" duration="709000" />
       <workItem from="1525696169675" duration="22273000" />
       <workItem from="1526226820193" duration="3580000" />
-      <workItem from="1526296538531" duration="20370000" />
+      <workItem from="1526296538531" duration="20538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75575000" />
+    <option name="totallyTimeSpent" value="75743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1744" extended-state="6" />
@@ -787,18 +787,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/footer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding />
         </state>
       </provider>
