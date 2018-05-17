@@ -13,19 +13,19 @@
 
 <h1>Statistiques</h1>
 <img class="cadre" src="encadre.png" >
-<a href="statWC.php" class="wc">WC</a>
+<a href="statistics2.php?piece=WC&cible=statistics2" class="wc">WC</a>
 <img class="wci" src="wc.png" >
 
-<a href="statSdb.php" class="sdb">salle de bain</a>
+<a href="statistics2.php?piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
 <img class="sdbi" src="sdb.png" >
 
-<a href="statSalon.php" class="salon">salon</a>
+<a href="statistics2.php?piece=salon&cible=statistics" class="salon">salon</a>
 <img class="saloni" src="salon.png" >
 
-<a href="statChambre.php" class="chambre">chambre</a>
+<a href="statistics2.php?piece=chambre&cible=statistics2" class="chambre">chambre</a>
 <img class="chambri" src="chambre.png" >
 
-<a href="statCuisine.php" class="cuisine">cuisine</a>
+<a href="statistics2.php?piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
 <img class="cuisini" src="cuisine.jpg" >
 </body>
 </html>
