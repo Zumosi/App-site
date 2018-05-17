@@ -29,6 +29,13 @@ if (isset($_POST['numéro'])) {
 
 ?>
 
+<?php
+
+if (isset($_POST['message'])) {
+    header("location:../index.php?cible=forum");
+}
+
+?>
 
 <?php
 if (ctype_alpha($_POST['nom'])) {
@@ -65,4 +72,14 @@ $reponse->execute(array(
     'nvnum' => $_POST['numéro'],
 ));
 echo $_POST['nom'];
+?>
+
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
+$reponse= $bdd->prepare('INSERT INTO topic( titre, id_utilisateur,date_crea) VALUES (:titre, :id, NOW())');
+$reponse->execute(array(
+    'titre' => $_POST['titre'],
+    'id' => $_SESSION['id'],
+));
+$reponse->closeCursor();
 ?>
