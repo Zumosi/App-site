@@ -13,8 +13,8 @@ img{
 .Profile{
     border:1px solid black;
     list-style-type: none;
-    background-image:Vue/image/profil.png;
-    background-repeat: no-repeat
+    background-image:Vue/ image/ profil.png;
+    background-repeat: no-repeat;
     background-position: left;
     padding:20px;
     text-align: center;
@@ -27,8 +27,8 @@ img{
 .Logoute{
     border:1px solid black;
     list-style-type: none;
-    background-image:Vue/image/logout.png;
-    background-repeat: no-repeat
+    background-image:Vue/ image/logout.png;
+    background-repeat: no-repeat;
     background-position: left;
     top:auto;
     text-align: center;

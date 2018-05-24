@@ -25,3 +25,9 @@ a:visited{
     color: rgb( 155,207,249);
 }
 
+.sujet{
+    border:2px solid darkblue;
+}
+.text{
+    border: 2px solid orangered;
+}

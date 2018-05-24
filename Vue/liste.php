@@ -1,4 +1,10 @@
 <?php
+session_start();
+$_SESSION['id']=1;
+?>
+
+
+<?php
 
 if (isset($_POST['choix'])) {
     header("location:facture.php");
@@ -73,7 +79,7 @@ $reponse->execute(array(
 ));
 echo $_POST['nom'];
 ?>
-
+//recup titre
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse= $bdd->prepare('INSERT INTO topic( titre, id_utilisateur,date_crea) VALUES (:titre, :id, NOW())');
@@ -82,4 +88,21 @@ $reponse->execute(array(
     'id' => $_SESSION['id'],
 ));
 $reponse->closeCursor();
+?>
+
+<?php
+
+//recup message
+
+$bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
+$last= $bdd->query('SELECT MAX(id_topic) AS maxprix FROM topic');
+while ($donnees = $last->fetch()) {
+    $i = $donnees['maxprix'];
+}
+$reponse= $bdd->prepare('INSERT INTO message( id_topic, id_user,commentaire, date_commentaire) VALUES (:id_topic, :id_user,:commentaire, NOW())');
+$reponse->execute(array(
+'id_topic'=> $i,
+'id_user' => $_SESSION['id'],
+'commentaire' => $_POST['message'],
+));
 ?>
