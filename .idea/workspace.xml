@@ -47,9 +47,14 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/style.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="680">
+              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+=======
             <state relative-caret-position="560">
               <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
 >>>>>>> 07cf4ff98dfe21652ac23f70585777798f500f84
+>>>>>>> 3d5a475923032a0020b084f08076d83d8643ffc1
               <folding />
             </state>
           </provider>
@@ -347,20 +352,28 @@
       <workItem from="1525696169675" duration="22273000" />
       <workItem from="1526226820193" duration="3580000" />
 <<<<<<< HEAD
+      <workItem from="1526296538531" duration="21172000" />
+=======
+<<<<<<< HEAD
       <workItem from="1526296538531" duration="13101000" />
       <workItem from="1526378765141" duration="2544000" />
 =======
       <workItem from="1526296538531" duration="20538000" />
 >>>>>>> 07cf4ff98dfe21652ac23f70585777798f500f84
+>>>>>>> 3d5a475923032a0020b084f08076d83d8643ffc1
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="76377000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="70850000" />
 =======
     <option name="totallyTimeSpent" value="75743000" />
 >>>>>>> 07cf4ff98dfe21652ac23f70585777798f500f84
+>>>>>>> 3d5a475923032a0020b084f08076d83d8643ffc1
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -785,6 +798,8 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/shop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -798,6 +813,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 3d5a475923032a0020b084f08076d83d8643ffc1
     <entry file="file://$PROJECT_DIR$/Vue/page 16.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="847">
@@ -814,11 +830,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/style.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="680">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+=======
         <state relative-caret-position="560">
           <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
 >>>>>>> 07cf4ff98dfe21652ac23f70585777798f500f84
+>>>>>>> 3d5a475923032a0020b084f08076d83d8643ffc1
           <folding />
         </state>
       </provider>
