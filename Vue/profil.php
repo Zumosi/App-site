@@ -34,98 +34,55 @@ $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
     <p>
-    <table>
-        <tr>
-            <td><strong>Nom</strong> : <br/><br/>
+    <form method="post" action="Vue/liste.php">
+        <table>
+            <tr>
+                <td><strong>Nom</strong> : <br/><br/>
 
-                <?php if (isset($_GET['nom'])) {
-                    echo '<form method="post" action="Vue/liste.php">
-                              <input type="text" name="nom" />
-                              <input id="Modif" type="submit" name="Valider">
-                              </form>';
-                } else {
-                    echo $donnees['nom'];
+                    <?php if (isset($_GET['nom'])) {
+                        echo '<input type="text" name="nom" />';
+                    } else {
+                        echo $donnees['nom'];
 
-                }
-                ?>
+                    }
+                    ?>
 
 
-                <?php if (!isset($_GET['nom'])) {
-                    echo '<a href="index.php?nom=1&cible=profil">
-                    <table id="Modif">
-                        <tr>
-                            <td id="Modifier">Modifier</td>
-                        </tr>
-                    </table>
+            </tr>
+            <tr>
+                <td><strong> Prenom </strong> :<br/><br/>
+                    <?php if (isset($_GET['prenom'])) {
+                        echo '<input type="text" name="prenom" />';
+                    } else {
+                        echo $donnees['prenom'];
+
+                    }
+                    ?>
+            </tr>
+            <tr>
+                <td><strong> Numéro </strong> :<br/><br/>
+                    <?php if (isset($_GET['numéro'])) {
+                        echo '<input type="text" name="numéro" />';
+                    } else {
+                        echo $donnees['numero'];
+                    }
+                    ?>
+            </tr>
+
+            <tr>
+                <td><strong> Mail </strong> :<br/><br/> <?php echo $donnees['mail']; ?>
                     <br/></td>
-            </a>';
-                }
+            </tr>
 
-                ?>
+            <tr>
+                <td><strong> Mot de Passe </strong> :<br/><br/> ******
+                </td>
+            </tr>
 
 
-        </tr>
-        <tr>
-            <td><strong> Prenom </strong> :<br/><br/>
-                <?php if (isset($_GET['prenom'])) {
-                    echo '<form method="post" action="Vue/liste.php">
-                              <input type="text" name="prenom" />
-                              <input  id="Modif" type="submit" name="Valider">
-                              </form>';
-                } else {
-                    echo $donnees['prenom'];
-
-                }
-                ?>
-                <?php if (!isset($_GET['prenom'])) {
-                    echo '<a href="index.php?prenom=1&cible=profil">
-                    <table id="Modif">
-                        <tr>
-                            <td id="Modifier">Modifier</td>
-                        </tr>
-                    </table>
-                    <br/></td>
-            </a>';
-                }
-
-                ?>
-
-        </tr>
-        <tr>
-            <td><strong> Numéro </strong> :<br/><br/>
-                <?php if (isset($_GET['numéro'])) {
-                    echo '<form method="post" action="liste.php">
-                              <input type="text" name="numéro" />
-                              <input  id="Modif" type="submit" name="Valider">
-                              </form>';
-                } else {
-                    echo $donnees['numero'];
-                }
-                ?>
-                <?php if (!isset($_GET['numéro'])) {
-                    echo '<a href="index.php?numéro=1&cible=profil">
-                    <table id="Modif">
-                        <tr>
-                            <td id="Modifier">Modifier</td>
-                        </tr>
-                    </table>
-            
-            <br/></td>
-            </a>';
-                }
-                ?>
-        </tr>
-
-        <tr>
-            <td><strong> Mail </strong> :<br/><br/> <?php echo $donnees['mail']; ?>
-                <?php Modifier() ?><br/></td>
-        </tr>
-
-        <tr>
-            <td><strong> Mot de Passe </strong> :<br/><br/> ******
-                <?php Modifier() ?><br/></td>
-        </tr>
-    </table>
+        </table>
+        <input id="bouton" type="submit" value="Modifier">
+    </form>
     </p>
 
     <?php
