@@ -8,41 +8,41 @@
 
 
 }*/
-h1{
-    position:absolute;
-    top:0;
-    Left:45%;
-    font-size:500%;
+.titre{
+    position: absolute;
+    top: -10%;
+    Left:35%;
+    font-size:7vw;
 }
 .chambre{
     position:absolute;
     top:20%;
     Left:30%;
-    font-size:250%;
+    font-size:3vw;
 }
 .sdb{
     position:absolute;
     top:20%;
     Left:45%;
-    font-size:250%;
+    font-size:3vw;
 }
 .cuisine{
     position:absolute;
     top:20%;
     Left:65%;
-    font-size:250%;
+    font-size:3vw;
 }
 .salon{
     position:absolute;
     top:50%;
     Left:30%;
-    font-size:250%;
+    font-size:3vw;
 }
 .wc{
     position:absolute;
     top:50%;
     Left:45%;
-    font-size:250%;
+    font-size:3vw;
 }
 
 .chambri{
@@ -81,40 +81,42 @@ h1{
     height:13%;
 }
 .stat{
-    font-size:200%;
+    font-size:3vw;
     position:absolute;
     top:5%;
-    left:5%;
+    left:2%;
 
 }
 .consommation{
-    font-size:125%;
+    font-size:2vw;
     position:absolute;
     top:20%;
     left:5%;
 
 }
 .puissance{
-    font-size:125%;
+    font-size:2vw;
     position:absolute;
     top:35%;
     left:5%;
 }
 
 .consoValue{
-    font-size:125%;
+    font-size:2vw;
     position:absolute;
-    top:25%;
+    top:30%;
     left:5%
 }
 .powerValue{
-    font-size:125%;
+    font-size:2vw;
     position:absolute;
-    top:40%;
+    top:45%;
     left:5%
 }
 .cadre{
-    left:1%;
-    width: 20%;
-    height: 50%;
+    position:absolute;
+    top:2vw;
+    left:0vw;
+    width: 25vw;
+    height: 40vw;
 }

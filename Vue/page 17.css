@@ -1,5 +1,5 @@
-caption
-{
+
+caption {
     font-size: 5vw;
     text-align: center;
     caption-side: top;
@@ -12,23 +12,29 @@ table
     border-spacing: 8vw 1vw;
     margin-left: auto;
     margin-right: auto;
+    font-family: Arial;
+    margin-top: 2vw;
 }
 th
 {
     text-align: center;
     font-weight: bold;
     font-size: 1.5vw;
+    text-align: left
 }
 td
 {
     border: 1px solid black;
     text-align: center;
     border-radius: 10px;
+    font-style: normal;
+    text-decoration: none;
 }
 a
 {
     text-decoration: none;
     font-weight: bold;
+    font-family: Arial;
 }
 a:visited
 {
@@ -51,7 +57,7 @@ a:visited
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
     display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    font-size: 14px; color: white; font-family: Arial; font-weight: bold;
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {

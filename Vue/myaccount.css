@@ -1,29 +1,27 @@
-.section{
-    font-size:3vw;
-
-    
-}
-
-img{
-    width:15%;
+table{
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-spacing: 4vw;
+    font-size: 0;
 
 
 }
 
-.Profile{
+.section td{
     border:1px solid black;
+<<<<<<< HEAD
     list-style-type: none;
     background-image:Vue/ image/ profil.png;
     background-repeat: no-repeat;
     background-position: left;
     padding:20px;
+=======
+>>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
     text-align: center;
-    top:auto;
-    margin-left:500px;
-    margin-right:488px;
-
+    border-radius: 2vw;
 }
 
+<<<<<<< HEAD
 .Logoute{
     border:1px solid black;
     list-style-type: none;
@@ -37,11 +35,25 @@ img{
     margin-right:480px;
 
 
+=======
+>>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
 
 
+.section a{
+    text-decoration: none;
+    position: relative;
+    top: 2.5vw;
+    font-size: 3vw;
+    font-family: Arial;
+    font-weight: bold;
 }
 
+.section img {
+    float: left;
+    width: 20%;
+}
 
-
-
-
+a:visited
+{
+    color: black;
+}

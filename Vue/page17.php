@@ -12,9 +12,9 @@
 
 <?php if ($_GET['capteur']== 'lux') {
     echo'
-    <table >
+    <table id="cible">
     <caption > Luminosité </caption >
-    <tr >
+    <tr>
         <th >
     IdCapteur:
         </th >
@@ -45,10 +45,10 @@
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';
@@ -88,10 +88,10 @@ elseif ($_GET['capteur']== 'hum') {
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';
@@ -131,10 +131,10 @@ elseif ($_GET['capteur']== 'ir') {
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';
@@ -174,10 +174,10 @@ elseif ($_GET['capteur']== 'mic') {
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';
@@ -217,10 +217,10 @@ elseif ($_GET['capteur']== 'vid') {
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';
@@ -260,10 +260,10 @@ elseif ($_GET['capteur']== 'temp') {
 
     </tr >
 </table >
-<table style = "margin-top: 2vw" >
+<table >
     <tr >
         <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th style = "text-align: left" > Ajouter un capteur </th >
+        <th  > Ajouter un capteur </th >
     </tr >
 </table >
 ';

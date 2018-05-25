@@ -7,17 +7,16 @@
 </head>
 
 <body>
-<section class="section">
-    <nav>
-        <ul>
-        <li class="Profile"><img class="Profil" src="Vue/image/profil.png" /><a href="index.php?cible=profil">Profil</a></li>
-            <br>
-        <li class="Profile"><img class="GestionFirstuser" src="Vue/image/profil.png"  /><a href="#">Gestion Utilisateur</a></li>
-            <br>
-        <li class="Logoute"><img class="Logout" src="Vue/image/logout.png"  /><a href="#">Déconnexion</a></li>
-        </ul>
-    </nav>
-
-</section>
+<table class="section">
+    <tr>
+        <td ><a href="index.php?cible=profil"><img id="user"  src="Vue/image/user.png" />Profil</a></td>
+    </tr>
+    <tr>
+        <td ><a href="#"><img  src="Vue/image/group.png" />Gestion Utilisateur</a></td>
+    </tr>
+    <tr>
+        <td ><a href="#"><img  src="Vue/image/off.png" />Déconnexion</a></td>
+    </tr>
+</table>
 </body>
 </html>

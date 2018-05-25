@@ -24,18 +24,11 @@ table
     border-collapse: collapse;
 
 }
-#Modifier
-{
-    border:1px solid black;
-    padding : 4px;
-    border-radius: 15%;
-}
-#Modif{
-    position : relative;
-    left: 250%;
-    bottom : 25px;
-
-}
 #bouton{
     margin-left: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
 }

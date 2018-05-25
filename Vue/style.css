@@ -1,4 +1,6 @@
-
+body{
+    font-family: Arial;
+}
 img {
     display: block;
     margin-left: auto;
@@ -25,7 +27,6 @@ img {
 }
 
 #home {
-    font-family: Myriad Pro, sans-serif;
     font-size: 3vw;
     color: #005376;
     text-align: center;
