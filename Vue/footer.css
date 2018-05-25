@@ -1,5 +1,6 @@
 footer{
     margin-top: 6vw;
+    font-family: Arial;
 }
 
 #footer_font {
@@ -8,7 +9,7 @@ footer{
     left: 0;
     height: 4vw;
     width: 100%;
-    background-color: darkgrey;
+    background-color: #9f9f9f;
 }
 #footer2 {
     position: fixed;
@@ -16,7 +17,7 @@ footer{
     bottom: 1vw;
     width: 100%;
     background-color:transparent;
-    color: black;
+    color: #fff;
     text-align: left;
 }
 #footer1 {
@@ -25,7 +26,7 @@ footer{
     bottom: 1vw;
     width: 100%;
     background-color: transparent;
-    color: black;
+    color: #fff;
     text-align: right;
 }
 #footer1 p{

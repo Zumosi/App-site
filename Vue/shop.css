@@ -1,122 +1,108 @@
 .box1{
     display: inline-block;
-    width: 40%;
-    height: 10%;
-    margin: 10%;
-    position:absolute;
-    top:0%;
+    width: 40vw;
+    height: 5vw;
+    margin: 10vw;
+    position:relative;
+
+
 }
 .box2{
     display: inline-block;
-    width: 40%;
-    height: 10%;
-    margin: 10%;
-    position:absolute;
-    top:20%;
+    width: 40vw;
+    height: 5VW;
+    margin: 10VW;
+    position:relative;
+
 }
 .box3{
     display: inline-block;
-    width: 40%;
-    height: 10%;
-    margin: 10%;
-    position:absolute;
-    top:40%;
+    width: 40vw;
+    height: 5VW;
+    margin: 10VW;
+    position:relative;
+
+
 }
 .box4 {
     display: inline-block;
-    width: 40%;
-    height: 10%;
-    margin: 10%;
-    position: absolute;
-    top: 60%;
+    width: 40vw;
+    height: 5VW;
+    margin: 10VW;
+    position: relative;
+
 }
+
+aside{
+    padding:1vw;
+}
+
 h1 {
     color: rgb(0, 102, 196);
     text-transform: uppercase;
+    font-size: 2vw;
+    font-family: Arial;
+    text-align: center;
+    padding-bottom: 2vw;
+
 }
 
-aside img {
-    border: 1px solid black;
+.aside img {
+    border: 0.1vw solid black;
+    border-radius: 1vw;
 }
 
 #im1 img {
     position:absolute;
-    width: 5%;
-    line-height: 5%;
+    width: 20%;
+
 }
 
 #im2 img {
     position:absolute;
-    width: 10%;
-    line-height: 10%;
+    width: 20%;
 }
 
 #im3 img {
     position:absolute;
-    width: 10%;
-    line-height: 10%;
+    width: 20%;
+
 }
 
 #im4 img {
     position:absolute;
-    width: 10%;
-    line-height: 10%;
-}
+    width: 20%;
 
-#imboutique {
-    text-align: right;
 }
 
 #txt1 {
-    position:absolute;
-    left:20%;
-    margin-right: 5%;
-    padding-right: 2%;
+    position:relative;
+    left:10vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 2%;
-    padding-bottom: 4.6%;
-}
-
-#bouton{
-    font-size: xx-large;
 }
 
 
 #txt2 {
-    position:absolute;
-    left:20%;
-    margin-right: 5%;
-    padding-right: 2%;
-    text-align: justify;
-    marging-bottom:0%;
-    padding-top: 2%;
-    padding-bottom: 4.6%;
+    position:relative;
+    left:10vw;
+    text-align: justify
 
 }
 
 #txt3 {
-    position:absolute;
-    left:20%;
-    margin-right: 5%;
-    padding-right: 2%;
+    position: relative;
+    left: 10vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 2%;
-    padding-bottom: 4.6%;
-
 }
-
 #txt4 {
-    position:absolute;
-    left:20%;
-    margin-right: 5%;
-    padding-right: 2%;
+    position: relative;
+    left: 10vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 2%;
-    padding-bottom: 4.6%;
-
 }
 
-
+.aside p{
+    text-decoration: none;
+    top: 0;
+    font-size: 1.3vw;
+    font-family: Arial;
+}

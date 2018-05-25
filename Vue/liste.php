@@ -1,3 +1,6 @@
+<?php session_start();
+$_SESSION['id']=1;
+?>
 <?php
 
 if (isset($_POST['choix'])) {
