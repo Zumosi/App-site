@@ -9,6 +9,7 @@ header{
     height: 5vw;
     margin-bottom: 2vw;
     font-family: Arial;
+    z-index: 10;
 
 
 }
@@ -118,6 +119,7 @@ header{
 
 #menu a{
     text-decoration:none;
+    font-weight: normal;
     display:block;
     padding:1vw 2vw;
     color:#fff;
