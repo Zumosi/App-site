@@ -39,43 +39,62 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong>Nom</strong> : <br/><br/>
 
-                    <?php if (isset($_GET['nom'])) {
+                    <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="nom" />';
                     } else {
                         echo $donnees['nom'];
 
                     }
                     ?>
+                    <br/><br/>
+                </td>
 
 
             </tr>
             <tr>
                 <td><strong> Prenom </strong> :<br/><br/>
-                    <?php if (isset($_GET['prenom'])) {
+                    <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="prenom" />';
                     } else {
                         echo $donnees['prenom'];
 
                     }
                     ?>
+                    <br/><br/>
+                </td>
             </tr>
             <tr>
                 <td><strong> Numéro </strong> :<br/><br/>
-                    <?php if (isset($_GET['numéro'])) {
+                    <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="numéro" />';
                     } else {
                         echo $donnees['numero'];
                     }
                     ?>
+                    <br/><br/>
+                </td>
             </tr>
 
             <tr>
-                <td><strong> Mail </strong> :<br/><br/> <?php echo $donnees['mail']; ?>
-                    <br/></td>
+                <td><strong> Mail </strong> :<br/><br/>
+                    <?php if (isset($_GET['modif'])) {
+                        echo '<input type="text" name="mail" />';
+                    } else {
+                        echo $donnees['mail'];
+                    }
+                    ?>
+                    <br/><br/>
+                </td>
             </tr>
 
             <tr>
-                <td><strong> Mot de Passe </strong> :<br/><br/> ******
+                <td><strong> Mot de Passe </strong> :<br/><br/>
+                    <?php if(isset($_GET['modif'])){
+                        echo '<input type="text" name="mdp" />';
+                    } else {
+                        echo '******';
+                    } ?>
+                    <br/><br/>
                 </td>
             </tr>
 
@@ -84,6 +103,7 @@ while ($donnees = $reponse->fetch()) {
         <input id="bouton" type="submit" value="Modifier">
     </form>
     </p>
+    
 
     <?php
 }
