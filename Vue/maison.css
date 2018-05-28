@@ -1,0 +1,31 @@
+#implan, #maisons {
+    display: inline-block;
+}
+
+#implan, #imcap ,#imstat {
+    width: 125px;
+}
+
+#imcap, #capt {
+    display: inline-block;
+}
+#imstat, #stat {
+    display: inline-block;
+}
+
+#plan, #capte, #statis{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0.5%;
+    padding-top: 5px;
+    border: 1px solid black;
+    padding-bottom: 45px;
+}
+#maisons, #capt, #stat {
+    font-size: 65px;
+    padding-top: ;
+    padding-left: 90px;
+}
+
+
+
