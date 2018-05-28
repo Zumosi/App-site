@@ -1,46 +1,24 @@
-img
-{
-    position: absolute;
-    left:0%;
-    top:10%;
-    width: 70%;
-    height: 80%;
-}
-.burp {
-    position: absolute;
-    top: 10%;
-    left: 73%;
 
-    }
-p
-{
-    font-size:25px;
-}
-h1
-{
-    font-size:50px;
-}
 body
 {
-    background-color: black;
+    background-color: white;
     color: white;
 }
-.barbi{
-    font-size:50px;
+.bibi{
+    font-size:2.5vw;
     color:white;
 }
 nav{
     position: absolute;
-    top: 20%;
-    left: 40%;
-    color: white;
+    top: 12vw;
+    left: 35vw;
 
 }
 a:visited /* Quand le visiteur a déjà vu la page concernée */
 
 {
 
-    color: whitesmoke; /* Appliquer une couleur grise */
+    color: brown; /* Appliquer une couleur grise */
 
 }
 a:hover /* Apparence au survol des liens */
@@ -62,14 +40,14 @@ a:hover /* Apparence au survol des liens */
     position: absolute;
     width:5%;
     height:5%;
-    top: 47%;
+    top: 22vw;
     left: 55%;
 }
 .case
 {
     position: absolute;
-    width:50%;
-    height:40%;
+    width:45vw;
+    height:17.5vw;
     top: 19%;
-    left: 30%;
+    left: 30vw;
 }
