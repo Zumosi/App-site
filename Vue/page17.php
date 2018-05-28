@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 <?php if ($_GET['capteur']== 'lux') {
     echo'
     <table id="cible">
