@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="Vue/page%2017.css" />
 </head>
+
 <body>
 
 
@@ -16,11 +17,15 @@
     <table id="cible">
     <caption > Luminosité </caption >
     <tr>
-        <th >
-    IdCapteur:
+        <th >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(1);
+    echo '    
         </th >
-        <th >
-    Admin:
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(1);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -37,14 +42,17 @@
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(1);
+    echo '
         </th >
-        <th >
-    Etat:
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(1);
+    echo '
         </th >
-
-    </tr >
+        </tr >
 </table >
 <table >
     <tr >
@@ -52,18 +60,21 @@
         <th  > Ajouter un capteur </th >
     </tr >
 </table >
-';
-}
+';}
 elseif ($_GET['capteur']== 'hum') {
     echo
     '<table >
     <caption > Humidité </caption >
     <tr >
-        <th >
-    IdCapteur:
+        <th >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(2);
+    echo '
         </th >
-        <th >
-    Admin:
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(2);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -80,11 +91,15 @@ elseif ($_GET['capteur']== 'hum') {
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(2);
+    echo '
         </th >
-        <th >
-    Etat:
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(2);
+    echo '
         </th >
 
     </tr >
@@ -101,12 +116,15 @@ elseif ($_GET['capteur']== 'ir') {
     echo
     '<table >
     <caption > Infra-rouge </caption >
-    <tr >
-        <th >
-    IdCapteur:
+    <tr >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(3);
+    echo '
         </th >
-        <th >
-    Admin:
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(3);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -123,11 +141,15 @@ elseif ($_GET['capteur']== 'ir') {
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(3);
+    echo '
         </th >
-        <th >
-    Etat:
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(3);
+    echo '
         </th >
 
     </tr >
@@ -144,12 +166,15 @@ elseif ($_GET['capteur']== 'mic') {
     echo
     '<table >
     <caption > Micro </caption >
-    <tr >
-        <th >
-    IdCapteur:
+    <tr >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(4);
+    echo '
         </th >
-        <th >
-    Admin:
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(4);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -166,10 +191,15 @@ elseif ($_GET['capteur']== 'mic') {
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(4);
+    echo '
         </th >
-        <th >
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(4);
+    echo '
     Etat:
         </th >
 
@@ -187,12 +217,15 @@ elseif ($_GET['capteur']== 'vid') {
     echo
     '<table >
     <caption > Video-camera </caption >
-    <tr >
-        <th >
-    IdCapteur:
+    <tr >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(5);
+    echo '
         </th >
-        <th >
-    Admin:
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(5);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -209,11 +242,15 @@ elseif ($_GET['capteur']== 'vid') {
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(5);
+    echo '
         </th >
-        <th >
-    Etat:
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(5);
+    echo '
         </th >
 
     </tr >
@@ -230,12 +267,14 @@ elseif ($_GET['capteur']== 'temp') {
     echo
     '<table >
     <caption > Temperature </caption >
-    <tr >
-        <th >
-    IdCapteur:
-        </th >
-        <th >
-    Admin:
+    <tr >';
+    echo 'IdCapteur: ';
+    echo ' ' . idcapt(6);
+    echo '
+        <th >';
+    echo 'Admin: ';
+    echo ' ' . utilcapt(6);
+    echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -252,11 +291,15 @@ elseif ($_GET['capteur']== 'temp') {
         </td >
     </tr >
     <tr >
-        <th >
-    Place:
+        <th >';
+    echo 'Place: ';
+    echo ' ' . loccapt(6);
+    echo '
         </th >
-        <th >
-    Etat:
+        <th >';
+    echo 'Etat: ';
+    echo ' ' . etatcapt(6);
+    echo '
         </th >
 
     </tr >

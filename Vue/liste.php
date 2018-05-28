@@ -97,7 +97,7 @@ $reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_util
 $reponse->execute(array(
     'nvmdp' => $_POST['mdp'],
 ));
-<<<<<<< HEAD
+*//<<<<<<< HEAD*
 $reponse->closeCursor();
 ?>
 
