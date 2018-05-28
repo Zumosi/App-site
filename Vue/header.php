@@ -9,7 +9,7 @@
         </div>
         <a href="index.php?cible=style" ><img src="Vue/image/AtHomeTransparent.png" id="logo"/></a>
             <ul id="menu">
-                <li><p><a href="index.php?cible=plan">Ma Maison</a></p>
+                <li><p><a href="index.php?cible=maison">Ma Maison</a></p>
                     <ul>
                         <li><a href="#">Plan</a></li>
                         <li><a href="index.php?cible=page 16">capteurs</a></li>
