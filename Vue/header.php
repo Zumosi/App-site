@@ -9,14 +9,10 @@
         </div>
         <a href="index.php?cible=style" ><img src="Vue/image/AtHomeTransparent.png" id="logo"/></a>
             <ul id="menu">
-<<<<<<< HEAD
 
                 <li><p><a href="index.php?cible=maison">Ma Maison</a></p>
-                <li><p><a href="index.php?cible=SensorStat">Ma Maison</a></p>
-=======
-                <li><p><a href="index.php?cible=maison">Ma Maison</a></p>
->>>>>>> 9c2ef093457ea5e44df7fe9bb27c8d54b699a4f0
                     <ul>
+                        <li><a href="index.php?cible=mes maisons">Mes maisons</a></li>
                         <li><a href="index.php?cible=page 16">capteurs</a></li>
                         <li><a href="index.php?cible=statistics">statistiques</a></li>
                     </ul>
