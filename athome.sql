@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 07 mai 2018 à 12:00
+-- Généré le :  mar. 29 mai 2018 à 09:38
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -149,11 +149,12 @@ INSERT INTO `facture` (`id_facture`, `nom_utilisateur`, `nom_produit`, `prix`, `
 
 DROP TABLE IF EXISTS `faq`;
 CREATE TABLE IF NOT EXISTS `faq` (
-  `id_faq` int(11) NOT NULL,
+  `id_faq` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(255) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `reponse` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
-  `auteur` varchar(50) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `auteur` varchar(50) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  PRIMARY KEY (`id_faq`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `faq`
@@ -268,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `statistique` (
   `id_stat` int(11) NOT NULL AUTO_INCREMENT,
   `id_sensor` int(11) NOT NULL,
   `date` date NOT NULL,
-  `donnee` text NOT NULL,
+  `puissance` int(11) NOT NULL,
   PRIMARY KEY (`id_stat`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -276,8 +277,8 @@ CREATE TABLE IF NOT EXISTS `statistique` (
 -- Déchargement des données de la table `statistique`
 --
 
-INSERT INTO `statistique` (`id_stat`, `id_sensor`, `date`, `donnee`) VALUES
-(1, 1, '2018-04-06', 'Puissance 10 mW\r\nTempérature 10 °C');
+INSERT INTO `statistique` (`id_stat`, `id_sensor`, `date`, `puissance`) VALUES
+(1, 1, '2018-04-06', 0);
 
 -- --------------------------------------------------------
 
@@ -292,7 +293,7 @@ CREATE TABLE IF NOT EXISTS `topic` (
   `id_utilisateur` int(11) NOT NULL,
   `date_crea` datetime NOT NULL,
   PRIMARY KEY (`id_topic`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `topic`
@@ -302,7 +303,8 @@ INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
 (2, 'Regle du Forum', 1, '2018-04-06 14:00:00'),
 (1, 'Jour actuel', 1, '2018-05-05 00:00:00'),
 (3, 'Soucis Technique', 2, '2018-05-05 00:00:00'),
-(4, 'Kappa', 3, '2018-05-06 00:00:00');
+(4, 'Kappa', 3, '2018-05-06 00:00:00'),
+(5, 'Salut', 1, '2018-05-17 09:44:46');
 
 -- --------------------------------------------------------
 
@@ -319,6 +321,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `password` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `type` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `mail` varchar(255) NOT NULL,
+  `num_principal` int(11) NOT NULL,
   PRIMARY KEY (`id_utilisateur`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -326,10 +329,10 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`) VALUES
-(1, 'Nguyen', 'Franck', 0675849566, 'Shizumo1', 'admin', 'franck.nguyen@isep.fr'),
-(2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr'),
-(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client', 'jean.bernard@jvc.com');
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`) VALUES
+(1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
+(2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
+(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
