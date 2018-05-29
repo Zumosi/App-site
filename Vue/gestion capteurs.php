@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Gestion Capteur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Vue/page%2018.css" />
+    <link rel="stylesheet" href="Vue/gestion capteurs.css" />
 </head>
 
 
