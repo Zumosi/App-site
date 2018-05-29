@@ -1,30 +1,46 @@
+
 #implan, #maisons {
     display: inline-block;
+    margin-left: 2vw;
+
 }
 
-#implan, #imcap ,#imstat {
-    width: 125px;
+#implan, #imcap {
+    width: 20%;
 }
 
 #imcap, #capt {
     display: inline-block;
+    margin-left: 2vw;
+
 }
 #imstat, #stat {
     display: inline-block;
+    margin-left: 2vw;
+    width: 18%;
+
+}
+#home{
+    margin-top: 6vw;
+    border-spacing: 1vw;
 }
 
 #plan, #capte, #statis{
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 0.5%;
-    padding-top: 5px;
+    margin-left: 29vw;
+    margin-right: 29vw;
+    margin-bottom: 4vw;
     border: 1px solid black;
-    padding-bottom: 45px;
+    border-radius: 2vw;
 }
 #maisons, #capt, #stat {
-    font-size: 65px;
-    padding-top: ;
-    padding-left: 90px;
+    font-size: 3vw;
+    padding-left: 5vw;
+    position: relative;
+    bottom: 3vw;
+}
+a:visited
+{
+    color: black;
 }
 
 
