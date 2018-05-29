@@ -1,5 +1,5 @@
 console.log("coucou");
-$('#project1').hover(
+$('#project1').onclick(
     function () {
         var src = $(this).data('hover');
         $(this).attr('src', src);
@@ -18,7 +18,7 @@ $('#project1').hover(
     function () {
 
     })
-$('#project2').hover(
+$('#project2').onclick(
     function () {
         var src = $(this).data('hover');
         $(this).attr('src', src);
