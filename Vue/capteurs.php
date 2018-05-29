@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Capteurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Vue/page%2016.css" />
+    <link rel="stylesheet" href="Vue/capteurs.css" />
 
 </head>
 <body>

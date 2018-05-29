@@ -13,7 +13,7 @@
                 <li><p><a href="index.php?cible=maison">Ma Maison</a></p>
                     <ul>
                         <li><a href="index.php?cible=mes maisons">Mes maisons</a></li>
-                        <li><a href="index.php?cible=page 16">capteurs</a></li>
+                        <li><a href="index.php?cible=capteurs">capteurs</a></li>
                         <li><a href="index.php?cible=statistics">statistiques</a></li>
                     </ul>
                 </li>
@@ -26,15 +26,15 @@
                 <li><p><a href="index.php?cible=myaccount">Mon Compte</a></p>
                     <ul>
                         <li><a href="index.php?cible=profil">profil</a></li>
-                        <li><a href="#">Gestion capteurs</a></li>
-                        <li><a href="#">Gestion utilisateurs</a></li>
+                        <li><a href="index.php?cible=gestion capteurs">Gestion capteurs</a></li>
+                        <li><a href="index.php?cible=gestion capteur utilisateur secondaire">Gestion utilisateurs</a></li>
                         <li><a href="#">Deconnexion</a></li>
                     </ul>
                 </li>
-                <li><p><a href="#">Contactez Nous</a></p>
+                <li><p><a href="index.php?cible=Contact">Contactez Nous</a></p>
                     <ul>
                         <li><a href="index.php?cible=forum">Forum</a></li>
-                        <li><a href="index.php?cible=page13">FAQ</a></li>
+                        <li><a href="index.php?cible=FAQ">FAQ</a></li>
                     </ul>
                 </li>
             </ul>

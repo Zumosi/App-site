@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>P 13</title>
-        <link rel="stylesheet" type="text/css" href="Vue/CSS p 13.css">
+        <link rel="stylesheet" type="text/css" href="Vue/FAQ.css">
     </head>
     <body>
 	<h1>Foire aux Questions</h1>
