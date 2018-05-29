@@ -56,8 +56,8 @@
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';}
@@ -87,7 +87,7 @@ elseif ($_GET['capteur']== 'hum') {
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "pagemodifier-Acheter.html" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -106,8 +106,8 @@ elseif ($_GET['capteur']== 'hum') {
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';
@@ -137,7 +137,7 @@ elseif ($_GET['capteur']== 'ir') {
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "pagemodifier-Acheter.html" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -156,8 +156,8 @@ elseif ($_GET['capteur']== 'ir') {
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';
@@ -187,7 +187,7 @@ elseif ($_GET['capteur']== 'mic') {
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "pagemodifier-Acheter.html" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -207,8 +207,8 @@ elseif ($_GET['capteur']== 'mic') {
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';
@@ -238,7 +238,7 @@ elseif ($_GET['capteur']== 'vid') {
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "pagemodifier-Acheter.html" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -257,8 +257,8 @@ elseif ($_GET['capteur']== 'vid') {
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';
@@ -287,7 +287,7 @@ elseif ($_GET['capteur']== 'temp') {
 
         </th >
         <td >
-            <a href = "pagemodifier-ajouter.html" > Modifier</a >
+            <a href = "pagemodifier-Acheter.html" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -306,8 +306,8 @@ elseif ($_GET['capteur']== 'temp') {
 </table >
 <table >
     <tr >
-        <td ><a href = "pagemodifier-ajouter.html" > +</a ></td >
-        <th  > Ajouter un capteur </th >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
+        <th  > Acheter un capteur </th >
     </tr >
 </table >
 ';

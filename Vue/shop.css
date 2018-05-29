@@ -79,7 +79,6 @@ h1 {
     position:relative;
     left:10vw;
     text-align: justify;
-<<<<<<< HEAD
     marging-bottom:0%;
     padding-top: 2%;
     padding-bottom: 4.6%;
@@ -88,13 +87,10 @@ h1 {
 
 #bouton{
     font-size: xx-large;
-=======
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
 }
 
 
 #txt2 {
-<<<<<<< HEAD
     position:absolute;
     left:20%;
     margin-right: 5%;
@@ -104,39 +100,31 @@ h1 {
     padding-top: 2%;
     padding-bottom: 4.6%;
     font-size: 1.2rem;
-=======
     position:relative;
     left:10vw;
     text-align: justify
 
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
 }
 
 #txt3 {
     position: relative;
     left: 10vw;
     text-align: justify;
-<<<<<<< HEAD
     marging-bottom:0%;
     padding-top: 2%;
     padding-bottom: 4.6%;
     font-size: 1.2rem;
-=======
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
 }
 #txt4 {
     position: relative;
     left: 10vw;
     text-align: justify;
-<<<<<<< HEAD
     marging-bottom:0%;
     padding-top: 2%;
     padding-bottom: 4.6%;
     font-size: 1.3rem;
 }
 
-=======
-}
 
 .aside p{
     text-decoration: none;
@@ -144,4 +132,3 @@ h1 {
     font-size: 1.3vw;
     font-family: Arial;
 }
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
