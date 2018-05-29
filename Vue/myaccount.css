@@ -9,35 +9,17 @@ table{
 
 .section td{
     border:1px solid black;
-<<<<<<< HEAD
     list-style-type: none;
-    background-image:Vue/ image/ profil.png;
-    background-repeat: no-repeat;
-    background-position: left;
-    padding:20px;
-=======
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
     text-align: center;
     border-radius: 2vw;
 }
 
-<<<<<<< HEAD
-.Logoute{
-    border:1px solid black;
+.Logoute {
+    border: 1px solid black;
     list-style-type: none;
-    background-image:Vue/ image/logout.png;
-    background-repeat: no-repeat;
-    background-position: left;
-    top:auto;
+    top: auto;
     text-align: center;
-    padding: 20px;
-    margin-left:500px;
-    margin-right:480px;
-
-
-=======
->>>>>>> 704da547edbeed4149bf32d101ef52e7b1fc61ee
-
+}
 
 .section a{
     text-decoration: none;
