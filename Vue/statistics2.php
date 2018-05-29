@@ -1,18 +1,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Capteurs</title>
+    <title>Statistiques</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vue/stat.css" />
 </head>
 <body>
 
-/**
- * Created by IntelliJ IDEA.
- * User: Julien
- * Date: 17/05/2018
- * Time: 10:03
- */
 
 <?php if ($_GET['piece']== 'WC') {
     echo '

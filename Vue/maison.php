@@ -16,7 +16,7 @@
 <div id="capte"><img src="vue/image/capteur.jpg" id="imcap">
     <p id="capt"><a href="index.php?cible=page 16">Mes capteurs </a></p></div>
 <div id="statis"><img src="vue/image/stat.png" id="imstat">
-    <p id="stat"><a href="index.php?cible=statistiques">Statistiques</p></div>
+    <p id="stat"><a href="index.php?cible=statistics">Statistiques</p></div>
 
 
 </body>
