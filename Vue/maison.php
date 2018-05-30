@@ -9,19 +9,17 @@
 </head>
 
 <body>
-
-<div id="home">
-<div id="plan"><img src="vue/image/maison.png" id="implan">
-    <p id="maisons"><a href="index.php?cible=plan"> Mes Maisons </a></p></div>
-<div id="capte"><img src="vue/image/capteur.jpg" id="imcap">
-    <p id="capt"><a href="index.php?cible=capteurs">Mes capteurs </a></p></div>
-<div id="statis"><img src="vue/image/stat.png" id="imstat">
-<<<<<<< HEAD
-    <p id="stat"><a href="index.php?cible=statistiques">Statistiques</p></div>
-</div>
-=======
-    <p id="stat"><a href="index.php?cible=statistics">Statistiques</p></div>
-
->>>>>>> 85ff5c2dd6817d8bb5e8841eab6872fdfe1af149
+<table class="mamaison">
+    <tr>
+        <td ><a href=="index.php?cible=plan><img  src="vue/image/maison.jpg" />Mes habitations</a></td>
+    </tr>
+    <tr>
+        <td ><a href="index.php?cible=capteurs>"><img  src="vue/image/Capteur.jpg" />Mes capteurs</a></td>
+    </tr>
+    <tr>
+        <td ><a href="index.php?cible=statistiques"><img  src="vue/image/stat.png"  id="statist"/>Statistiques</a></td>
+    </tr>
+</table>
 
 </body>
+</html>

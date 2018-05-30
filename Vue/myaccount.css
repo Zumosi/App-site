@@ -14,13 +14,6 @@ table{
     border-radius: 2vw;
 }
 
-.Logoute {
-    border: 1px solid black;
-    list-style-type: none;
-    top: auto;
-    text-align: center;
-}
-
 .section a{
     text-decoration: none;
     position: relative;

@@ -1,47 +1,37 @@
-
-#implan, #maisons {
-    display: inline-block;
-    margin-left: 2vw;
-
+table{
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-spacing: 4vw;
+    font-size: 0;
+    color: black;
 }
 
-#implan, #imcap {
-    width: 20%;
-}
-
-#imcap, #capt {
-    display: inline-block;
-    margin-left: 2vw;
-
-}
-#imstat, #stat {
-    display: inline-block;
-    margin-left: 2vw;
-    width: 18%;
-
-}
-#home{
-    margin-top: 6vw;
-    border-spacing: 1vw;
-}
-
-#plan, #capte, #statis{
-    margin-left: 29vw;
-    margin-right: 29vw;
-    margin-bottom: 4vw;
-    border: 1px solid black;
+.mamaison td{
+    border:1px solid black;
+    list-style-type: none;
+    text-align: center;
     border-radius: 2vw;
 }
-#maisons, #capt, #stat {
-    font-size: 3vw;
-    padding-left: 5vw;
+
+.mamaison a{
+    text-decoration: none;
     position: relative;
-    bottom: 3vw;
+    top: 2.5vw;
+    font-size: 3vw;
+    font-family: Arial;
+    font-weight: bold;
 }
+
+.mamaison img {
+    float: left;
+    width: 20%;
+    margin-left: 1.8vw;
+}
+#statist{
+    width: 22%;
+}
+
 a:visited
 {
     color: black;
 }
-
-
-

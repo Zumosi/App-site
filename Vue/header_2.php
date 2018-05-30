@@ -19,7 +19,7 @@
             </div>
 
             <div class="logo">
-                <img src="AtHomeTransparent.png">
+                <img src="vue/image/AtHomeTransparent.png">
             </div>
 
             <div class="menu">
