@@ -8,7 +8,8 @@
 <body>
 
 
-<h1>Profil</h1>
+<h1>Profil: </h1>
+<br>
 
 <?php
 function Modifier()
@@ -33,11 +34,10 @@ $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
-    <p>
     <form method="post" action="Vue/liste.php">
-        <table>
+        <table class="prof">
             <tr>
-                <td><strong>Nom</strong> : <br/><br/>
+                <td id="top"><strong>Nom: </strong><br/><br/>
 
                     <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="nom" />';
@@ -52,7 +52,7 @@ while ($donnees = $reponse->fetch()) {
 
             </tr>
             <tr>
-                <td><strong> Prenom </strong> :<br/><br/>
+                <td><strong> Prenom: </strong> <br/><br/>
                     <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="prenom" />';
                     } else {
@@ -64,7 +64,7 @@ while ($donnees = $reponse->fetch()) {
                 </td>
             </tr>
             <tr>
-                <td><strong> Numéro </strong> :<br/><br/>
+                <td><strong> Numéro: </strong><br/><br/>
                     <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="numéro" />';
                     } else {
@@ -76,7 +76,7 @@ while ($donnees = $reponse->fetch()) {
             </tr>
 
             <tr>
-                <td><strong> Mail </strong> :<br/><br/>
+                <td><strong> Mail: </strong> <br/><br/>
                     <?php if (isset($_GET['modif'])) {
                         echo '<input type="text" name="mail" />';
                     } else {
@@ -88,7 +88,7 @@ while ($donnees = $reponse->fetch()) {
             </tr>
 
             <tr>
-                <td><strong> Mot de Passe </strong> :<br/><br/>
+                <td id="bottom"><strong> Mot de Passe: </strong> <br/><br/>
                     <?php if(isset($_GET['modif'])){
                         echo '<input type="text" name="mdp" />';
                     } else {
@@ -102,7 +102,7 @@ while ($donnees = $reponse->fetch()) {
         </table>
         <input id="bouton" type="submit" value="Modifier">
     </form>
-    </p>
+
     
 
     <?php

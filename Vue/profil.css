@@ -1,34 +1,56 @@
 h1
 {
     font-size: xx-large;
-    text-align: center;
+    margin-left: 42vw;
 }
 
-strong
+.prof strong
 {
     font-size: x-large;
 }
 body
 {
-    font-family: "Calibri Light";
-}
-
-td
-{
-    border: 1px solid black;
-    padding-right: 380px;
-}
-table
-{
-    margin-left: 35%;
-    border-collapse: collapse;
+    font-family:Arial;
 
 }
+.prof td
+{
+    border:1px solid black;
+    padding-right: 30vw;
+    padding-left: 1vw;
+
+
+}
+
+#top{
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+
+
+}
+#bottom{
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+
+
+}
+.prof
+{
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-spacing: 0;
+
+
+
+
+}
+
 #bouton{
-    margin-left: 50%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 60px;
+    margin-left: 43vw;
+    margin-right: 43vw;
+    margin-top: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
