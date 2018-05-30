@@ -16,7 +16,7 @@
         <FORM id="Form"><legend> Mon capteur</legend>
             <p>
                 <label for="Type">Type :</label>
-            <SELECT name="Type" size="1" id="Type">
+            <SELECT name="Type" id="Type">
                 <OPTION>Luminosité
                 <OPTION>Temperature
                 <OPTION>Micro
@@ -25,13 +25,13 @@
                 <OPTION>Video-camera
             </SELECT><br>
             <label for="Localisation">Localisation :</label>
-            <SELECT name="Localisation" size="1" id="Localisation">
+            <SELECT name="Localisation"  id="Localisation">
                 <option>Salon
                 <option>Chambre
                 <option>Couloir
             </SELECT><br>
             <label for="Utilisateur">Utilisateur :</label>
-            <SELECT name="Utilisateur" size="1" id="Utilisateur">
+            <SELECT name="Utilisateur"  id="Utilisateur">
             <option>Principal
             <option>Secondaire
             </SELECT><br>

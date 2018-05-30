@@ -38,7 +38,7 @@
 
         </th >
         <td >
-            <a href = "index.php?cible=page 18" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -55,7 +55,7 @@
         </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus" >
         <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
@@ -87,7 +87,7 @@ elseif ($_GET['capteur']== 'hum') {
 
         </th >
         <td >
-            <a href = "pagemodifier-Acheter.html" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -105,7 +105,7 @@ elseif ($_GET['capteur']== 'hum') {
     </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus">
         <td ><a href = ""index.php?cible=shop"" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
@@ -116,7 +116,8 @@ elseif ($_GET['capteur']== 'ir') {
     echo
     '<table >
     <caption > Infra-rouge </caption >
-    <tr >';
+    <tr >
+    <th>';
     echo 'IdCapteur: ';
     echo ' ' . idcapt(3);
     echo '
@@ -137,7 +138,7 @@ elseif ($_GET['capteur']== 'ir') {
 
         </th >
         <td >
-            <a href = "pagemodifier-Acheter.html" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -155,7 +156,7 @@ elseif ($_GET['capteur']== 'ir') {
     </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus">
         <td ><a href = ""index.php?cible=shop"" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
@@ -166,7 +167,8 @@ elseif ($_GET['capteur']== 'mic') {
     echo
     '<table >
     <caption > Micro </caption >
-    <tr >';
+    <tr >
+    <th>';
     echo 'IdCapteur: ';
     echo ' ' . idcapt(4);
     echo '
@@ -187,7 +189,7 @@ elseif ($_GET['capteur']== 'mic') {
 
         </th >
         <td >
-            <a href = "pagemodifier-Acheter.html" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -206,7 +208,7 @@ elseif ($_GET['capteur']== 'mic') {
     </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus">
         <td ><a href = ""index.php?cible=shop"" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
@@ -217,7 +219,8 @@ elseif ($_GET['capteur']== 'vid') {
     echo
     '<table >
     <caption > Video-camera </caption >
-    <tr >';
+    <tr >
+    <th>';
     echo 'IdCapteur: ';
     echo ' ' . idcapt(5);
     echo '
@@ -238,7 +241,7 @@ elseif ($_GET['capteur']== 'vid') {
 
         </th >
         <td >
-            <a href = "pagemodifier-Acheter.html" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -256,7 +259,7 @@ elseif ($_GET['capteur']== 'vid') {
     </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus">
         <td ><a href = ""index.php?cible=shop"" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
@@ -266,8 +269,9 @@ elseif ($_GET['capteur']== 'vid') {
 elseif ($_GET['capteur']== 'temp') {
     echo
     '<table >
-    <caption > Temperature </caption >
-    <tr >';
+    <caption > Température </caption >
+    <tr >
+    <th>';
     echo 'IdCapteur: ';
     echo ' ' . idcapt(6);
     echo '
@@ -287,7 +291,7 @@ elseif ($_GET['capteur']== 'temp') {
 
         </th >
         <td >
-            <a href = "pagemodifier-Acheter.html" > Modifier</a >
+            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -305,7 +309,7 @@ elseif ($_GET['capteur']== 'temp') {
     </tr >
 </table >
 <table >
-    <tr >
+    <tr id="plus">
         <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >

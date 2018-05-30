@@ -25,7 +25,7 @@
     <tr>
         <td><p>Micro</td>
         <td><p>Video-camera</p></td>
-        <td><p>Temperature</p></td>
+        <td><p>Température</p></td>
     </tr>
     <tr>
         <td><p><a href="index.php?capteur=mic&cible=affichage capteur" title="Micro"><img src="Vue/image/micro.png"></a></p></td>
