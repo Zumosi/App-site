@@ -1,5 +1,5 @@
 <?php
-require("../controlleur/login.php");
+require("../controleur/login.php");
 ?>
 
 

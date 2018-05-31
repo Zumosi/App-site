@@ -1,5 +1,5 @@
 <?php
-require("../controlleur/form.php");
+require("../controleur/form.php");
 ?>
 
 

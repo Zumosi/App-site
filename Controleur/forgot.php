@@ -1,5 +1,5 @@
 <?php
-require("../modele/login.php");
+require("../Modèle/login.php");
 session_start();
 $_SESSION['message'] = '';
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');

@@ -78,7 +78,7 @@ body{
   color: #fff;
   background-color:#fff;
   font-family:helvetica;
-  background:url('../images/fondlogin.jpg') #fff;
+  background:url('../vue/image/fondlogin.jpg') #fff;
   background-size: 100%;
   background-repeat: no-repeat;
 }
