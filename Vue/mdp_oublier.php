@@ -1,5 +1,5 @@
 <?php
-require("../controlleur/forgot.php");
+require("../controleur/forgot.php");
 ?>
 
 <link rel="stylesheet" href="../css/form.css" type="text/css">

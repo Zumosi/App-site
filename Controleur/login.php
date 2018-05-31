@@ -1,6 +1,6 @@
 <?php
 require("Encryption.php");
-require("../modele/login.php");
+require("../Modèle/login.php");
 
 
 session_start();

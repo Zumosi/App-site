@@ -14,6 +14,7 @@
 
 <?php if ($_GET['capteur']== 'lux') {
     echo'
+
     <table id="cible">
     <caption > Luminosité </caption >
     <tr>
@@ -38,7 +39,7 @@
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=lux&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -87,7 +88,7 @@ elseif ($_GET['capteur']== 'hum') {
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=hum&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -106,7 +107,7 @@ elseif ($_GET['capteur']== 'hum') {
 </table >
 <table >
     <tr id="plus">
-        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
 </table >
@@ -138,7 +139,7 @@ elseif ($_GET['capteur']== 'ir') {
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=ir&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -157,7 +158,7 @@ elseif ($_GET['capteur']== 'ir') {
 </table >
 <table >
     <tr id="plus">
-        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
 </table >
@@ -189,7 +190,7 @@ elseif ($_GET['capteur']== 'mic') {
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=mic&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -202,14 +203,13 @@ elseif ($_GET['capteur']== 'mic') {
     echo 'Etat: ';
     echo ' ' . etatcapt(4);
     echo '
-    Etat:
         </th >
 
     </tr >
 </table >
 <table >
     <tr id="plus">
-        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
 </table >
@@ -241,7 +241,7 @@ elseif ($_GET['capteur']== 'vid') {
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=vid&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >
@@ -260,7 +260,7 @@ elseif ($_GET['capteur']== 'vid') {
 </table >
 <table >
     <tr id="plus">
-        <td ><a href = ""index.php?cible=shop"" > +</a ></td >
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
     </tr >
 </table >
@@ -291,7 +291,7 @@ elseif ($_GET['capteur']== 'temp') {
 
         </th >
         <td >
-            <a href = "index.php?cible=gestion capteurs" > Modifier</a >
+            <a href = "index.php?gestion=temp&cible=gestion capteurs" > Modifier</a >
         </td >
     </tr >
     <tr >

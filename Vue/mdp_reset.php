@@ -1,5 +1,5 @@
 <?php 
-require("../controlleur/reset.php");
+require("../controleur/reset.php");
 ?>
 
 

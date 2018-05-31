@@ -1,8 +1,8 @@
 <?php
 
 require("Encryption.php");
-require ("../modele/login.php");
-require("../modele/insertion.php");
+require ("../Modèle/login.php");
+require("../Modèle/insertion.php");
 
 session_start();
 $_SESSION['message'] = '';
