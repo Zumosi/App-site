@@ -6,6 +6,10 @@
 
 <body>
 
+<?php
+include("../Controleur/NonVide.js");
+?>
+
 <form method="post" action="Vue/liste.php">
     <p>
         <label for="titre topic">Titre du topic :</label>

@@ -12,6 +12,10 @@
 <br>
 
 <?php
+include("../Controleur/NonVide.js");
+?>
+
+<?php
 function Modifier()
 {
 
