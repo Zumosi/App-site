@@ -1,3 +1,7 @@
+<?php
+include_once("BDD.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +17,15 @@
 
 <?php
 
-include("BDD.php");
-
 function consopuissanceWC()
 {
-    $server = "localhost";
-    $login = "root";
-    $pass = "";
-    $connexion = new PDO("mysql:host=$server;dbname=athome", $login, $pass);
-    $requete = $connexion->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="wc" LIMIT 1');
+    $object = new Bdd;
+    $object->connect();
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="wc" LIMIT 1');
     $requete->execute();
-   $conso = $requete->fetchAll();
-  $value=$conso[0]["consommation_value"];
-  return $value;
+    $conso = $requete->fetchAll();
+    $value=$conso[0]["consommation_value"];
+    return $value;
 
 
 }
@@ -36,11 +36,9 @@ function consopuissanceWC()
 
 function consopuissanceChambre()
 {
-    $server = "localhost";
-    $login = "root";
-    $pass = "";
-    $connexion = new PDO("mysql:host=$server;dbname=athome", $login, $pass);
-    $requete = $connexion->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Chambre" LIMIT 1');
+    $object = new Bdd;
+    $object->connect();
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Chambre" LIMIT 1');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=$conso[0]["consommation_value"];
@@ -55,11 +53,9 @@ function consopuissanceChambre()
 
 function consopuissanceSalon()
 {
-    $server = "localhost";
-    $login = "root";
-    $pass = "";
-    $connexion = new PDO("mysql:host=$server;dbname=athome", $login, $pass);
-    $requete = $connexion->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Salon" LIMIT 1');
+    $object = new Bdd;
+    $object->connect();
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Salon" LIMIT 1');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=$conso[0]["consommation_value"];
@@ -80,6 +76,7 @@ echo '</script>';
     <canvas id="myChart"></canvas>
 </div>
 <script src="Courbe.js"></script>
+
 </body>
 </html>
 
