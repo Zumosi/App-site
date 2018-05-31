@@ -1,4 +1,7 @@
 <?php
+include("../Controleur/Securisation.php")
+?>
+<?php
 session_start();
 $_SESSION['id'] = 1;
 ?>

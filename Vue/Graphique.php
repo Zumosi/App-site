@@ -20,7 +20,6 @@ include_once("BDD.php");
 function consopuissanceWC()
 {
     $object = new Bdd;
-    $object->connect();
     $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="wc" LIMIT 1');
     $requete->execute();
     $conso = $requete->fetchAll();
@@ -37,7 +36,6 @@ function consopuissanceWC()
 function consopuissanceChambre()
 {
     $object = new Bdd;
-    $object->connect();
     $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Chambre" LIMIT 1');
     $requete->execute();
     $conso = $requete->fetchAll();
@@ -54,7 +52,6 @@ function consopuissanceChambre()
 function consopuissanceSalon()
 {
     $object = new Bdd;
-    $object->connect();
     $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Salon" LIMIT 1');
     $requete->execute();
     $conso = $requete->fetchAll();
