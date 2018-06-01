@@ -17,7 +17,7 @@
         <td ><a href="index.php?cible=capteurs>"><img  src="vue/image/Capteur.jpg" />Mes capteurs</a></td>
     </tr>
     <tr>
-        <td ><a href="index.php?cible=statistiques"><img  src="vue/image/stat.png"  id="statist"/>Statistiques</a></td>
+        <td ><a href="index.php?cible=statistics"><img  src="vue/image/stat.png"  id="statist"/>Statistiques</a></td>
     </tr>
 </table>
 
