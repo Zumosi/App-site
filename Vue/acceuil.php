@@ -1,84 +1,86 @@
-<!doctype html>
-<html>
+
+
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <title>AtHome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Sticky Navbar</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
-	<div class="headerfixe">
-	<header>
-	
-		<img src="../images/bandeHaut.jpg" id="bande"/>
-		<a href="index"><img src="../images/AtHomeTransparent.png" id="logo" /></a>
-		
-<nav>
-		<ul id="menu">
-	<li><a href="#">Ma Maison</a>
-		<ul>
-			<li><a href="#">Plan</a></li>
-			<li><a href="#">capteurs</a></li>
-			<li><a href="#">statistiques</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Magasin</a>
-		<ul>
-			<li><a href="#">Capteurs</a></li>
-			<li><a href="#">factures</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Mon Compte</a>
-		<ul>
-			<li><a href="#">profil</a></li>
-			<li><a href="#">Gestion utilisateurs</a></li>
-			<li><a href="#">Deconnexion</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Contactez Nous</a>
-		<ul>
-			<li><a href="#">Forum</a></li>
-			<li><a href="#">FAQ</a></li>
-		</ul>
-	</li>
-</ul>
-	</div>
-</nav>
-</header>
-	
+
+<div id="i">
+    <div class="pimg1">
+        <div class="ptext">
+      <span class="border">
+AtHome
+      </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Qui sommes nous ?</h2>
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
+            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
+            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
+            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
+            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
+            dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt
+            nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum
+            temporibus. Laborum ad temporibus ex, omnis!
+        </p>
+    </section>
+
+    <div class="pimg2">
+        <div class="ptext">
+      <span class="border trans">
+Que faisons nous?
+      </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Que faisons nous ?</h2>
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
+            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
+            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
+            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
+            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
+            dolor repellendus ratione in.
+        </p>
+    </section>
+
+    <div class="pimg3">
+        <div class="ptext">
+      <span class="border trans">
+Pourquoi?
+      </span>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Pourquoi ?</h2>
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
+            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
+            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
+            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
+            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
+            dolor repellendus ratione in.
+        </p>
+    </section>
+</div>
 
 
-
-		
-	
-	 <img src="../images/maisonhead.jpg" title="Maison" id="Maison"/>
-	 <br>
-	 <br>
-     <p id="presentation"> AtHome est une compagnie qui vous aides à créer ou développer votre propre maison connectée  </p>
-     <br>
-     <br>
-     <div id="home">
-     	<i class="fa fa-home"> Votre Maison</i>
-
-     
-     </div>
-     <br>
-     <br>
-     <div id="world">
-     	<i class="fa fa-globe"> Votre Univers</i>
-     </div>
-     <br>
-     <br>
-     <img src="../images/bar.gif" id="gif"/>
+<script type="text/javascript" src="menu.js">
 
 
-
-
-<footer>
-	
-</footer>
-      
-
+</script>
 
 </body>
 </html>
