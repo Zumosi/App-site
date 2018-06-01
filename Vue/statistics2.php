@@ -4,30 +4,41 @@
     <title>Statistiques</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vue/stat.css" />
-</head>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Capteurs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stat.css" />
+    </head>
 <body>
 
+/**
+* Created by IntelliJ IDEA.
+* User: Julien
+* Date: 17/05/2018
+* Time: 10:03
+*/
 
 <?php if ($_GET['piece']== 'WC') {
     echo '
 
 <section>
     <h1 class="titre">Statistiques</h1>
-<a href="statWC.php" class="wc">WC</a>
-<img class="wci" src="wc.png" >
+<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
+<img class="wci" src="Vue/image/wc.png" >
 
-<a href="statSdb.php" class="sdb">salle de bain</a>
-<img class="sdbi" src="sdb.png" >
+<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
+<img class="sdbi" src="Vue/image/sdb.png" >
 
-<a href="statSalon.php" class="salon">salon</a>
-<img class="saloni" src="salon.png" >
+<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
+<img class="saloni" src="Vue/image/salon.png" >
 
-<a href="statChambre.php" class="chambre">chambre</a>
-<img class="chambri" src="chambre.png" >
+<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
+<img class="chambri" src="Vue/image/chambre.png" >
 
-<a href="statCuisine.php" class="cuisine">cuisine</a>
-<img class="cuisini" src="cuisine.jpg" ></nav>
-</section>
+<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
+<img class="cuisini" src="Vue/image/cuisine.jpg" ></section>
 <?php consopuissanceWC(1)  ?>
     <div class="nav">
     <img class="cadre" src="encadre.png" >
@@ -40,22 +51,23 @@
 elseif ($_GET['piece']== 'sdb') {
     echo '
 
-<h1>Statistiques</h1>
+<section>
+    <h1 class="titre">Statistiques</h1>
+<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
+<img class="wci" src="Vue/image/wc.png" >
 
-<a href="statWC.php" class="wc">WC</a>
-<img class="wci" src="wc.png" >
+<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
+<img class="sdbi" src="Vue/image/sdb.png" >
 
-<a href="statSdb.php" class="sdb">salle de bain</a>
-<img class="sdbi" src="sdb.png" >
+<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
+<img class="saloni" src="Vue/image/salon.png" >
 
-<a href="statSalon.php" class="salon">salon</a>
-<img class="saloni" src="salon.png" >
+<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
+<img class="chambri" src="Vue/image/chambre.png" >
 
-<a href="statChambre.php" class="chambre">chambre</a>
-<img class="chambri" src="chambre.png" >
+<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
+<img class="cuisini" src="Vue/image/cuisine.jpg" ></section>
 
-<a href="statCuisine.php" class="cuisine">cuisine</a>
-<img class="cuisini" src="cuisine.jpg" >
 <?php consopuissanceSdb(1)  ?>
     <div class="nav">
     <img class="cadre" src="encadre.png" >
@@ -68,22 +80,23 @@ elseif ($_GET['piece']== 'sdb') {
 elseif ($_GET['piece']== 'salon') {
     echo'
     
-<h1>Statistiques</h1>
+<section>
+    <h1 class="titre">Statistiques</h1>
+<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
+<img class="wci" src="Vue/image/wc.png" >
 
-<a href="statWC.php" class="wc">WC</a>
-<img class="wci" src="wc.png" >
+<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
+<img class="sdbi" src="Vue/image/sdb.png" >
 
-<a href="statSdb.php" class="sdb">salle de bain</a>
-<img class="sdbi" src="sdb.png" >
+<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
+<img class="saloni" src="Vue/image/salon.png" >
 
-<a href="statSalon.php" class="salon">salon</a>
-<img class="saloni" src="salon.png" >
+<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
+<img class="chambri" src="Vue/image/chambre.png" >
 
-<a href="statChambre.php" class="chambre">chambre</a>
-<img class="chambri" src="chambre.png" >
+<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
+<img class="cuisini" src="Vue/image/cuisine.jpg" ></section>
 
-<a href="statCuisine.php" class="cuisine">cuisine</a>
-<img class="cuisini" src="cuisine.jpg" >
 <?php consopuissanceSalon(1)  ?>
 <img class="cadre" src="encadre.png" >
     <p class="stat">Statistiques Salon</p>
@@ -94,26 +107,57 @@ elseif ($_GET['piece']== 'salon') {
 elseif ($_GET['piece']== 'chambre') {
     echo'
    
-<h1>Statistiques</h1>
+<section>
+    <h1 class="titre">Statistiques</h1>
+<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
+<img class="wci" src="Vue/image/wc.png" >
 
-<a href="statWC.php" class="wc">WC</a>
-<img class="wci" src="wc.png" >
+<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
+<img class="sdbi" src="Vue/image/sdb.png" >
 
-<a href="statSdb.php" class="sdb">salle de bain</a>
-<img class="sdbi" src="sdb.png" >
+<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
+<img class="saloni" src="Vue/image/salon.png" >
 
-<a href="statSalon.php" class="salon">salon</a>
-<img class="saloni" src="salon.png" >
+<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
+<img class="chambri" src="Vue/image/chambre.png" >
 
-<a href="statChambre.php" class="chambre">chambre</a>
-<img class="chambri" src="chambre.png" >
-
-<a href="statCuisine.php" class="cuisine">cuisine</a>
-<img class="cuisini" src="cuisine.jpg" >
+<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
+<img class="cuisini" src="Vue/image/cuisine.jpg" >
+</section>
  <?php consopuissanceChambre(1)  ?>
 <div class="nav">
     <img class="cadre" src="encadre.png" >
     <p class="stat">Statistiques Chambre</p>
+    <p class="consommation">Consommation:</p>
+    <p class="puissance">Puissance:</p>
+</div>
+    ';
+}
+
+elseif ($_GET['piece']== 'cuisine') {
+    echo'
+   
+<section>
+    <h1 class="titre">Statistiques</h1>
+<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
+<img class="wci" src="Vue/image/wc.png" >
+
+<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
+<img class="sdbi" src="Vue/image/sdb.png" >
+
+<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
+<img class="saloni" src="Vue/image/salon.png" >
+
+<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
+<img class="chambri" src="Vue/image/chambre.png" >
+
+<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
+<img class="cuisini" src="Vue/image/cuisine.jpg" >
+</section>
+ <?php consopuissanceCuisine(1)  ?>
+<div class="nav">
+    <img class="cadre" src="encadre.png" >
+    <p class="stat">Statistiques Cuisine</p>
     <p class="consommation">Consommation:</p>
     <p class="puissance">Puissance:</p>
 </div>

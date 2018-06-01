@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>Forum</title>
     <link rel="stylesheet" href="Vue/forum.css"/>
+
 </head>
 
 <?php include("Modèle/requete.topic.php"); ?>
