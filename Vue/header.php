@@ -31,7 +31,7 @@
                         <li><a href="#">Deconnexion</a></li>
                     </ul>
                 </li>
-                <li><p><a href="index.php?cible=Contact">Contactez Nous</a></p>
+                <li><p><a href="index.php?cible=Contacteznous">Contactez Nous</a></p>
                     <ul>
                         <li><a href="index.php?cible=forum">Forum</a></li>
                         <li><a href="index.php?cible=FAQ">FAQ</a></li>
