@@ -14,7 +14,7 @@ footer{
 #footer2 {
     position: fixed;
     left: 5%;
-    bottom: 1vw;
+    bottom: -1vw;
     width: 100%;
     background-color:transparent;
     color: #fff;
@@ -23,7 +23,7 @@ footer{
 #footer1 {
     position:fixed;
     right:5%;
-    bottom: 1vw;
+    bottom: -1vw;
     width: 100%;
     background-color: transparent;
     color: #fff;
