@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     $_SESSION['message'] = "Inscription réussie! Bienvenue $prenom $nom!";
 
-                    header("location: ../vue/acceuil.php");
+                    header("location: ../index.php?cible=acceuil");
                 }
                 else{
                   $_SESSION['message']="Veuillez acceper les conditions du site.";

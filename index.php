@@ -4,20 +4,21 @@
 include("Modèle/requete.boutique.php");
 include("Modèle/requete.capteur.php");
 
-include("Vue/header_2.php");
+if (isset($_GET['cible']) && !empty($_GET['cible'])) {
+    include("Vue/header_2.php");
+}
 
-
-
-if(isset($_GET['cible']) && !empty($_GET['cible'])) {
+if (isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = $_GET['cible'];
+} else {
+    $url = 'first_page';
 }
-else {
-    $url='acceuil';
+
+include('Vue/' . $url . '.php');
+
+
+if (isset($_GET['cible']) && !empty($_GET['cible'])) {
+    include("Vue/footer.php");
 }
 
-
-
-include ('Vue/'.$url.'.php');
-
-include ("Vue/footer.php");
 

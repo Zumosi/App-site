@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive Sticky Navbar</title>
-    <link rel="stylesheet" href="Vue/header_2.css">
+    <link rel="stylesheet" href="vue/header_2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
@@ -19,22 +19,22 @@
             </div>
 
             <div class="logo">
-                <img src="vue/image/AtHomeTransparent.png">
+               Athome
             </div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="">Ma Maison</a></li>
-                    <li><a href="#">Magasin</a></li>
-                    <li><a href="#">Mon Compte</a></li>
-                    <li><a href="#">Contactez nous</a></li>
+                    <li><a href="index.php?cible=maison">Ma Maison</a></li>
+                    <li><a href="index.php?cible=shop">Magasin</a></li>
+                    <li><a href="index.php?cible=myaccount">Mon Compte</a></li>
+                    <li><a href="index.php?cible=Contacteznous">Contactez nous</a></li>
                 </ul>
             </div>
         </nav>
 
     </header>
 
-    <script type="text/javascript" src="Vue/menu.js">
+    <script type="text/javascript" src="vue/menu.js">
 
 
     </script>

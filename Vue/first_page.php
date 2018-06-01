@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AtHome</title>
-    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="Vue/acceuil.css">
 </head>
 <body>
 
@@ -76,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quib
 <div class="pimg1">
     <div class="ptext">
       <span class="border">
-          <a href="register.php">S'inscrire</a>
+          <a href="Vue/register.php">S'inscrire</a>
       </span>
     </div>
 </div>
