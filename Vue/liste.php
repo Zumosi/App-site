@@ -47,10 +47,11 @@ if (isset($_POST['message'])) {
 
 
 <?php
+$titre=securisation($_POST['titre']);
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('INSERT INTO topic( titre, id_utilisateur,date_crea) VALUES (:titre, :id, NOW())');
 $reponse->execute(array(
-    'titre' => $_POST['titre'],
+    'titre' => $titre,
     'id' => $_SESSION['id'],
 ));
 $reponse->closeCursor();

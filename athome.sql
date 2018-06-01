@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 29 mai 2018 à 09:38
+-- Généré le :  ven. 01 juin 2018 à 13:34
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -113,7 +113,9 @@ CREATE TABLE IF NOT EXISTS `consommation_jour` (
 --
 
 INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`) VALUES
-(1, 'wc', 10, '2018-05-05');
+(1, 'wc', 10, '2018-05-05'),
+(2, 'salon', 20, '2018-05-01'),
+(3, 'chambre', 30, '2018-05-02');
 
 -- --------------------------------------------------------
 

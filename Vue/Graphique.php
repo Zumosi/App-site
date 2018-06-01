@@ -1,5 +1,5 @@
 <?php
-include_once("BDD.php");
+include_once("../Controleur/BDD.php");
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +72,7 @@ echo '</script>';
 <div class="container">
     <canvas id="myChart"></canvas>
 </div>
-<script src="Courbe.js"></script>
+<script src="Graphique.js"></script>
 
 </body>
 </html>
