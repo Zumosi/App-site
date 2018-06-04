@@ -1,16 +1,28 @@
 function NonVide() {
-    if (document.getElementById("champs").value == '' ) {
-
-        alert("champs vide  !");
+    if (document.getElementById("nom").value == '' ) {
+        alert("champ nom vide   !");
         return false;
     }
-    else if (!isNaN(document.getElementById("champs").value)){
-// return isNan return True si ce n'est pas un nombre
-        alert("Ce nom n'est pas valide car il n'a pas de lettre");
+    else if (document.getElementById("prenom").value == '' ){
+        alert("champ prenom vide  !");
         return false;
-
     }
-
+    else if ((document.getElementById("numero").value == '')) {
+        alert("champ numero vide  !");
+        return false;
+    }
+    else if (isNaN(document.getElementById("numero").value)){
+        alert("Ce numéro n'est pas valide car il contient des lettres");
+        return false;
+    }
+    else if (document.getElementById("mail").value == '' ){
+        alert("champ mail vide  !");
+        return false;
+    }
+    else if (document.getElementById("mdp").value == '' ){
+        alert("champ mot de passe vide  !");
+        return false;
+    }
         else return true;
 }
 

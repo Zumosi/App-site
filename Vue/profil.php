@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>Profil</title>
     <link rel="stylesheet" href="Vue/profil.css"/>
+    <script type="text/javascript" src="Controleur/NonVide.js"></script>
 </head>
 <body>
 
@@ -11,9 +12,6 @@
 <h1>Profil: </h1>
 <br>
 
-<?php
-include("../Controleur/NonVide.js");
-?>
 
 <?php
 function Modifier()
@@ -38,13 +36,13 @@ $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
-    <form method="post" action="Vue/liste.php">
+    <form method="post" action="Vue/liste.php" onsubmit="return(NonVide());">
         <table class="prof">
             <tr>
                 <td id="top"><strong>Nom: </strong><br/><br/>
 
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input type="text" name="nom" />';
+                        echo '<input id ="nom" type="text" name="nom" />';
                     } else {
                         echo $donnees['nom'];
 
@@ -58,7 +56,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong> Prenom: </strong> <br/><br/>
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input type="text" name="prenom" />';
+                        echo '<input id ="prenom" type="text" name="prenom" />';
                     } else {
                         echo $donnees['prenom'];
 
@@ -70,7 +68,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong> Numéro: </strong><br/><br/>
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input type="text" name="numéro" />';
+                        echo '<input id="numero" type="text" name="numéro" />';
                     } else {
                         echo $donnees['numero'];
                     }
@@ -82,7 +80,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong> Mail: </strong> <br/><br/>
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input type="text" name="mail" />';
+                        echo '<input id="mail" type="text" name="mail" />';
                     } else {
                         echo $donnees['mail'];
                     }
@@ -94,7 +92,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td id="bottom"><strong> Mot de Passe: </strong> <br/><br/>
                     <?php if(isset($_GET['modif'])){
-                        echo '<input type="text" name="mdp" />';
+                        echo '<input id="mdp" type="text" name="mdp" />';
                     } else {
                         echo '******';
                     } ?>
