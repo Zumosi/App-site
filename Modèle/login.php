@@ -9,7 +9,7 @@ function verify_User($email) {
 
     $result = $bdd->prepare("SELECT * FROM utilisateur WHERE mail=:email", [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
     $result->execute([
-        ":email" => $email,
+        ':email' => $email,
     ]);
     return $result->fetchAll(PDO::FETCH_ASSOC)[0];
 }

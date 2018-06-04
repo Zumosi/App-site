@@ -14,13 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = verify_User($_POST['email']);
     if (Encryption::compare($_POST['password'], $user['password'])) {
 
-        $_SESSION['email'] = $user['email'];
+        $_SESSION['email'] = $user['mail'];
         $_SESSION['nom'] = $user['nom'];
+        $_SESSION['prenom'] = $user['prenom'];
 
         // on sait si l'utilisateur est connecter
         $_SESSION['logged_in'] = true;
 
-        header('Location: ../vue/acceuil.php');
+        header('Location: ../index.php?cible=acceuil');
     } else {
         $_SESSION['message'] = "Le mot de passe est incorrect!";
 
