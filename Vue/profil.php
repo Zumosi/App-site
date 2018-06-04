@@ -68,7 +68,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong> Numéro: </strong><br/><br/>
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input id="numero" type="text" name="numéro" />';
+                        echo '<input id="numero" type="text" name="numero" />';
                     } else {
                         echo $donnees['numero'];
                     }

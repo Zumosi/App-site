@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 include("../Controleur/Securisation.php")
 ?>
 
@@ -50,9 +54,10 @@ $reponse->closeCursor();
 <?php
 if (ctype_alpha($_POST['nom'])) {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-    $reponse = $bdd->prepare('UPDATE utilisateur SET nom = :nvnom WHERE id_utilisateur=1');
+    $reponse = $bdd->prepare('UPDATE utilisateur SET nom = :nvnom WHERE id_utilisateur=:id');
     $reponse->execute(array(
         'nvnom' => $_POST['nom'],
+        'id' => $_SESSION['id'],
     ));
 }
 
@@ -60,36 +65,39 @@ if (ctype_alpha($_POST['nom'])) {
 
 <?php if (ctype_alpha($_POST['prenom'])) {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-    $reponse = $bdd->prepare('UPDATE utilisateur SET prenom = :nvprenom WHERE id_utilisateur=1');
+    $reponse = $bdd->prepare('UPDATE utilisateur SET prenom = :nvprenom WHERE id_utilisateur=:id');
     $reponse->execute(array(
         'nvprenom' => $_POST['prenom'],
+        'id' => $_SESSION['id'],
     ));
 }
 ?>
 
-<?php if (ctype_digit($_POST['numero']) && ($_POST['numero'] < 10)) {
+<?php
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-    $reponse = $bdd->prepare('UPDATE utilisateur SET numero = :nvnum WHERE id_utilisateur=1');
+    $reponse = $bdd->prepare('UPDATE utilisateur SET numero = :nvnum WHERE id_utilisateur=:id');
     $reponse->execute(array(
-        'nvnum' => $_POST['numéro'],
+        'nvnum' => $_POST['numero'],
+        'id' => $_SESSION['id'],
     ));
-}
 ?>
 
 <?php if ((filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL))) {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-    $reponse = $bdd->prepare('UPDATE utilisateur SET mail = :nvmail WHERE id_utilisateur=1');
+    $reponse = $bdd->prepare('UPDATE utilisateur SET mail = :nvmail WHERE id_utilisateur=:id');
     $reponse->execute(array(
         'nvmail' => $_POST['mail'],
+        'id' => $_SESSION['id'],
     ));
 }
 ?>
 //recup titre
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-$reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=1');
+$reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=:id');
 $reponse->execute(array(
     'nvmdp' => $_POST['mdp'],
+    'id' => $_SESSION['id'],
 ));
 
 $reponse->closeCursor();
