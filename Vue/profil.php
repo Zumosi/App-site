@@ -31,7 +31,7 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-$user = 1;
+$user = $_SESSION['id'];
 $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
@@ -68,7 +68,7 @@ while ($donnees = $reponse->fetch()) {
             <tr>
                 <td><strong> Numéro: </strong><br/><br/>
                     <?php if (isset($_GET['modif'])) {
-                        echo '<input id="numero" type="text" name="numéro" />';
+                        echo '<input id="numero" type="text" name="numero" />';
                     } else {
                         echo $donnees['numero'];
                     }
