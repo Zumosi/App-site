@@ -33,7 +33,7 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-$user = 1;
+$user = $_SESSION['id'];
 $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {

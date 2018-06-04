@@ -1,7 +1,4 @@
-<?php
-session_start();
 
-?>
 
 <html lang="en">
 <head>
@@ -19,7 +16,7 @@ session_start();
     <div class="pimg1">
         <div class="ptext">
       <span class="border">
-AtHome <?php echo $_SESSION['prenom'].'&nbsp'.$_SESSION['nom'];?>
+AtHome <?php echo $_SESSION['prenom'].'&nbsp'.$_SESSION['nom'].''.$_SESSION['id'];?>
       </span>
         </div>
     </div>

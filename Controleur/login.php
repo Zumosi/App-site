@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['email'] = $user['mail'];
         $_SESSION['nom'] = $user['nom'];
         $_SESSION['prenom'] = $user['prenom'];
+        $_SESSION['id']=$user['id_utilisateur'];
 
         // on sait si l'utilisateur est connecter
         $_SESSION['logged_in'] = true;
