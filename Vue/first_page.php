@@ -20,7 +20,7 @@ AtHome
 </div>
 
 <section class="section section-dark">
-    <h2>Qui sommes nous ?</h2>
+    <h2>Qui sommes nous ? </h2>
     <p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi,
         fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum

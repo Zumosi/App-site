@@ -39,6 +39,12 @@ if (isset($_POST['message'])) {
 
 ?>
 
+<?php
+if (isset($_GET['session'])){
+    header("location:../");
+    session_destroy();
+}
+?>
 
 <?php
 $titre=securisation($_POST['titre']);

@@ -15,7 +15,7 @@
         <td ><a href="#"><img  src="Vue/image/group.png" />Gestion Utilisateur</a></td>
     </tr>
     <tr>
-        <td ><a href="#"><img  src="Vue/image/off.png" />Déconnexion</a></td>
+        <td ><a href="vue/liste.php?session=fin"><img  src="Vue/image/off.png" />Déconnexion</a></td>
     </tr>
 </table>
 </body>
