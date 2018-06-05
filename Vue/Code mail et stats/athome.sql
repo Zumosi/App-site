@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2018 at 05:31 PM
+-- Generation Time: Jun 06, 2018 at 12:34 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -302,7 +302,7 @@ CREATE TABLE `utilisateur` (
   `prenom` varchar(40) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `numero` int(10) UNSIGNED ZEROFILL NOT NULL,
   `motdepasse` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
-  `type` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  `droits` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `mail` varchar(255) NOT NULL,
   `num_principal` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -311,11 +311,14 @@ CREATE TABLE `utilisateur` (
 -- Dumping data for table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `motdepasse`, `type`, `mail`, `num_principal`) VALUES
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `motdepasse`, `droits`, `mail`, `num_principal`) VALUES
 (1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
 (2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
 (3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0),
-(4, 'AA', 'A', 0000000000, 'ZmRXmImK', 'client principal', 'A@A', 0);
+(4, 'AA', 'A', 0000000000, 'A', 'client principal', 'A@A', 0),
+(5, 'B', 'B', 0000000000, 'B', 'secondaire', 'B@B', 4),
+(6, 'C', 'C', 0000000000, 'C', 'secondaire', 'C@C', 4),
+(7, 'D', 'D', 0000000000, 'D', 'secondaire', 'D@D', 4);
 
 --
 -- Indexes for dumped tables
@@ -467,7 +470,7 @@ ALTER TABLE `topic`
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
