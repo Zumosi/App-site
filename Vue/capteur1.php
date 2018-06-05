@@ -7,8 +7,6 @@
 </head>
 
 
-
-
 <body>
 
 <?php if ($_GET['nc'] == 1) {
@@ -50,16 +48,12 @@
         <p id="prix"> Prix : <?php prix($i) ?> </p>
         <p id="quanti"> Quantité disponible : <?php quanti($i) ?> </p>
 
-        <form method="post" action="liste.php">
-
-            <select id="nombre" name="choix">
-                <option value="choix1" selected="selected"> 1</option>
-                <?php choix2($q) ?>
-                <?php choix3($q) ?>
+        <form method="post" action="vue/liste.php">
 
 
-                <input id="bouton" type="submit" value="Ajouter au Panier">
-            </select>
+            <input id="quant" type="number" name="quantitée" min="0" max="<?php quanti($i) ?>"/>
+            <input id="bouton" type="submit" name="addpanier" value="Ajouter au Panier">
+
         </form>
 
     </article>

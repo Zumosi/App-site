@@ -60,13 +60,22 @@ aside {
     text-align: center;
 }
 
-input[type=text], select {
+input[type=number],#quant {
     text-align: center;
     text-align-last: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quant{
+    width: 5vw;
+    height: 2vw;
+    margin-right: 10vw;
 }
 
 #bouton{
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 #prix{

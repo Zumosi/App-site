@@ -7,13 +7,6 @@ include("../Controleur/Securisation.php")
 ?>
 
 
-<?php
-
-if (isset($_POST['choix'])) {
-    header("location:facture.php");
-}
-
-?>
 
 <?php
 
@@ -29,6 +22,14 @@ if (isset($_POST['nom'])) {
 }
 
 ?>
+
+<?php
+if (isset($_POST['addpanier'])) {
+    header("location:../index.php?cible=panier");
+}
+
+?>
+
 
 
 <?php
@@ -125,6 +126,7 @@ $reponse->execute(array(
 'commentaire' => $_POST['message'],
 ));
 ?>
-=======
-?>
->>>>>>> 89b7c0fafd57ab4e7da775ece74b0c2691fac06c
+
+<?php
+
+
