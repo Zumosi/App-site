@@ -66,15 +66,48 @@ function puissanceSalon()
     return $puissance;
 }
 
+function consoChambre()
+{
+    $object = new Bdd;
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Chambre" ');
+    $requete->execute();
+    $conso = $requete->fetchAll();
+    $value=array();
+    for ($i=0;$i<sizeof($conso);$i++){
+        array_push($value,$conso[$i]["consommation_value"]);
+    }
+    for ($i=0;$i<sizeof($conso);$i++){
+        array_push($value,$conso[$i]["consommation_value"]);
+    }
+    return $value;
+}
+
+function puissanceChambre()
+{
+    $object = new Bdd;
+    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="Chambre" ');
+    $requete->execute();
+    $conso = $requete->fetchAll();
+    $puissance=array();
+    for ($i=0;$i<sizeof($conso);$i++){
+        array_push($puissance,$conso[$i]["puissance_value"]);
+    }
+    return $puissance;
+}
+
 ?>
 
 <?php
-$capteur = consoSalon();
-$puissance = puissanceSalon();
+$consoSalon = consoSalon();
+$puissanceSalon = puissanceSalon();
+$consoChambre = consoChambre();
+$puissanceChambre = puissanceChambre();
 $date = trouverdate();
 echo '<script>';
-echo 'var capteur = ' .json_encode($capteur) . ';';
-echo 'var puissance = ' .json_encode($puissance) . ';';
+echo 'var consoSalon = ' .json_encode($consoSalon) . ';';
+echo 'var puissanceSalon = ' .json_encode($puissanceSalon) . ';';
+echo 'var consoChambre = ' .json_encode($consoChambre) . ';';
+echo 'var puissanceChambre = ' .json_encode($puissanceChambre) . ';';
 echo 'var date = ' .json_encode($date) . ';';
 echo '</script>';
 
@@ -82,7 +115,10 @@ echo '</script>';
 
 
 <div class="container">
-    <canvas id="line-chart" width="800" height="450"></canvas>
+    <canvas id="Salon" width="800" height="450"></canvas>
+</div>
+<div class="container">
+    <canvas id="Chambre" width="800" height="450"></canvas>
 </div>
 <script src="Courbure.js"></script>
 </body>

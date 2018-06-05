@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2018 at 03:12 PM
+-- Generation Time: Jun 05, 2018 at 05:31 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -106,9 +106,12 @@ CREATE TABLE `consommation_jour` (
 --
 
 INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`) VALUES
+(4, 'Chambre', 35, '2018-06-05'),
 (1, 'Salon', 20, '2018-06-05'),
 (2, 'Salon', 30, '2018-06-06'),
-(3, 'Salon', 40, '2018-06-07');
+(3, 'Salon', 40, '2018-06-07'),
+(5, 'Chambre', 45, '2018-06-06'),
+(6, 'Chambre', 55, '2018-06-07');
 
 -- --------------------------------------------------------
 
@@ -236,9 +239,12 @@ CREATE TABLE `puissance_jour` (
 --
 
 INSERT INTO `puissance_jour` (`piece_id`, `piece_name`, `puissance_value`, `consommation_date`) VALUES
+(4, 'Chambre', 90, '2018-06-05'),
 (1, 'Salon', 60, '2018-06-05'),
 (2, 'Salon', 70, '2018-06-06'),
-(3, 'Salon', 80, '2018-06-07');
+(3, 'Salon', 80, '2018-06-07'),
+(5, 'Chambre', 50, '2018-06-06'),
+(6, 'Chambre', 30, '2018-06-07');
 
 -- --------------------------------------------------------
 
@@ -295,7 +301,7 @@ CREATE TABLE `utilisateur` (
   `nom` varchar(40) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `prenom` varchar(40) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `numero` int(10) UNSIGNED ZEROFILL NOT NULL,
-  `password` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  `motdepasse` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `type` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `mail` varchar(255) NOT NULL,
   `num_principal` int(11) NOT NULL
@@ -305,10 +311,11 @@ CREATE TABLE `utilisateur` (
 -- Dumping data for table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`) VALUES
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `motdepasse`, `type`, `mail`, `num_principal`) VALUES
 (1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
 (2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
-(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0);
+(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0),
+(4, 'AA', 'A', 0000000000, 'ZmRXmImK', 'client principal', 'A@A', 0);
 
 --
 -- Indexes for dumped tables
@@ -460,7 +467,7 @@ ALTER TABLE `topic`
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
