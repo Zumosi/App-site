@@ -5,7 +5,7 @@ $object_contact="Dans le cas d'une demande particulière";
 $mailnewclient= "athomequipe@gmail.com";
 $mail_forgetpassw= "athomequipe@gmail.com" ;
 $longueur="8";
-$newpassw= genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+//$newpassw= genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 
 
@@ -178,11 +178,6 @@ function genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmn
     return $_GLOBAL['chaine'];
 
 }
-
-sendmail($message_contact, $object_contact);
-sendmail_bienvenue($mailnewclient);
-sendmail_forgetpassw($mail_forgetpassw,$newpassw);
-
 
 
 ?>
