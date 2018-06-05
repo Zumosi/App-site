@@ -1,12 +1,12 @@
 var myChart = document.getElementById("myChart").getContext('2d');
 var CaptorChart = new Chart(myChart, {
-    type: "pie",
+    type: "line",//type du graphique il faut un de type line
     data: {
-        labels: ["Salle à manger", "Salon", "SdB"],
+        labels: ["Salle à manger"],//titre
         datasets: [{
             label: "Consommation",
             data: capteur,
-            backgroundColor: [
+            backgroundColor: [//couleur camenbert
                 "Red",
                 "Green",
                 "Blue"
