@@ -153,6 +153,7 @@ nav ul li a {
     }
 
     .ptext {
+        display: inline-block;
         position: absolute;
         top: 50%;
         width: 100%;
@@ -167,6 +168,8 @@ nav ul li a {
         background-color: #111;
         color: #fff;
         padding: 20px;
+        margin: 3vw;
+
     }
 
     @media (max-width: 786px) {
@@ -179,6 +182,5 @@ a{
     color: #FFFFFF;
     text-decoration: none;
 }
-
 
 

@@ -78,6 +78,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quib
       <span class="border">
           <a href="Vue/register.php">S'inscrire</a>
       </span>
+      <span class="border">
+          <a href="Vue/connexion.php">Se connecter</a>
+      </span>
     </div>
 </div>
 </body>
