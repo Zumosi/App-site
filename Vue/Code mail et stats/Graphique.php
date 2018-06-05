@@ -16,6 +16,22 @@ include_once("BDD.php");
 <h1>Statistiques</h1>
 
 <?php
+
+function trouverdate(){
+    $object = new Bdd;
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="Salon" ');
+    $requetedate->execute();
+    $tabledate = $requetedate->fetchAll();
+    $date=array();
+    for ($i=0;$i<sizeof($tabledate);$i++){
+        array_push($date,$tabledate[$i]["consommation_date"]);
+    }
+    echo "<pre>";
+    print_r($date) ;
+    echo "</pre>";
+    return $date;
+}
+
 function consoSalon()
 {
     $object = new Bdd;
@@ -23,12 +39,14 @@ function consoSalon()
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=array();
+
     echo "<pre>";
     print_r($conso) ;
     echo "</pre>";
     for ($i=0;$i<sizeof($conso);$i++){
         array_push($value,$conso[$i]["consommation_value"]);
     }
+
     echo "<pre>";
     print_r($value) ;
     echo "</pre>";
@@ -53,9 +71,11 @@ function puissanceSalon()
 <?php
 $capteur = consoSalon();
 $puissance = puissanceSalon();
+$date = trouverdate();
 echo '<script>';
 echo 'var capteur = ' .json_encode($capteur) . ';';
 echo 'var puissance = ' .json_encode($puissance) . ';';
+echo 'var date = ' .json_encode($date) . ';';
 echo '</script>';
 
 ?>

@@ -1,7 +1,7 @@
 new Chart(document.getElementById("line-chart"), {
     type: 'line',
     data: {
-        labels: ["Janvier","Février","Mars"],
+        labels: date,
         datasets: [{
             data: capteur,
             label: "Consommation",
