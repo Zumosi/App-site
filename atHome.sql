@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mar. 05 juin 2018 à 10:18
--- Version du serveur :  5.6.38
--- Version de PHP :  7.2.1
+-- Host: 127.0.0.1
+-- Generation Time: Jun 06, 2018 at 11:06 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `atHome`
+-- Database: `athome`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `actionneur`
+-- Table structure for table `actionneur`
 --
 
 CREATE TABLE `actionneur` (
@@ -34,7 +36,7 @@ CREATE TABLE `actionneur` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `actionneur`
+-- Dumping data for table `actionneur`
 --
 
 INSERT INTO `actionneur` (`id_actionneur`, `etat`, `type`, `id_capteur`) VALUES
@@ -43,7 +45,7 @@ INSERT INTO `actionneur` (`id_actionneur`, `etat`, `type`, `id_capteur`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `boutique`
+-- Table structure for table `boutique`
 --
 
 CREATE TABLE `boutique` (
@@ -56,12 +58,11 @@ CREATE TABLE `boutique` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `boutique`
+-- Dumping data for table `boutique`
 --
 
 INSERT INTO `boutique` (`id_boutique`, `nom`, `description`, `prix`, `id_personne`, `stock`) VALUES
-(1, 'capteur 1 ', 'ce capteur est le capteur 1 ', '1.00', 1, 1),
-(5, 'capteur 1 ', 'ce capteur est le capteur 1 ', '4.00', 6, 13),
+(1, 'infrarouge TSOP4838 38 kHz', 'Haute densité d\'assemblage par intégration de la diode réceptrice, du filtre et du préampli dans un boîtier. Insensibilité à la lumière du jour, compatibilité TTL et C-MOS, faible puissance absorbée et haute sécurité anti-parasite distinguent cette série.', '0.65', 1, 5),
 (2, 'CAPTEUR DE TEMPÉRATURE DS18B20', 'Le DS18B20 est composé des éléments suivant :\r\nun capteur de température, un convertisseur analogique - numérique, une zone mémoire de 8 octets et une EEPROM de 3 octets.\r\n\r\nCes zones de mémoire servent à communiquer avec le DS18B20 afin de :\r\n- récupérer les températures converties\r\n- de configurer le convertisseur\r\n- de configurer les valeurs de températures min et max pour la fonction \"thermostat\"', '3.50', 1, 8),
 (3, 'Capteur Photoélectrique / Mini Crépusculaire 1-10V', 'Avec une zone de détection de 360 ° et une plage de régulation 1-100%, ce capteur crépusculaire est compatible avec les luminaires équipés de driver dimmable 1-10V. Son mode de fonctionnement progressif, augmente et diminue l’éclairage du luminaire en fonction de la lumière ambiante préréglée (équipé d’un variateur qui modifie le comportement par rapport à la lumière ambiante), c’est à dire, quand la lumière ambiante diminue, le capteur augmente l\'intensité de la lumière et au contraire, quand la lumière ambiante augmente, le capteur réduit l\'intensité de la lumière, permettant toujours un éclairage adéquat d\'une manière efficace.', '17.29', 2, 15),
 (4, 'Capteur de Son RB-Wav-26', 'Amplificateur de puissance audio LM386 intégré\r\nGain du signal audio jusqu\'à 200\r\nPrécision ajustable\r\nIndicateur du signal en sortie', '3.92', 2, 70);
@@ -69,7 +70,7 @@ INSERT INTO `boutique` (`id_boutique`, `nom`, `description`, `prix`, `id_personn
 -- --------------------------------------------------------
 
 --
--- Structure de la table `capteur`
+-- Table structure for table `capteur`
 --
 
 CREATE TABLE `capteur` (
@@ -81,7 +82,7 @@ CREATE TABLE `capteur` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `capteur`
+-- Dumping data for table `capteur`
 --
 
 INSERT INTO `capteur` (`id_capteur`, `type`, `reference`, `etat`, `id_place`) VALUES
@@ -90,27 +91,32 @@ INSERT INTO `capteur` (`id_capteur`, `type`, `reference`, `etat`, `id_place`) VA
 -- --------------------------------------------------------
 
 --
--- Structure de la table `consommation_jour`
+-- Table structure for table `consommation_jour`
 --
 
 CREATE TABLE `consommation_jour` (
-  `piece_id` mediumint(9) NOT NULL,
+  `piece_id` int(11) NOT NULL,
   `piece_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `consommation_value` mediumint(9) NOT NULL,
   `consommation_date` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
 
 --
--- Déchargement des données de la table `consommation_jour`
+-- Dumping data for table `consommation_jour`
 --
 
 INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`) VALUES
-(1, 'wc', 10, '2018-05-05');
+(4, 'Chambre', 35, '2018-06-05'),
+(1, 'Salon', 20, '2018-06-05'),
+(2, 'Salon', 30, '2018-06-06'),
+(3, 'Salon', 40, '2018-06-07'),
+(5, 'Chambre', 45, '2018-06-06'),
+(6, 'Chambre', 55, '2018-06-07');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `facture`
+-- Table structure for table `facture`
 --
 
 CREATE TABLE `facture` (
@@ -125,7 +131,7 @@ CREATE TABLE `facture` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `facture`
+-- Dumping data for table `facture`
 --
 
 INSERT INTO `facture` (`id_facture`, `nom_utilisateur`, `nom_produit`, `prix`, `num_adresse`, `rue_adresse`, `nom_adresse`, `code_postal`) VALUES
@@ -134,7 +140,7 @@ INSERT INTO `facture` (`id_facture`, `nom_utilisateur`, `nom_produit`, `prix`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `faq`
+-- Table structure for table `faq`
 --
 
 CREATE TABLE `faq` (
@@ -145,7 +151,7 @@ CREATE TABLE `faq` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `faq`
+-- Dumping data for table `faq`
 --
 
 INSERT INTO `faq` (`id_faq`, `titre`, `reponse`, `auteur`) VALUES
@@ -154,7 +160,7 @@ INSERT INTO `faq` (`id_faq`, `titre`, `reponse`, `auteur`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `habitation`
+-- Table structure for table `habitation`
 --
 
 CREATE TABLE `habitation` (
@@ -164,17 +170,16 @@ CREATE TABLE `habitation` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `habitation`
+-- Dumping data for table `habitation`
 --
 
 INSERT INTO `habitation` (`id_habitation`, `type`, `id_user`) VALUES
-(1, 'Appartement', 1),
-(2, 'Maison', 1);
+(1, 'Appartement', 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `message`
+-- Table structure for table `message`
 --
 
 CREATE TABLE `message` (
@@ -186,20 +191,19 @@ CREATE TABLE `message` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `message`
+-- Dumping data for table `message`
 --
 
 INSERT INTO `message` (`id_message`, `id_topic`, `id_user`, `commentaire`, `date_commentaire`) VALUES
 (1, 2, 1, 'Voici les règles d\'usage de ce forum.\r\n-Le forum est destiné à répondre à des problèmes tout autre utilisation sera puni\r\n-Regardez si il y a des topics répondant à votre question\r\n-Pas de flood inutile', '2018-04-06 14:00:00'),
 (2, 3, 2, 'Pour les soucis techniques veuillez nous envoyez un mail.', '2018-05-02 00:00:00'),
 (3, 4, 3, 'Kappa ou kippo.', '2018-05-08 00:00:00'),
-(4, 4, 2, 'Nous allons supprimer ce topic il semblerait que vous soyez stupide.', '2018-05-09 00:00:00'),
-(6, 10, 1, 'hello', '2018-06-01 15:05:28');
+(4, 4, 2, 'Nous allons supprimer ce topic il semblerait que vous soyez stupide.', '2018-05-09 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `piece`
+-- Table structure for table `piece`
 --
 
 CREATE TABLE `piece` (
@@ -211,7 +215,7 @@ CREATE TABLE `piece` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `piece`
+-- Dumping data for table `piece`
 --
 
 INSERT INTO `piece` (`id_piece`, `nom`, `superficie`, `id_maison`, `type`) VALUES
@@ -220,7 +224,7 @@ INSERT INTO `piece` (`id_piece`, `nom`, `superficie`, `id_maison`, `type`) VALUE
 -- --------------------------------------------------------
 
 --
--- Structure de la table `puissance_jour`
+-- Table structure for table `puissance_jour`
 --
 
 CREATE TABLE `puissance_jour` (
@@ -231,20 +235,21 @@ CREATE TABLE `puissance_jour` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
 
 --
--- Déchargement des données de la table `puissance_jour`
+-- Dumping data for table `puissance_jour`
 --
 
 INSERT INTO `puissance_jour` (`piece_id`, `piece_name`, `puissance_value`, `consommation_date`) VALUES
-(1, 'wc', 10, '2018-05-05'),
-(1, 'chambre', 50, '2018-05-05'),
-(1, 'salon', 60, '2018-05-05'),
-(1, 'sdb', 25, '2018-05-05'),
-(1, 'cuisine', 69, '2018-05-05');
+(4, 'Chambre', 90, '2018-06-05'),
+(1, 'Salon', 60, '2018-06-05'),
+(2, 'Salon', 70, '2018-06-06'),
+(3, 'Salon', 80, '2018-06-07'),
+(5, 'Chambre', 50, '2018-06-06'),
+(6, 'Chambre', 30, '2018-06-07');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `statistique`
+-- Table structure for table `statistique`
 --
 
 CREATE TABLE `statistique` (
@@ -255,7 +260,7 @@ CREATE TABLE `statistique` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `statistique`
+-- Dumping data for table `statistique`
 --
 
 INSERT INTO `statistique` (`id_stat`, `id_sensor`, `date`, `puissance`) VALUES
@@ -264,7 +269,7 @@ INSERT INTO `statistique` (`id_stat`, `id_sensor`, `date`, `puissance`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `topic`
+-- Table structure for table `topic`
 --
 
 CREATE TABLE `topic` (
@@ -275,7 +280,7 @@ CREATE TABLE `topic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `topic`
+-- Dumping data for table `topic`
 --
 
 INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
@@ -284,12 +289,16 @@ INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
 (3, 'Soucis Technique', 2, '2018-05-05 00:00:00'),
 (4, 'Kappa', 3, '2018-05-06 00:00:00'),
 (5, 'Salut', 1, '2018-05-17 09:44:46'),
-(10, 'hello', 1, '2018-06-01 15:05:28');
+(10, '', 5, '2018-06-05 17:53:05'),
+(11, '', 5, '2018-06-05 18:01:06'),
+(12, '', 5, '2018-06-05 18:01:23'),
+(13, '', 5, '2018-06-05 18:02:16'),
+(14, '', 5, '2018-06-05 18:02:47');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateur`
+-- Table structure for table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -304,155 +313,168 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `utilisateur`
+-- Dumping data for table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`) VALUES
-(1, 'Robert', 'Franck', 0657848571, '', 'admin', 'nicolas.nguyen@isep.fr', 0),
+(1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
 (2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
 (3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0),
-(4, 'phu', 'Clement', 0649880410, '$6$rounds=3232$yRyJDM8YPUMMRAJF$0rc.UwPKuC.up3s8qUzhjtGOt5vWNVc/1Iyur8HFIj3VS2aqA.BQ71waC8cUAVbuwqq7CbV6nL4e/cT0s9cIy1', 'client principal', 'clement.phu@hotmail.fr', 0),
-(5, 'a', 'a', 0649880410, '$6$rounds=3232$yRyJDM8YPUMMRAJF$RUAfImrssOz6DtOdXKeRpNaiHEc3DWWUvcVvk5.oi5FQkdSgVOOdpBJHkle0kyrG095ytILFXS8Fzx3S5Q.Dn1', 'client principal', 'a@a.a', 0);
+(4, 'a', 'a', 1234567890, 'test', 'principal', 'a@a.fr', 0),
+(5, 'b', 'b', 1234567890, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'client principal', 'b@b', 0);
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `actionneur`
+-- Indexes for table `actionneur`
 --
 ALTER TABLE `actionneur`
   ADD PRIMARY KEY (`id_actionneur`);
 
 --
--- Index pour la table `boutique`
+-- Indexes for table `boutique`
 --
 ALTER TABLE `boutique`
   ADD PRIMARY KEY (`id_boutique`);
 
 --
--- Index pour la table `capteur`
+-- Indexes for table `capteur`
 --
 ALTER TABLE `capteur`
   ADD PRIMARY KEY (`id_capteur`);
 
 --
--- Index pour la table `facture`
+-- Indexes for table `consommation_jour`
+--
+ALTER TABLE `consommation_jour`
+  ADD PRIMARY KEY (`piece_id`);
+
+--
+-- Indexes for table `facture`
 --
 ALTER TABLE `facture`
   ADD PRIMARY KEY (`id_facture`);
 
 --
--- Index pour la table `faq`
+-- Indexes for table `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`id_faq`);
 
 --
--- Index pour la table `habitation`
+-- Indexes for table `habitation`
 --
 ALTER TABLE `habitation`
   ADD PRIMARY KEY (`id_habitation`);
 
 --
--- Index pour la table `message`
+-- Indexes for table `message`
 --
 ALTER TABLE `message`
   ADD PRIMARY KEY (`id_message`);
 
 --
--- Index pour la table `piece`
+-- Indexes for table `piece`
 --
 ALTER TABLE `piece`
   ADD PRIMARY KEY (`id_piece`);
 
 --
--- Index pour la table `statistique`
+-- Indexes for table `puissance_jour`
+--
+ALTER TABLE `puissance_jour`
+  ADD PRIMARY KEY (`piece_id`);
+
+--
+-- Indexes for table `statistique`
 --
 ALTER TABLE `statistique`
   ADD PRIMARY KEY (`id_stat`);
 
 --
--- Index pour la table `topic`
+-- Indexes for table `topic`
 --
 ALTER TABLE `topic`
   ADD PRIMARY KEY (`id_topic`);
 
 --
--- Index pour la table `utilisateur`
+-- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id_utilisateur`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `actionneur`
+-- AUTO_INCREMENT for table `actionneur`
 --
 ALTER TABLE `actionneur`
   MODIFY `id_actionneur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `boutique`
+-- AUTO_INCREMENT for table `boutique`
 --
 ALTER TABLE `boutique`
-  MODIFY `id_boutique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_boutique` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `capteur`
+-- AUTO_INCREMENT for table `capteur`
 --
 ALTER TABLE `capteur`
   MODIFY `id_capteur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `facture`
+-- AUTO_INCREMENT for table `facture`
 --
 ALTER TABLE `facture`
   MODIFY `id_facture` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `faq`
+-- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `id_faq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `habitation`
+-- AUTO_INCREMENT for table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `id_habitation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_habitation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `message`
+-- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `piece`
+-- AUTO_INCREMENT for table `piece`
 --
 ALTER TABLE `piece`
   MODIFY `id_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `statistique`
+-- AUTO_INCREMENT for table `statistique`
 --
 ALTER TABLE `statistique`
   MODIFY `id_stat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `topic`
+-- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `utilisateur`
+-- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
