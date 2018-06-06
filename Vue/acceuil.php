@@ -16,7 +16,7 @@
     <div class="pimg1">
         <div class="ptext">
       <span class="border">
-AtHome <?php echo $_SESSION['prenom'].'&nbsp'.$_SESSION['nom'].''.$_SESSION['id'];?>
+AtHome <?php echo $_SESSION['prenom'].'&nbsp'.$_SESSION['nom'];?>
       </span>
         </div>
     </div>

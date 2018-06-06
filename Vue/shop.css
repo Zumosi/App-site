@@ -1,6 +1,6 @@
 .box1{
     display: inline-block;
-    width: 40vw;
+    width: 50vw;
     height: 5vw;
     margin: 10vw;
     position:relative;
@@ -10,27 +10,30 @@
 }
 .box2{
     display: inline-block;
-    width: 40vw;
+    width: 50vw;
     height: 5vw;
     margin: 10vw;
+    margin-top: 15vw;
     position:relative;
 
 
 }
 .box3{
     display: inline-block;
-    width: 40vw;
+    width: 50vw;
     height: 5vw;
     margin: 10vw;
+    margin-top: 20vw;
     position:relative;
 
 
 }
 .box4 {
     display: inline-block;
-    width: 40vw;
+    width: 50vw;
     height: 5vw;
     margin: 10vw;
+    margin-top: 25vw;
     position: relative;
 
 }
@@ -77,8 +80,6 @@ h1 {
     position:relative;
     left:15vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
     padding-bottom: 2vw;
 }
 
@@ -87,8 +88,6 @@ h1 {
     position:relative;
     left:15vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
     padding-bottom: 2vw;
 
     }
@@ -97,8 +96,6 @@ h1 {
     position: relative;
     left: 15vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
     padding-bottom: 2vw;
 
 }
@@ -107,8 +104,6 @@ h1 {
     position: relative;
     left: 15vw;
     text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
     padding-bottom: 2vw;
 
 }
@@ -120,4 +115,3 @@ h1 {
     font-size: 1.3vw;
     font-family: Arial;
 }
-

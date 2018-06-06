@@ -30,7 +30,19 @@ if (isset($_POST['addpanier'])) {
 
 ?>
 
+<?php
+if (isset($_POST['retourshop'])) {
+    header("location:../index.php?cible=shop");
+}
 
+?>
+
+<?php
+if (isset($_POST['Validerpanier'])) {
+    header("location:../index.php?cible=#");
+}
+
+?>
 
 <?php
 
