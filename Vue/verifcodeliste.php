@@ -10,6 +10,7 @@ echo $_POST["passv"];
 if(($_POST["pass"])==($_POST["passv"]))
 {
     header("Location: mdp_reset.php");
+    $GLOBALS["email"]=$email;
     echo "Hello";
 }
 else{

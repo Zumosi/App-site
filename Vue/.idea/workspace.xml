@@ -11,14 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="mdp_reset.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mdp_reset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mdp_reset.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="250">
+              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="25" />
               <folding>
-                <marker date="1528301706731" expanded="true" signature="82:108" ph="..." />
-                <marker date="1528301706731" expanded="true" signature="89:108" ph="..." />
+                <marker date="1528303000533" expanded="true" signature="68:94" ph="..." />
+                <marker date="1528303000533" expanded="true" signature="75:94" ph="..." />
               </folding>
             </state>
           </provider>
@@ -28,9 +28,9 @@
         <entry file="file://$PROJECT_DIR$/mdp_resetliste.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding>
-                <marker date="1528301995090" expanded="true" signature="290:348" ph="UPDATE utilisateur... " />
+                <marker date="1528302962580" expanded="true" signature="290:348" ph="UPDATE utilisateur... " />
               </folding>
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file leaf-file-name="mdp_oublier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+            <state relative-caret-position="375">
+              <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="verifcodeliste.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="verifcodeliste.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/verifcodeliste.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="300">
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -157,10 +157,10 @@
         <option value="$PROJECT_DIR$/mdp_oublier.php" />
         <option value="$USER_HOME$/Desktop/App-site/Controleur/Modifmdpbdd.php" />
         <option value="$USER_HOME$/Desktop/Code mail et stats/UtilisateurSecondaireListe.php" />
-        <option value="$PROJECT_DIR$/verifcodeliste.php" />
         <option value="$PROJECT_DIR$/verifcode.php" />
-        <option value="$PROJECT_DIR$/mdp_reset.php" />
+        <option value="$PROJECT_DIR$/verifcodeliste.php" />
         <option value="$PROJECT_DIR$/mdp_resetliste.php" />
+        <option value="$PROJECT_DIR$/mdp_reset.php" />
       </list>
     </option>
   </component>
@@ -171,7 +171,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -312,15 +312,15 @@
       <workItem from="1527790498064" duration="81000" />
       <workItem from="1528114963554" duration="6671000" />
       <workItem from="1528212930485" duration="1639000" />
-      <workItem from="1528297894659" duration="4095000" />
+      <workItem from="1528297894659" duration="5205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18058000" />
+    <option name="totallyTimeSpent" value="19168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -620,10 +620,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verifcodeliste.php">
+    <entry file="file://$PROJECT_DIR$/mdp_reset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <marker date="1528303000533" expanded="true" signature="68:94" ph="..." />
+            <marker date="1528303000533" expanded="true" signature="75:94" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdp_resetliste.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="38" />
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <marker date="1528302962580" expanded="true" signature="290:348" ph="UPDATE utilisateur... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/App-site/Controleur/Modifmdpbdd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <marker date="1528285748435" expanded="true" signature="261:319" ph="UPDATE utilisateur... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="70" lean-forward="true" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -638,42 +669,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
+    <entry file="file://$PROJECT_DIR$/verifcodeliste.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+        <state relative-caret-position="300">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/App-site/Controleur/Modifmdpbdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <marker date="1528285748435" expanded="true" signature="261:319" ph="UPDATE utilisateur... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mdp_resetliste.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <marker date="1528301995090" expanded="true" signature="290:348" ph="UPDATE utilisateur... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mdp_reset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <marker date="1528301706731" expanded="true" signature="82:108" ph="..." />
-            <marker date="1528301706731" expanded="true" signature="89:108" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
