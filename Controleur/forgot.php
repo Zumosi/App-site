@@ -3,7 +3,10 @@ require("../Modèle/login.php");
 session_start();
 $_SESSION['message'] = '';
 include("mail.php");
+include("Modifmdpbdd.php");
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
+$longueur="8";
+$newpassw= genererChaineAleatoire($longueur, $listeCar = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {   
@@ -19,10 +22,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
         $email = $user['mail'];
         $nom = $user['nom'];
         $prenom = $user['prenom'];
+        sendmail_forgetpassw($email,$newpassw);
+        modifmdp($newpassw,$mail);
 
-        $_SESSION['message'] = "Please check your email $email"
-        . " for a confirmation link to complete your password reset!";
-        sendmail_forgetpassw($email,)
+
 
 
 
