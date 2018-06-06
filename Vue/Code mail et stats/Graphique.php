@@ -95,35 +95,6 @@ function puissanceChambre()
     return $puissance;
 }
 
-function consoWc()
-{
-    $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="wc" ');
-    $requete->execute();
-    $conso = $requete->fetchAll();
-    $value=array();
-    for ($i=0;$i<sizeof($conso);$i++){
-        array_push($value,$conso[$i]["consommation_value"]);
-    }
-    for ($i=0;$i<sizeof($conso);$i++){
-        array_push($value,$conso[$i]["consommation_value"]);
-    }
-    return $value;
-}
-
-function puissanceWc()
-{
-    $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="wc" ');
-    $requete->execute();
-    $conso = $requete->fetchAll();
-    $puissance=array();
-    for ($i=0;$i<sizeof($conso);$i++){
-        array_push($puissance,$conso[$i]["puissance_value"]);
-    }
-    return $puissance;
-}
-
 ?>
 
 <?php
@@ -131,16 +102,12 @@ $consoSalon = consoSalon();
 $puissanceSalon = puissanceSalon();
 $consoChambre = consoChambre();
 $puissanceChambre = puissanceChambre();
-$consoWc = consoWc();
-$puissanceWc = puissanceWc();
 $date = trouverdate();
 echo '<script>';
 echo 'var consoSalon = ' .json_encode($consoSalon) . ';';
 echo 'var puissanceSalon = ' .json_encode($puissanceSalon) . ';';
 echo 'var consoChambre = ' .json_encode($consoChambre) . ';';
 echo 'var puissanceChambre = ' .json_encode($puissanceChambre) . ';';
-echo 'var consoWc = ' .json_encode($consoWc) . ';';
-echo 'var puissanceWc = ' .json_encode($puissanceWc) . ';';
 echo 'var date = ' .json_encode($date) . ';';
 echo '</script>';
 
@@ -152,15 +119,6 @@ echo '</script>';
 </div>
 <div class="container">
     <canvas id="Chambre" width="800" height="450"></canvas>
-</div>
-<div class="container">
-    <canvas id="Cuisine" width="800" height="450"></canvas>
-</div>
-<div class="container">
-    <canvas id="Wc" width="800" height="450"></canvas>
-</div>
-<div class="container">
-    <canvas id="Sdb" width="800" height="450"></canvas>
 </div>
 <script src="Courbure.js"></script>
 </body>
