@@ -29,7 +29,7 @@ echo "Mot de passe modifié, l'utilisateur avec le mail " .$email. " a maintenan
         <h1>Entrez le code reçu par mail :  </h1>
     <form class="form" action="verifcodeliste.php" method="post" enctype="multipart/form-data" autocomplete="off">
     <input type="password" placeholder="" name="pass" required />
-        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>"><br>
+        <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
         <input type="hidden" name="passv" value="<?php echo htmlspecialchars($newpassw); ?>"><br>
     <input type="submit" value="Envoyer" name="send" class="btn btn-block btn-primary" />
     </form>
