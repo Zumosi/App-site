@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 include_once("BDD.php");
 //include("Securisation.php");
@@ -6,16 +9,12 @@ include_once("BDD.php");
 
 if($_POST["nom"]!=""){
     $mail = $_POST["nom"];
-    $_SESSION["id"]=4;
    // $name = securisation ($name);
 
     $object = new Bdd;
     $requete = $object->connect()->prepare('SELECT id_utilisateur FROM utilisateur WHERE id_utilisateur=:ID ');
     $requete->execute(array("ID"=>$_SESSION["id"]));
     $newnum = $requete->fetch();
-    echo "<pre>";
-    print_r ($newnum);
-    echo  " </pre>";
     $requete = $object->connect()->prepare('UPDATE utilisateur SET num_principal=:newnum WHERE mail=:mail ');
     $requete->execute(array("newnum"=>$newnum["id_utilisateur"],
         "mail"=>$mail));

@@ -3,6 +3,7 @@
 require("Encryption.php");
 require ("../Modèle/login.php");
 require("../Modèle/insertion.php");
+include("mail.php");
 
 session_start();
 $_SESSION['message'] = '';
@@ -47,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
                     $_SESSION['message'] = "Inscription réussie! Bienvenue $prenom $nom!";
+                    sendmail_bienvenue($email);
+
 
                     header("location: ../index.php?cible=acceuil");
                 }

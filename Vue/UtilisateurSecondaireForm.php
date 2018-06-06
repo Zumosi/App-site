@@ -10,10 +10,9 @@
 
 <p>Voici vos utilisateurs Secondaires : </p>
 
-<?php
-include_once("BDD.php");
 
- $_SESSION["id"]=4;
+<?php
+include_once("Controleur/BDD.php");
  $object = new Bdd;
 $requete = $object->connect()->prepare("SELECT nom,prenom FROM utilisateur WHERE num_principal=:ID");
 $requete->execute(array("ID"=>$_SESSION["id"]));
@@ -32,7 +31,7 @@ echo '<table border="2" >
     echo '</table>';
 ?>
 
-<form method="post" action = "UtilisateurSecondaireListe.php" onsubmit="">
+<form method="post" action = "Controleur/UtilisateurSecondaireListe.php" onsubmit="">
     <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder="Texte" /> <br>
     <br><br>
     <input type="submit" value="Envoyer" />

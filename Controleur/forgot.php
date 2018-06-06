@@ -2,6 +2,7 @@
 require("../Modèle/login.php");
 session_start();
 $_SESSION['message'] = '';
+include("mail.php");
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 
 
@@ -15,27 +16,15 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     }
     else {
 
-        $email = $user['email'];
+        $email = $user['mail'];
         $nom = $user['nom'];
         $prenom = $user['prenom'];
 
         $_SESSION['message'] = "Please check your email $email"
         . " for a confirmation link to complete your password reset!";
+        sendmail_forgetpassw($email,)
 
-        // envoie un mail de reset 
-        $to      = $email;
-        $subject = 'Password Reset Link ( atHome.com )';
-        $message_body = '
-        Hello '.$nom.' '.$prenom.',
 
-        You have requested password reset!
-
-        Please click this link to reset your password:
-
-        http://localhost:8888/connexion/reset.php?email='.$email.'.'; 
-        $header['From']='atHome@contact.com';
-
-        mail($to, $subject, $message_body,$header);
 
         header("location:../vue/mdp_reset.php");
   }
