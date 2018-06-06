@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2018 at 11:06 AM
+-- Generation Time: Jun 06, 2018 at 02:38 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -111,7 +111,16 @@ INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`,
 (2, 'Salon', 30, '2018-06-06'),
 (3, 'Salon', 40, '2018-06-07'),
 (5, 'Chambre', 45, '2018-06-06'),
-(6, 'Chambre', 55, '2018-06-07');
+(6, 'Chambre', 55, '2018-06-07'),
+(7, 'WC', 65, '2018-06-05'),
+(8, 'WC', 87, '2018-06-06'),
+(9, 'WC', 89, '2018-06-07'),
+(14, 'Cuisine', 34, '2018-06-05'),
+(15, 'Cuisine', 45, '2018-06-06'),
+(13, 'Cuisine', 65, '2018-06-07'),
+(11, 'SdB', 67, '2018-06-05'),
+(10, 'SdB', 34, '2018-06-06'),
+(12, 'SdB', 98, '2018-06-07');
 
 -- --------------------------------------------------------
 
@@ -244,7 +253,16 @@ INSERT INTO `puissance_jour` (`piece_id`, `piece_name`, `puissance_value`, `cons
 (2, 'Salon', 70, '2018-06-06'),
 (3, 'Salon', 80, '2018-06-07'),
 (5, 'Chambre', 50, '2018-06-06'),
-(6, 'Chambre', 30, '2018-06-07');
+(6, 'Chambre', 30, '2018-06-07'),
+(7, 'WC', 45, '2018-06-05'),
+(8, 'WC', 65, '2018-06-06'),
+(9, 'WC', 89, '2018-06-07'),
+(10, 'Cuisine', 65, '2018-06-05'),
+(11, 'Cuisine', 67, '2018-06-06'),
+(12, 'Cuisine', 34, '2018-06-07'),
+(13, 'SdB', 52, '2018-06-05'),
+(14, 'SdB', 36, '2018-06-06'),
+(15, 'SdB', 85, '2018-06-07');
 
 -- --------------------------------------------------------
 
@@ -293,7 +311,9 @@ INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
 (11, '', 5, '2018-06-05 18:01:06'),
 (12, '', 5, '2018-06-05 18:01:23'),
 (13, '', 5, '2018-06-05 18:02:16'),
-(14, '', 5, '2018-06-05 18:02:47');
+(14, '', 5, '2018-06-05 18:02:47'),
+(15, '', 4, '2018-06-06 11:26:52'),
+(16, '', 4, '2018-06-06 11:28:26');
 
 -- --------------------------------------------------------
 
@@ -320,8 +340,11 @@ INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `passwor
 (1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
 (2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
 (3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0),
-(4, 'a', 'a', 1234567890, 'test', 'principal', 'a@a.fr', 0),
-(5, 'b', 'b', 1234567890, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'client principal', 'b@b', 0);
+(4, 'a', 'a', 0000000000, '', 'principal', 'a@a.fr', 0),
+(5, 'b', 'b', 1234567890, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'b@b', 6),
+(6, 'A', 'A', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$oUt25/fSDq5igCaouTZZxCdcQF94Z.GMcQzA7GmSc8XjNy8P8lt1DZv4jbsjd9L.1/MzccTSYUGH0drNKolEj/', 'client principal', 'A@A', 0),
+(7, 'B', 'B', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$eXcJlqBO.ikX/ciRLJABARNwDpfCmMbsuQGWDLZbolbEL/MI.1YroTK12Tg4jIuPtQmN0cZYMRhruowfzgXGa0', 'client principal', 'n-franck@hotmail.fr', 0),
+(8, 'C', 'C', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$3vM/iJBfqb3EXJhRiZFV3echo3K0spZrb9FZhrG9sPJfWbXC5cGI2RCr/eYdqXy5TYYKS4kEKEZtfW8Tw8o9u/', 'client principal', 'arnold.neuman@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -467,13 +490,13 @@ ALTER TABLE `statistique`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
