@@ -12,14 +12,14 @@
     <td>Quantité</td>
     </tr>
     <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td> Infrarouge</td>
+        <td> 0,65</td>
+        <td> 1</td>
     </tr>
 </table>
-<p id="prix">Prix total :</p>
+<p id="prix">Prix total : 0,65€</p>
 <section>
-    <form method="post" action="vue/liste.php">
+    <form method="post" action="vue/capteurdispo.php">
         <input type="submit" name="retourshop" value="Continuer mes achats">
         <input type="submit" name="Validerpanier" value="Valider mon panier">
     </form>

@@ -13,6 +13,6 @@ if(($_POST["pass"])==($_POST["passv"]))
     //header("Location: mdp_reset.php");
 }
 else{
-    $_SESSION["message"]="Le code n'est pas bon";
+
 }
 ?>
