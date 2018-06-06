@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="mdp_reset.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mdp_reset.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mdp_reset.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mdp_oublier.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mdp_oublier.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="91" />
+            <state relative-caret-position="346">
+              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -156,13 +156,13 @@
         <option value="$PROJECT_DIR$/../../Test/Graphique.js" />
         <option value="$PROJECT_DIR$/../../www/Test/Modifmdpbdd.php" />
         <option value="$USER_HOME$/Desktop/Code mail et stats/Modifmdpbdd.php" />
-        <option value="$PROJECT_DIR$/mdp_oublier.php" />
         <option value="$USER_HOME$/Desktop/App-site/Controleur/Modifmdpbdd.php" />
         <option value="$USER_HOME$/Desktop/Code mail et stats/UtilisateurSecondaireListe.php" />
         <option value="$PROJECT_DIR$/mdp_resetliste.php" />
         <option value="$PROJECT_DIR$/verifcode.php" />
         <option value="$PROJECT_DIR$/verifcodeliste.php" />
         <option value="$PROJECT_DIR$/mdp_reset.php" />
+        <option value="$PROJECT_DIR$/mdp_oublier.php" />
       </list>
     </option>
   </component>
@@ -314,12 +314,12 @@
       <workItem from="1527790498064" duration="81000" />
       <workItem from="1528114963554" duration="6671000" />
       <workItem from="1528212930485" duration="1639000" />
-      <workItem from="1528297894659" duration="7024000" />
+      <workItem from="1528297894659" duration="7182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20987000" />
+    <option name="totallyTimeSpent" value="21145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -642,14 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verifcode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -678,6 +670,14 @@
             <marker date="1528304967760" expanded="true" signature="68:94" ph="..." />
             <marker date="1528304967760" expanded="true" signature="75:94" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdp_oublier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
