@@ -9,8 +9,8 @@ require("../controleur/reset.php");
     <h1>Réinitialiser le mot de passe </h1>
     <form class="form" action="mdp_reset.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
-      <input type="password" placeholder="Nouveau mot de passe" name="new password" required />
-       <input type="password" placeholder="Confirmer le nouveau mot de passe" name="confirm new password" required />
+      <input type="password" placeholder="Nouveau mot de passe" name="newpass" required />
+       <input type="password" placeholder="Confirmer le nouveau mot de passe" name="cnewpass" required />
       <input type="submit" value="Envoyer" name="send" class="btn btn-block btn-primary" />
 
     </form>
