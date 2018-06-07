@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2018 at 02:38 PM
+-- Generation Time: Jun 07, 2018 at 05:23 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -62,7 +62,7 @@ CREATE TABLE `boutique` (
 --
 
 INSERT INTO `boutique` (`id_boutique`, `nom`, `description`, `prix`, `id_personne`, `stock`) VALUES
-(1, 'infrarouge TSOP4838 38 kHz', 'Haute densité d\'assemblage par intégration de la diode réceptrice, du filtre et du préampli dans un boîtier. Insensibilité à la lumière du jour, compatibilité TTL et C-MOS, faible puissance absorbée et haute sécurité anti-parasite distinguent cette série.', '0.65', 1, 5),
+(1, 'infrarouge TSOP4838 38 kHz', 'Haute densité d\'assemblage par intégration de la diode réceptrice, du filtre et du préampli dans un boîtier. Insensibilité à la lumière du jour, compatibilité TTL et C-MOS, faible puissance absorbée et haute sécurité anti-parasite distinguent cette série.', '0.65', 1, 20),
 (2, 'CAPTEUR DE TEMPÉRATURE DS18B20', 'Le DS18B20 est composé des éléments suivant :\r\nun capteur de température, un convertisseur analogique - numérique, une zone mémoire de 8 octets et une EEPROM de 3 octets.\r\n\r\nCes zones de mémoire servent à communiquer avec le DS18B20 afin de :\r\n- récupérer les températures converties\r\n- de configurer le convertisseur\r\n- de configurer les valeurs de températures min et max pour la fonction \"thermostat\"', '3.50', 1, 8),
 (3, 'Capteur Photoélectrique / Mini Crépusculaire 1-10V', 'Avec une zone de détection de 360 ° et une plage de régulation 1-100%, ce capteur crépusculaire est compatible avec les luminaires équipés de driver dimmable 1-10V. Son mode de fonctionnement progressif, augmente et diminue l’éclairage du luminaire en fonction de la lumière ambiante préréglée (équipé d’un variateur qui modifie le comportement par rapport à la lumière ambiante), c’est à dire, quand la lumière ambiante diminue, le capteur augmente l\'intensité de la lumière et au contraire, quand la lumière ambiante augmente, le capteur réduit l\'intensité de la lumière, permettant toujours un éclairage adéquat d\'une manière efficace.', '17.29', 2, 15),
 (4, 'Capteur de Son RB-Wav-26', 'Amplificateur de puissance audio LM386 intégré\r\nGain du signal audio jusqu\'à 200\r\nPrécision ajustable\r\nIndicateur du signal en sortie', '3.92', 2, 70);
@@ -86,7 +86,13 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`id_capteur`, `type`, `reference`, `etat`, `id_place`) VALUES
-(1, 'infrarouge', 'LHI 968', 'marche', 1);
+(1, 'infrarouge', 'LHI 968', 'off', 2),
+(31, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
+(22, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
+(30, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
+(24, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
+(29, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
+(28, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1);
 
 -- --------------------------------------------------------
 
@@ -228,7 +234,9 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`id_piece`, `nom`, `superficie`, `id_maison`, `type`) VALUES
-(1, 'Chambre A', 15, 1, 'Chambre');
+(1, 'Chambre A', 15, 1, 'Chambre'),
+(2, 'Cuisine', 20, 1, 'Cuisine'),
+(3, 'Salon', 30, 1, 'Salon');
 
 -- --------------------------------------------------------
 
@@ -313,7 +321,19 @@ INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
 (13, '', 5, '2018-06-05 18:02:16'),
 (14, '', 5, '2018-06-05 18:02:47'),
 (15, '', 4, '2018-06-06 11:26:52'),
-(16, '', 4, '2018-06-06 11:28:26');
+(16, '', 4, '2018-06-06 11:28:26'),
+(17, '', 8, '2018-06-06 15:18:07'),
+(18, '', 5, '2018-06-06 23:20:34'),
+(19, '', 5, '2018-06-06 23:21:35'),
+(20, '', 5, '2018-06-06 23:25:59'),
+(21, '', 5, '2018-06-06 23:26:08'),
+(22, '', 5, '2018-06-06 23:26:14'),
+(23, '', 5, '2018-06-06 23:26:15'),
+(24, '', 5, '2018-06-06 23:30:40'),
+(25, '', 5, '2018-06-06 23:32:56'),
+(26, '', 5, '2018-06-06 23:39:13'),
+(27, '', 5, '2018-06-06 23:40:48'),
+(28, '', 5, '2018-06-07 09:43:09');
 
 -- --------------------------------------------------------
 
@@ -329,22 +349,23 @@ CREATE TABLE `utilisateur` (
   `password` text CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `type` varchar(200) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `num_principal` int(11) NOT NULL
+  `num_principal` int(11) NOT NULL,
+  `NombreCapteurInfrarouge` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`) VALUES
-(1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0),
-(2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0),
-(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0),
-(4, 'a', 'a', 0000000000, '', 'principal', 'a@a.fr', 0),
-(5, 'b', 'b', 1234567890, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'b@b', 6),
-(6, 'A', 'A', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$oUt25/fSDq5igCaouTZZxCdcQF94Z.GMcQzA7GmSc8XjNy8P8lt1DZv4jbsjd9L.1/MzccTSYUGH0drNKolEj/', 'client principal', 'A@A', 0),
-(7, 'B', 'B', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$eXcJlqBO.ikX/ciRLJABARNwDpfCmMbsuQGWDLZbolbEL/MI.1YroTK12Tg4jIuPtQmN0cZYMRhruowfzgXGa0', 'client principal', 'n-franck@hotmail.fr', 0),
-(8, 'C', 'C', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$3vM/iJBfqb3EXJhRiZFV3echo3K0spZrb9FZhrG9sPJfWbXC5cGI2RCr/eYdqXy5TYYKS4kEKEZtfW8Tw8o9u/', 'client principal', 'arnold.neuman@gmail.com', 0);
+INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`, `NombreCapteurInfrarouge`) VALUES
+(1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0, 0),
+(2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0, 0),
+(3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0, 0),
+(4, 'a', 'a', 0000000000, '', 'principal', 'a@a.fr', 0, 0),
+(5, 'a', 'b', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'b@b', 6, 0),
+(6, 'A', 'A', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'A@A', 5, 0),
+(7, 'B', 'B', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$eXcJlqBO.ikX/ciRLJABARNwDpfCmMbsuQGWDLZbolbEL/MI.1YroTK12Tg4jIuPtQmN0cZYMRhruowfzgXGa0', 'client principal', 'n-franck@hotmail.fr', 0, 0),
+(8, 'C', 'C', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$RUAfImrssOz6DtOdXKeRpNaiHEc3DWWUvcVvk5.oi5FQkdSgVOOdpBJHkle0kyrG095ytILFXS8Fzx3S5Q.Dn1', 'client principal', 'arnold.neuman@gmail.com', 0, 12);
 
 --
 -- Indexes for dumped tables
@@ -448,7 +469,7 @@ ALTER TABLE `boutique`
 -- AUTO_INCREMENT for table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `id_capteur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_capteur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `facture`
@@ -478,7 +499,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `id_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `statistique`
@@ -490,7 +511,7 @@ ALTER TABLE `statistique`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `utilisateur`
