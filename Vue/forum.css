@@ -1,33 +1,69 @@
-#mact,#jact,#aact{
+.body{
+    padding-top: 5vw;
+}
+
+.mact,.jact,.aact{
     display: inline-block;
 }
 
-#jactuel{
+.jactuel{
     font-size: x-large;
     text-align: right;
+    color:blue;
 
 }
-#newmess,#jactuel,#rechercher{
+.newmess,.jactuel,.rechercher{
     display: inline-block;
 }
 
-#titretoptic{
+.titretoptic, .newmess{
+    text-decoration: none;
+}
+
+.titretoptic{
     color : rgb( 155,207,249);
     font-size: x-large;
     margin-top: 5%;
 }
 
-#jtopic,#mtopic,#atopic,#le,#nom{
+.jtopic,.mtopic,.atopic,.le,.nom{
     display: inline-block;
 }
 
 a:visited{
     color: rgb( 155,207,249);
 }
+a{
+    color:#3c3f41;
+}
 
 .sujet{
     border:2px solid darkblue;
 }
-.text{
-    border: 2px solid orangered;
+.titre{
+    position:absolute;
+    font-size:xx-large;
+    color: #3c3f41;
+    font-family: "AR BLANCA";
+    left:35%;
+    top: 2%;
+
 }
+.poster{
+    color:blue;
+}
+.le{
+    color:blue;
+}
+.nom{
+    color:blue;
+}
+body {
+    background-image: url("image/fond.jpg");
+    background-size: cover;
+}
+
+input{
+    width: 13vw;
+}
+
