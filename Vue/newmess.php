@@ -2,14 +2,10 @@
     <meta charset="utf-8"/>
     <title>Nouveau Message</title>
     <link rel="stylesheet"/>
+    <script src="NonVide.js"></script>
 </head>
 
 <body>
-
-<?php
-include("../Controleur/NonVide.js");
-?>
-
 <form method="post" action="Vue/liste.php">
     <p>
         <label for="titre topic">Titre du topic :</label>
