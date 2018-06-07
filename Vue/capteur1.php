@@ -27,7 +27,7 @@
 <section>
     <aside>
         <?php if ($_GET['nc'] == 1) {
-            echo '<div id="image"><img src="Vue/image/inf1.png"></div>';
+            echo '<div id="image"><img src="Vue/image/inf.jpg"></div>';
         } elseif ($_GET['nc'] == 2) {
             echo '<div id="image2"><img src="Vue/image/im2.jpg"></div>';
         } elseif ($_GET['nc'] == 3) {

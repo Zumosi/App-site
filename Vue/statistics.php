@@ -1,3 +1,7 @@
+<?php
+include("Graphique.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +26,7 @@
 <a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
 <img class="saloni" src="Vue/image/salon.png" >
 
+
 <a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
 <img class="chambri" src="Vue/image/chambre.png" >
 
@@ -29,11 +34,5 @@
 <img class="cuisini" src="Vue/image/cuisine.jpg" >
 </body>
 </html>
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: Julien
- * Date: 03/05/2018
- * Time: 11:51
- */
+
 

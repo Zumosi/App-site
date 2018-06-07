@@ -12,7 +12,7 @@
         <td ><a href="index.php?cible=profil"><img id="user"  src="Vue/image/user.png" />Profil</a></td>
     </tr>
     <tr>
-        <td ><a href="#"><img  src="Vue/image/group.png" />Gestion Utilisateur</a></td>
+        <td ><a href="index.php?cible=UtilisateurSecondaireForm"><img  src="Vue/image/group.png" />Gestion Utilisateur</a></td>
     </tr>
     <tr>
         <td ><a href="vue/liste.php?session=fin"><img  src="Vue/image/off.png" />Déconnexion</a></td>

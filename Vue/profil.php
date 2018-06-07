@@ -36,7 +36,7 @@ $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
-    <form method="post" action="Vue/liste.php" onsubmit="return(NonVide());">
+    <form method="post" action="Vue/liste.php" onsubmit="//return(NonVide());">
         <table class="prof">
             <tr>
                 <td id="top"><strong>Nom: </strong><br/><br/>
