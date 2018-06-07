@@ -56,6 +56,10 @@ nav.black ul {
     background: #3c3f41;
 }
 
+nav.black ul li a{
+    color: white;
+}
+
 nav ul li {
     display: inline-block;
     padding: 16px 40px;;
@@ -63,7 +67,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 16px;
 }
 
