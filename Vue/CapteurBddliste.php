@@ -1,5 +1,5 @@
 <?php
-include("BDD.php");
+include("../Controleur/BDD.php");
 $object = new Bdd;
 $etat = $_POST["etat"];
 $id=1;

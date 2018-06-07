@@ -28,6 +28,8 @@
     <aside>
         <?php if ($_GET['nc'] == 1) {
             echo '<div id="image"><img src="Vue/image/inf.jpg"></div>';
+            ?>
+<?php
         } elseif ($_GET['nc'] == 2) {
             echo '<div id="image2"><img src="Vue/image/im2.jpg"></div>';
         } elseif ($_GET['nc'] == 3) {
@@ -48,11 +50,14 @@
         <p id="prix"> Prix : <?php prix($i) ?> </p>
         <p id="quanti"> Quantité disponible : <?php quanti($i) ?> </p>
 
-        <form method="post" action="vue/liste.php">
+        <form method="post" action="vue/panier.php">
 
 
-            <input id="quant" type="number" name="quantitée" min="0" max="<?php quanti($i) ?>"/>
+            <input id="quant" type="number" name="quantite" min="0" max="<?php quanti($i) ?>"/>
+            <input type='hidden' name='nomcapteur' value="Infrarouge">
+            <input type='hidden' name='prix' value="<?php prix($i) ?>">
             <input id="bouton" type="submit" name="addpanier" value="Ajouter au Panier">
+
 
         </form>
 

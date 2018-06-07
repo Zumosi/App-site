@@ -1,5 +1,5 @@
 <?php
-include("BDD.php");
+include("../Controleur/BDD.php");
 ?>
 
 <!DOCTYPE html>

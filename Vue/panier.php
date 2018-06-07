@@ -6,21 +6,31 @@
     <link rel="stylesheet" href="Vue/panier.css"/>
 </head>
 <body>
-<table id="facture">
+<?php
+$quantite = $_POST["quantite"];
+$nomcapteur = $_POST["nomcapteur"];
+$prix = $_POST["prix"];
+$prixtotal = $quantite*$prix;
+?>
+<table id="facture" border="2">
     <tr><td>Nom du capteur</td>
     <td>Prix unitaire</td>
     <td>Quantité</td>
+    <td>Prix Total</td>
     </tr>
     <tr>
-        <td> Infrarouge</td>
-        <td> 0,65</td>
-        <td> 1</td>
+        <td> <?php echo htmlspecialchars($_POST["nomcapteur"]); ?></td>
+        <td> <?php echo htmlspecialchars($_POST["prix"]); ?></td>
+        <td> <?php echo htmlspecialchars($_POST["quantite"]); ?></td>
+        <td> <?php echo htmlspecialchars(($prixtotal));?></td>
     </tr>
 </table>
-<p id="prix">Prix total : 0,65€</p>
+
 <section>
-    <form method="post" action="vue/capteurdispo.php">
+    <form method="post" action="capteurdispo.php">
         <input type="submit" name="retourshop" value="Continuer mes achats">
+        <input type='hidden' name='nomcapteur' value="<?php echo htmlspecialchars($_POST["nomcapteur"]); ?>">
+        <input type='hidden' name='quantite' value="<?php echo htmlspecialchars($_POST["quantite"]); ?>">
         <input type="submit" name="Validerpanier" value="Valider mon panier">
     </form>
 </section>
