@@ -1,3 +1,6 @@
+<?php
+$_SESSION["ajout"]=true;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +13,7 @@
 <body>
 
 <?php
-
-
+$_SESSION["id"]=8;
 if ($_GET['nc'] == 1) {
     $i = (i() - 3);
 } elseif ($_GET['nc'] == 2) {
@@ -44,7 +46,7 @@ if ($_GET['nc'] == 1) {
     </aside>
 
     <article>
-        <h1><?php $_SESSION["nomcapteur"]= titreshop($i);?> </h1>
+        <h1><?php $_SESSION["nomcapteur"]= titreshop($i); ?> </h1>
 
         <div id="txtim1">
             <?php textshop($i) ?>

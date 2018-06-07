@@ -19,6 +19,7 @@ $requete = $object->connect()->prepare('SELECT NombreCapteurInfrarouge FROM util
 $requete->execute(array("ID"=>$_SESSION["id"]));
 $nombrecapteur=$requete->fetch();
 $nombrecapteur=$nombrecapteur[0];
+$_SESSION["quantitetotale"]=$nombrecapteur;
 echo "Un capteur à été rajouté et est maintenant attribué à la pièce : " . $_POST["piece"] ;
 echo "<br>";
 echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)."

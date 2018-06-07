@@ -2,8 +2,7 @@
 session_start();
 include("../Controleur/BDD.php");
 
-$_SESSION["id"]=8;
-$_SESSION["idcapteur"]=1;
+
 
 ?>
 <!DOCTYPE html>
@@ -22,10 +21,13 @@ $requete->execute(array(
         "ID"=>$_SESSION["id"]
 ));
 $quantitebdd = $requete->fetch();
-$quantitetotale = $quantite + $quantitebdd[0];
+if($_SESSION["ajout"]==true){
+    $_SESSION["quantitetotale"] = $quantite + $quantitebdd[0];
+    $_SESSION["ajout"]=false;
+}
 $requete = $object->connect()->prepare('UPDATE utilisateur SET NombreCapteurInfrarouge=:quantitetotale WHERE id_utilisateur=:ID ');
 $requete->execute(array(
-    "quantitetotale"=>$quantitetotale,
+    "quantitetotale"=>$_SESSION["quantitetotale"],
     "ID"=>$_SESSION["id"]
 ));
 
@@ -43,7 +45,7 @@ $requete->execute(array(
     <tr>
         <td><?php echo htmlspecialchars($_SESSION["nomcapteur"]); ?></td>
 
-        <td><?php echo htmlspecialchars($quantitetotale); ?></td>
+        <td><?php echo htmlspecialchars($_SESSION["quantitetotale"]); ?></td>
 
         <td><input type="submit" name="send" value="Ajouter"/></td>
     </tr>
