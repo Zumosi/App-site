@@ -12,20 +12,12 @@ include("BDD.php");
       $(document).ready(function() {
             $("#button").click(function () {
                 var etat = $('#etat').val();
-                if(document.getElementById('etat').value=="on"){
-                    etat="off";
-                    document.getElementById('etat').value="off";
-                }
-                else if(document.getElementById('etat').value=="off"){
-                    etat="on";
-                    document.getElementById('etat').value="on";
-                }
                 var varData = 'etat=' + etat;
                 console.log(varData);
 
                 $.ajax({
                     type:'POST',
-                    url:'CapteurBddliste.php',
+                    url:'CapteurBddlistetext.php',
                     data:varData,
                     success:function(){
                     alert("tu peux aller dormir")
@@ -58,11 +50,11 @@ include("BDD.php");
        echo "Le capteur avec l'id " .$id. " a maintenant l'état : " . $newetat;
    }*/
 ?>
-<input type="hidden" name="etat" id="etat" value="on" />
+<input type="text" name="etat" id="etat"; />
+  <div id="button" name="send" class="btn btn-block btn-primary">Clique ici</div>
 <br>
 <br>
 <br>
-  <div id="button"
 <button id="button">
 <div class="onoffswitch" >
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" >
@@ -71,7 +63,6 @@ include("BDD.php");
         <span class="onoffswitch-switch"></span>
     </label>
 </div>
-    </div>
 </button>
 </body>
 </html>
