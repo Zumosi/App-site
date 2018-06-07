@@ -19,6 +19,7 @@ function titreshop($im)
     $reponse->execute(array($im));
     while ($donnees = $reponse->fetch()) {
         echo $donnees['nom'];
+        return $donnees['nom'];
     }
     $reponse->closeCursor();
 }

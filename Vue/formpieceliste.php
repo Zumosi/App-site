@@ -1,18 +1,27 @@
 <?php
+session_start();
 include("../Controleur/BDD.php");
-echo "capteurs ajoutés!";
-echo "<br>";
 
-$_POST["idcapteur"]=1;
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT id_piece FROM piece WHERE type=:piece ');
 $requete->execute(array("piece"=>$_POST["piece"]));
 $idpiece=$requete->fetch();
 $object = new Bdd;
-$requete = $object->connect()->prepare('UPDATE capteur SET id_place=:idpiece WHERE id_capteur=:ID ');
-$requete->execute(array("idpiece"=>$idpiece[0],
-    "ID"=>$_POST["idcapteur"]));
-echo "Le capteur avec l'id " .$_POST["idcapteur"]. " est maintenant attribué à la pièce : " . $_POST["piece"] ;
+$requete = $object->connect()->prepare(
+        'INSERT INTO capteur (type,reference,etat,id_place)
+          VALUES (:type,"LHI 968","off",:idpiece)');
+$requete->execute(array("type"=>$_SESSION["nomcapteur"],
+        "idpiece"=>$idpiece[0]
+    ));
+$requete = $object->connect()->prepare('UPDATE utilisateur SET NombreCapteurInfrarouge=NombreCapteurInfrarouge-1 WHERE id_utilisateur=:ID ');
+$requete->execute(array("ID"=>$_SESSION["id"]));
+$requete = $object->connect()->prepare('SELECT NombreCapteurInfrarouge FROM utilisateur WHERE id_utilisateur=:ID ');
+$requete->execute(array("ID"=>$_SESSION["id"]));
+$nombrecapteur=$requete->fetch();
+$nombrecapteur=$nombrecapteur[0];
+echo "Un capteur à été rajouté et est maintenant attribué à la pièce : " . $_POST["piece"] ;
+echo "<br>";
+echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)."
 ?>
 
 

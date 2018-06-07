@@ -1,7 +1,10 @@
 <?php
+session_start();
 include("../Controleur/BDD.php");
 
-$_SESSION["id"]=8
+$_SESSION["id"]=8;
+$_SESSION["idcapteur"]=1;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +15,7 @@ $_SESSION["id"]=8
 </head>
 <body>
 <?php
-$quantite = $_POST["quantite"];
+$quantite = $_SESSION["quantite"];
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT NombreCapteurInfrarouge FROM utilisateur WHERE id_utilisateur=:ID');
 $requete->execute(array(
@@ -25,28 +28,27 @@ $requete->execute(array(
     "quantitetotale"=>$quantitetotale,
     "ID"=>$_SESSION["id"]
 ));
-$nomcapteur = $_POST["nomcapteur"];
 
 
 ?>
     <form action="formpiece.php" method="post" >
-        <input type ="hidden" name="nomcapteur" value="<?php echo htmlspecialchars($nomcapteur); ?>"/>
         <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
-        <input type="submit" name="send" value="Ajouter"/>
-    </form>
+
+
 <table id="facture" border="2">
     <tr><td>Nom du capteur</td>
         <td>Quantité Disponible</td>
         <td>Modifier</td>
     </tr>
     <tr>
-        <td><?php echo htmlspecialchars($nomcapteur); ?></td>
+        <td><?php echo htmlspecialchars($_SESSION["nomcapteur"]); ?></td>
 
         <td><?php echo htmlspecialchars($quantitetotale); ?></td>
 
-        <td></td>
+        <td><input type="submit" name="send" value="Ajouter"/></td>
     </tr>
 </table>
+    </form>
 
 </section>
 </body>

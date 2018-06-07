@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../Controleur/BDD.php");
 ?>
 <!DOCTYPE html>
@@ -12,8 +13,8 @@ include("../Controleur/BDD.php");
 <body>
 <?php
 
-//$_POST["nomcapteur"]="Infrarouge";
-$nomcapteur= $_POST["nomcapteur"];
+
+$nomcapteur= $_SESSION["nomcapteur"];
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT id_capteur FROM capteur WHERE type=:nomcapteur');
 $requete->execute(array(
@@ -35,7 +36,7 @@ $idcapteur=1;
         <option name ="piece" value="SdB">SdB</option><br>
         <option name ="piece" value="Salon">Salon</option><br>
         <option name ="piece" value="WC">WC</option><br>
-        <input type="hidden" name ="idcapteur" value="<?php $idcapteur; ?>">
+        <input type="hidden" name ="idcapteur" value="<?php $idcapteur; ?>"/>
     </select>
     <input type="submit" value="Envoyer" />
 
