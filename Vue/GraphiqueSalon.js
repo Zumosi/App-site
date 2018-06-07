@@ -1,5 +1,5 @@
 
-    new Chart(document.getElementById("Salon"), {
+    new Chart(document.getElementsByClassName("Salong"), {
         type: 'line',
         data: {
             labels: date,
@@ -19,7 +19,7 @@
         options: {
             title: {
                 display: true,
-                text: 'Consomation de votre Salon'
+                text: 'Consomation et puissance généré par les capteurs de votre Salon'
             }
         }
     });

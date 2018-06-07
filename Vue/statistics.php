@@ -15,8 +15,8 @@ include("Graphique.php");
 
 <body>
 
-<h1>Statistiques</h1>
-<img class="cadre" src="Vue/image/encadre.png" >
+<p class="titre">Statistiques</p>
+
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
 <img class="wci" src="Vue/image/wc.png" >
 

@@ -1,5 +1,5 @@
 
-new Chart(document.getElementById("Cuisine"), {
+new Chart(document.getElementsByClassName("Cuisineg"), {
     type: 'line',
     data: {
         labels: date,
@@ -19,7 +19,7 @@ new Chart(document.getElementById("Cuisine"), {
     options: {
         title: {
             display: true,
-            text: 'Consomation de votre Cuisine'
+            text: 'Consomation et puissance généré par les capteurs de votre Cuisine'
         }
     }
 });

@@ -13,13 +13,12 @@ include_once("Controleur/BDD.php");
 </head>
 <body>
 
-<h1>Statistiques</h1>
 
 <?php
 
 function trouverdate(){
     $object = new Bdd;
-    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="Salon" ');
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="salon" ');
     $requetedate->execute();
     $tabledate = $requetedate->fetchAll();
     $date=array();
@@ -35,7 +34,7 @@ print_r($date) ;
 function consoSalon()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Salon" ');
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="salon" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=array();
@@ -56,7 +55,7 @@ function consoSalon()
 function puissanceSalon()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="Salon" ');
+    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="salon" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $puissance=array();
@@ -98,7 +97,7 @@ function puissanceChambre()
 function consoSdB()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="SdB" ');
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="sdb" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=array();
@@ -114,7 +113,7 @@ function consoSdB()
 function puissanceSdB()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="SdB" ');
+    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="sdb" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $puissance=array();
@@ -213,13 +212,6 @@ echo '</script>';
 ?>
 
 
-<!--<div class="container">
-    <canvas id="Salon" width="800" height="450"></canvas>
-</div>';
-<div class="container">
-    <canvas id="Chambre" width="800" height="450"></canvas>
-</div>
-<script src="Courbure.js"></script> -->
 </body>
 </html>
 
