@@ -1,3 +1,7 @@
+.body{
+    padding-top: 5vw;
+}
+
 .mact,.jact,.aact{
     display: inline-block;
 }
@@ -10,6 +14,10 @@
 }
 .newmess,.jactuel,.rechercher{
     display: inline-block;
+}
+
+.titretoptic, .newmess{
+    text-decoration: none;
 }
 
 .titretoptic{
@@ -54,3 +62,8 @@ body {
     background-image: url("image/fond.jpg");
     background-size: cover;
 }
+
+input{
+    width: 13vw;
+}
+
