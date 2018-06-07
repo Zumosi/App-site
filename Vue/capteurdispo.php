@@ -1,9 +1,6 @@
 <?php
 session_start();
 include("../Controleur/BDD.php");
-
-
-
 ?>
 <!DOCTYPE html>
 <html>

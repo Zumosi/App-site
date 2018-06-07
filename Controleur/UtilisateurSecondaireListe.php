@@ -1,6 +1,5 @@
-
 <?php
-
+session_start();
 include_once("BDD.php");
 //include("Securisation.php");
 

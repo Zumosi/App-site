@@ -13,7 +13,6 @@ $_SESSION["ajout"]=true;
 <body>
 
 <?php
-$_SESSION["id"]=8;
 if ($_GET['nc'] == 1) {
     $i = (i() - 3);
 } elseif ($_GET['nc'] == 2) {

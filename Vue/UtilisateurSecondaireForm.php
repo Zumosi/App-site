@@ -16,28 +16,22 @@ include_once("Controleur/BDD.php");
 $object = new Bdd;
 $requete = $object->connect()->prepare("SELECT nom,prenom FROM utilisateur WHERE num_principal=:ID");
 $requete->execute(array("ID"=>$_SESSION["id"]));
-$resultat = $requete->fetchAll();   ?>
+$resultat = $requete->fetchAll();
 
 
-<table id="tablesecondaire">
+echo '<table border="2" >
    <tr>
-        <td>Nom</td>
-        <td>Prénom</td>
+        <th>Nom</th>
+        <th>Prénom</th>
     </tr>
-
-    <?php for ($i = 0; $i < count($resultat); $i++) {  ?>
-    <td align='center'>" . $resultat[$i]['nom'] . "</td>
-    <td>" . $resultat[$i]['prenom'] . "</td>
-    <tr/>
-
-    <?php 
-
-
-    }  
-
- ?>
-    </table>
-
+    ';
+for ($i = 0; $i < count($resultat); $i++) {
+    echo "<td align='center'>" . $resultat[$i]['nom'] . "</td>";
+    echo "<td>" . $resultat[$i]['prenom'] . "</td>";
+    echo "<tr/>";
+}
+echo '</table>';
+?>
 
 <section id="formulaire">
 <form method="post" action = "Controleur/UtilisateurSecondaireListe.php" onsubmit="">
