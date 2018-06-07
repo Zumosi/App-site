@@ -1,4 +1,4 @@
-section {
+#formulaire {
     text-align: center;
     margin-top: 25vw;
     width: 15vw;
@@ -8,21 +8,10 @@ section {
     font-size: 1.3vw;
     color: black;
 }
-h1 {
+
+#titre {
     text-align: center;
-    
 
-
-
-}
-p {
-    text-align: center;
-    width: 15vw;
-    height: 3vw;
-    font-size: 1.3vw;
-    color: black;
-    margin-right: auto;
-    margin-left: auto;
 
 }
 

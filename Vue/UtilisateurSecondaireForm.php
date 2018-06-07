@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Voici vos utilisateurs Secondaires : </h1>
+<h1 id="titre"> Voici vos utilisateurs Secondaires : </h1>
 
 
 <?php
@@ -17,6 +17,7 @@ $object = new Bdd;
 $requete = $object->connect()->prepare("SELECT nom,prenom FROM utilisateur WHERE num_principal=:ID");
 $requete->execute(array("ID"=>$_SESSION["id"]));
 $resultat = $requete->fetchAll();   ?>
+
 
 <table id="tablesecondaire">
    <tr>
@@ -31,14 +32,17 @@ $resultat = $requete->fetchAll();   ?>
 
     <?php 
 
-    }   ?>
+
+    }  
+
+ ?>
     </table>
 
 
-<section>
+<section id="formulaire">
 <form method="post" action = "Controleur/UtilisateurSecondaireListe.php" onsubmit="">
-    <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder="Texte" /> <br>
-    <input type="submit" value="Ajouter"   />
+    <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder=" " /> <br>
+    <br>   <input type="submit" value="Ajouter"   />
 
 </form>
 </section>
