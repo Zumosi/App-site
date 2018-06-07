@@ -14,6 +14,7 @@ if (isset($_GET['cible']) && !empty($_GET['cible'])) {
     include("Vue/header_2.php");
 }
 
+
 if (isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = $_GET['cible'];
 } else {
@@ -21,6 +22,7 @@ if (isset($_GET['cible']) && !empty($_GET['cible'])) {
 }
 
 include('Vue/' . $url . '.php');
+
 
 
 if (isset($_GET['cible']) && !empty($_GET['cible'])) {
