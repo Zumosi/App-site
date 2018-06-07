@@ -1,122 +1,108 @@
-/*body{
-    background: url("encadre.png") no-repeat left;
-    background: url("encadre.png") no-repeat top;
-    top:5%;
-    left:1%;
-    width: 20%;
-    height: 50%;
 
-
-}*/
 .titre{
+    font-family: "AR BLANCA";
     position: absolute;
-    top: -10%;
-    Left:35%;
-    font-size:7vw;
+    top: 7%;
+    Left:40%;
+    font-size:4vw;
+    margin-bottom: 10%;
 }
 .chambre{
     position:absolute;
     top:20%;
-    Left:30%;
-    font-size:3vw;
+    Left:35%;
+    font-size:x-large;
+    margin-right: 55%;
+    margin-bottom: 55%;
+
 }
 .sdb{
     position:absolute;
     top:20%;
-    Left:45%;
-    font-size:3vw;
+    Left:50%;
+    font-size:x-large;
+    margin-right: 35%;
+
+
 }
 .cuisine{
     position:absolute;
     top:20%;
-    Left:65%;
-    font-size:3vw;
+    Left:70%;
+    font-size:x-large;
+
+
 }
 .salon{
     position:absolute;
     top:50%;
-    Left:30%;
-    font-size:3vw;
+    Left:35%;
+    font-size:x-large;
+
+
 }
 .wc{
     position:absolute;
     top:50%;
-    Left:45%;
-    font-size:3vw;
+    Left:50%;
+    font-size:x-large;
+
+
 }
 
 .chambri{
     position:absolute;
     top:33%;
     Left:30%;
-    width:10%;
-    height:10%;
+    width:15%;
+    height:15%;
 }
 .sdbi{
     position:absolute;
     top:33%;
     Left:45%;
-    width:10%;
-    height:10%;
+    width:15%;
+    height:15%;
 }
 .cuisini{
     position:absolute;
     top:33%;
     Left:65%;
-    width:10%;
-    height:10%;
+    width:15%;
+    height:15%;
 }
 .saloni{
     position:absolute;
     top:63%;
     Left:30%;
-    width:10%;
-    height:10%;
+    width:15%;
+    height:15%;
 }
 .wci{
     position:absolute;
     top:63%;
     Left:45%;
-    width:10%;
-    height:13%;
-}
-.stat{
-    font-size:3vw;
-    position:absolute;
-    top:5%;
-    left:2%;
-
-}
-.consommation{
-    font-size:2vw;
-    position:absolute;
-    top:20%;
-    left:5%;
-
-}
-.puissance{
-    font-size:2vw;
-    position:absolute;
-    top:35%;
-    left:5%;
+    width:15%;
+    height:18%;
 }
 
-.consoValue{
-    font-size:2vw;
-    position:absolute;
-    top:30%;
-    left:5%
+
+body {
+    background-image: url("image/fond.jpg");
+    background-size: cover;
 }
-.powerValue{
-    font-size:2vw;
-    position:absolute;
-    top:45%;
-    left:5%
+
+.container{
+    position: absolute;
+    left: 0%;
+    top:23%;
+    height: 20%;
+    width: 30%;
 }
-.cadre{
-    position:absolute;
-    top:2vw;
-    left:0vw;
-    width: 25vw;
-    height: 40vw;
+
+a:visited{
+    color: rgb( 155,207,249);
+}
+a{
+    color:#3c3f41;
 }

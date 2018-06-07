@@ -1,5 +1,5 @@
 
-new Chart(document.getElementById("SdB"), {
+new Chart(document.getElementsByClassName("SdBg"), {
     type: 'line',
     data: {
         labels: date,
@@ -19,7 +19,7 @@ new Chart(document.getElementById("SdB"), {
     options: {
         title: {
             display: true,
-            text: 'Consomation de votre Salle de Bain'
+            text: 'Consomation et puissance généré par les capteurs de votre Salle de Bain'
         }
     }
 });

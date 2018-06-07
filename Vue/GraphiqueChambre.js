@@ -1,5 +1,5 @@
 
-new Chart(document.getElementById("Chambre"), {
+new Chart(document.getElementsByClassName("Chambreg"), {
     type: 'line',
     data: {
         labels: date,
@@ -19,7 +19,7 @@ new Chart(document.getElementById("Chambre"), {
     options: {
         title: {
             display: true,
-            text: 'Consomation de votre Salon'
+            text: 'Consomation et puissance généré par les capteurs de votre Salon'
         }
     }
 });
