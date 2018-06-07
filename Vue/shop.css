@@ -1,3 +1,9 @@
+#content{
+    z-index: -1;
+}
+
+
+
 .box1{
     display: inline-block;
     width: 40vw;
@@ -6,22 +12,20 @@
     position:relative;
 
 
-
 }
 .box2{
     display: inline-block;
     width: 40vw;
-    height: 5vw;
-    margin: 10vw;
+    height: 5VW;
+    margin: 10VW;
     position:relative;
-
 
 }
 .box3{
     display: inline-block;
     width: 40vw;
-    height: 5vw;
-    margin: 10vw;
+    height: 5VW;
+    margin: 10VW;
     position:relative;
 
 
@@ -29,10 +33,14 @@
 .box4 {
     display: inline-block;
     width: 40vw;
-    height: 5vw;
-    margin: 10vw;
+    height: 5VW;
+    margin: 10VW;
     position: relative;
 
+}
+
+aside{
+    padding:1vw;
 }
 
 h1 {
@@ -75,42 +83,52 @@ h1 {
 
 #txt1 {
     position:relative;
-    left:15vw;
+    left:10vw;
     text-align: justify;
     marging-bottom:0%;
-    padding-top: 0;
-    padding-bottom: 2vw;
+    padding-top: 2%;
+    padding-bottom: 4.6%;
+    font-size: 1.2rem;
+}
+
+#bouton{
+    font-size: xx-large;
 }
 
 
 #txt2 {
+    position:absolute;
+    left:20%;
+    margin-right: 5%;
+    padding-right: 2%;
+    text-align: justify;
+    marging-bottom:0%;
+    padding-top: 2%;
+    padding-bottom: 4.6%;
+    font-size: 1.2rem;
     position:relative;
-    left:15vw;
-    text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
-    padding-bottom: 2vw;
-
-    }
-
-#txt3 {
-    position: relative;
-    left: 15vw;
-    text-align: justify;
-    marging-bottom:0%;
-    padding-top: 0;
-    padding-bottom: 2vw;
+    left:10vw;
+    text-align: justify
 
 }
 
-#txt4 {
+#txt3 {
     position: relative;
-    left: 15vw;
+    left: 10vw;
     text-align: justify;
     marging-bottom:0%;
-    padding-top: 0;
-    padding-bottom: 2vw;
-
+    padding-top: 2%;
+    padding-bottom: 4.6%;
+    font-size: 1.2rem;
+}
+#txt4 {
+    position: relative;
+    left: 10vw;
+    text-align: justify;
+    marging-bottom:0%;
+    padding-top: 2%;
+    padding-bottom: 4.6%;
+    font-size: 1.3rem;
 }
 
 
@@ -120,4 +138,3 @@ h1 {
     font-size: 1.3vw;
     font-family: Arial;
 }
-

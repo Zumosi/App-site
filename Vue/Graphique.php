@@ -33,7 +33,7 @@ function consopuissanceWC()
 
 <?php
 
-function consopuissanceChambre()
+function consopuissanceChambre()//rajouter la valeur des puissances
 {
     $object = new Bdd;
     $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Chambre" LIMIT 1');
@@ -62,7 +62,7 @@ function consopuissanceSalon()
 ?>
 
 <?php
-$capteur = array (consopuissanceWC(),consopuissanceChambre(),consopuissanceSalon());
+$capteur = array (consopuissanceSdb);//valeurs utilisées
 echo '<script>';
 echo 'var capteur = ' .json_encode($capteur) . ';';
 echo '</script>';

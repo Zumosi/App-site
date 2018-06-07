@@ -1,56 +1,35 @@
 h1
 {
     font-size: xx-large;
-    margin-left: 42vw;
+    text-align: center;
 }
 
-.prof strong
+strong
 {
     font-size: x-large;
 }
 body
 {
-    font-family:Arial;
-
+    font-family: "Calibri Light";
+    width: 100%;
 }
-.prof td
+
+td
 {
-    border:1px solid black;
-    padding-right: 30vw;
-    padding-left: 1vw;
-
-
+    border: 1px solid black;
+    padding-right: 380px;
 }
-
-#top{
-    border-top-left-radius: 2vw;
-    border-top-right-radius: 2vw;
-
-
-}
-#bottom{
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
-
-
-}
-.prof
+table
 {
-    margin-left: 25vw;
-    margin-right: 25vw;
-    border-spacing: 0;
-
-
-
+    margin-left: 35%;
+    border-collapse: collapse;
 
 }
-
 #bouton{
-    margin-left: 43vw;
-    margin-right: 43vw;
-    margin-top: 2vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    margin-left: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
 }

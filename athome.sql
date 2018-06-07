@@ -2,10 +2,17 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
+<<<<<<< HEAD
 -- Hôte : localhost
 -- Généré le :  mar. 05 juin 2018 à 10:18
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
+=======
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mar. 05 juin 2018 à 08:53
+-- Version du serveur :  5.7.19
+-- Version de PHP :  7.1.9
+>>>>>>> 84b6947228000fbceb1f69f8f592a817dbc3d628
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -105,7 +112,23 @@ CREATE TABLE `consommation_jour` (
 --
 
 INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`) VALUES
+<<<<<<< HEAD
 (1, 'wc', 10, '2018-05-05');
+=======
+(1, 'wc', 10, '2018-05-05'),
+(2, 'salon', 20, '2018-05-01'),
+(3, 'chambre', 30, '2018-05-02'),
+(1, 'sdb', 10, '2018-06-03'),
+(2, 'sdb', 20, '2018-06-04'),
+(1, 'sdb', 10, '2018-06-03'),
+(2, 'sdb', 20, '2018-06-04'),
+(2, 'wc', 10, '2018-06-06'),
+(3, 'wc', 5, '2018-06-05'),
+(2, 'chambre', 8, '2018-06-06'),
+(3, 'chambre', 6, '2018-06-05'),
+(2, 'salon', 9, '2018-06-05'),
+(3, 'salon', 14, '2018-06-06');
+>>>>>>> 84b6947228000fbceb1f69f8f592a817dbc3d628
 
 -- --------------------------------------------------------
 
@@ -239,7 +262,17 @@ INSERT INTO `puissance_jour` (`piece_id`, `piece_name`, `puissance_value`, `cons
 (1, 'chambre', 50, '2018-05-05'),
 (1, 'salon', 60, '2018-05-05'),
 (1, 'sdb', 25, '2018-05-05'),
-(1, 'cuisine', 69, '2018-05-05');
+(1, 'cuisine', 69, '2018-05-05'),
+(2, 'sdb', 20, '2018-06-04'),
+(2, 'sdb', 20, '2018-06-04'),
+(2, 'wc', 8, '2018-06-06'),
+(3, 'wc', 10, '2018-06-05'),
+(2, 'salon', 13, '2018-06-05'),
+(3, 'salon', 12, '2018-06-06'),
+(2, 'sdb', 6, '2018-06-05'),
+(3, 'sdb', 7, '2018-06-06'),
+(2, 'chambre', 14, '2018-06-05'),
+(3, 'chambre', 11, '2018-06-06');
 
 -- --------------------------------------------------------
 
@@ -260,6 +293,19 @@ CREATE TABLE `statistique` (
 
 INSERT INTO `statistique` (`id_stat`, `id_sensor`, `date`, `puissance`) VALUES
 (1, 1, '2018-04-06', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `stat_piece`
+--
+
+DROP TABLE IF EXISTS `stat_piece`;
+CREATE TABLE IF NOT EXISTS `stat_piece` (
+  `piece_id` int(11) NOT NULL AUTO_INCREMENT,
+  `piece_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  PRIMARY KEY (`piece_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

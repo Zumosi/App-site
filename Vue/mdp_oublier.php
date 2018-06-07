@@ -1,8 +1,8 @@
 <?php
-require("../controleur/forgot.php");
+require("../controlleur/forgot.php");
 ?>
 
-<link rel="stylesheet" href="../css/form.css" type="text/css">
+<link rel="stylesheet" href="../connexion/css/form.css" type="text/css">
 <div class="body-content">
   <div class="module">
     <h1>Réinitialiser le mot de passe </h1>

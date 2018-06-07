@@ -4,7 +4,7 @@ require("../controleur/form.php");
 
 
 
-<link rel="stylesheet" href="../css/form.css" type="text/css">
+<link rel="stylesheet" href="../connexion/css/form.css" type="text/css">
 <div class="body-content">
   <div class="module">
     <h1>S'inscrire</h1>
@@ -19,7 +19,7 @@ require("../controleur/form.php");
       <input type="tel" placeholder="Numero de telephone" name="telNo" required/>
       <div>
         <input type="checkbox" name="conditions" id="conditions">
-        <label for="conditions">Acceptez les <a href="../conditions_générales.pdf" target="_blank">conditions générales d'utilisation</a> du site.</label>
+        <label for="conditions">Acceptez les <a href="../connexion/conditions_générales.pdf" target="_blank">conditions générales d'utilisation</a> du site.</label>
       </div>
       <input type="submit" value="S'enregistrer" name="register" class="btn btn-block btn-primary" />
 

@@ -1,3 +1,9 @@
+#content{
+    z-index: -1;
+}
+
+
+
 aside, article {
     display: inline-block;
     vertical-align: top;

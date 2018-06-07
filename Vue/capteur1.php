@@ -7,8 +7,6 @@
 </head>
 
 
-
-
 <body>
 
 <?php if ($_GET['nc'] == 1) {
@@ -52,14 +50,10 @@
 
         <form method="post" action="liste.php">
 
-            <select id="nombre" name="choix">
-                <option value="choix1" selected="selected"> 1</option>
-                <?php choix2($q) ?>
-                <?php choix3($q) ?>
 
+            <input id="quant" type="number" name="quantitée" min="0" max="<?php quanti($i) ?>"/>
+            <input id="bouton" type="submit" name="addpanier" value="Ajouter au Panier">
 
-                <input id="bouton" type="submit" value="Ajouter au Panier">
-            </select>
         </form>
 
     </article>
