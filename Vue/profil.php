@@ -3,17 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="css/profil.css"/>
-=======
-<<<<<<< HEAD
-    <link rel="stylesheet" href="Vue/profil.css"/>
-    <script type="text/javascript" src="Controleur/NonVideProfil.js"></script>
-=======
-    <link rel="stylesheet" href="../css/profil.css"/>
->>>>>>> 2b9e8b25a2612197b1e1c9300a05ff583b3f9f87
     <script type="text/javascript" src="Controleur/NonVide.js"></script>
->>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
+
 </head>
 <body>
 
