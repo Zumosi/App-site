@@ -1,23 +1,23 @@
 Body{
     font-family: Arial;
 }
-img {
+#table img {
     width: 10vw;
     height: auto;
 }
-caption
+#table caption
 {
     font-size: 5vw;
     text-align: center;
     caption-side: top;
 }
-td
+#table td
 {
     border: none;
     text-align: center;
     background-color: transparent;
 }
-table
+#table
 {
     margin: 0 auto;
     margin-bottom: 3vw;
