@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="../css/Contact.css">
+    <link rel="stylesheet" type="text/css" href="css/Contact.css">
     <script src="Vue/jquery-3.3.1.min.js"></script>
     <script src="Vue/Contact.js"></script>
 </head>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>FAQ</title>
-        <link rel="stylesheet" type="text/css" href="../css/FAQ.css">
+        <link rel="stylesheet" type="text/css" href="css/FAQ.css">
     </head>
     <body>
 	<h1>Foire aux Questions</h1>

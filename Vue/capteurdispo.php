@@ -7,7 +7,7 @@ include("../Controleur/BDD.php");
 <head>
     <meta charset="utf-8"/>
     <title>validerpanier</title>
-    <link rel="stylesheet" href="../css/panier.css"/>
+    <link rel="stylesheet" href="css/panier.css"/>
 </head>
 <body>
 <?php
