@@ -1,7 +1,6 @@
 <?php
 include("../Controleur/BDD.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +14,12 @@ include("../Controleur/BDD.php");
                 if(document.getElementById('etat').value=="on"){
                     etat="off";
                     document.getElementById('etat').value="off";
+                    alert("état : on ");
                 }
                 else if(document.getElementById('etat').value=="off"){
                     etat="on";
                     document.getElementById('etat').value="on";
+                    alert("état : off ");
                 }
                 var varData = 'etat=' + etat;
                 console.log(varData);
@@ -28,7 +29,7 @@ include("../Controleur/BDD.php");
                     url:'CapteurBddliste.php',
                     data:varData,
                     success:function(){
-                    alert("tu peux aller dormir")
+                    alert("L'état du capteur a été modifié")
                 }
 
 
