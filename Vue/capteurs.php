@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Capteurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Vue/capteurs.css" />
+    <link rel="stylesheet" href="css/capteurs.css" />
 
 </head>
 <body>
 
-<table>
+<table id="table">
     <caption> Mes capteurs </caption>
     <tr>
         <td><p>Luminosité</td>

@@ -6,7 +6,7 @@ $_SESSION["ajout"]=true;
 <head>
     <meta charset="utf-8"/>
     <title>Capteur</title>
-    <link rel="stylesheet" href="Vue/capteur1.css"/>
+    <link rel="stylesheet" href="css/capteur1.css">
 </head>
 
 

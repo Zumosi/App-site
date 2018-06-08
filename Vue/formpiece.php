@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("../Controleur/BDD.php");
+include("Controleur/BDD.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +10,9 @@ include("../Controleur/BDD.php");
     <title>Choix Pièce </title>
 </head>
 <body>
+
+
 <?php
-
-
 $nomcapteur= $_SESSION["nomcapteur"];
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT id_capteur FROM capteur WHERE type=:nomcapteur');
@@ -23,12 +22,11 @@ $requete->execute(array(
 $nomcapteur = $requete->fetch();
 $idcapteur=1;
 
-
-
-
 ?>
+
+
 <h1>Sur quelle pièce souhaitez vous agir (choisissez une pièce): </h1>
-<form method="post" action = "formpieceliste.php" onsubmit="">
+<form method="post" action = "Vue/traitement.php" onsubmit="">
     <select name="piece">
         <option name ="piece" value="">Aucune</option><br>
         <option name ="piece" value="Cuisine">Cuisine</option><br>
@@ -38,7 +36,7 @@ $idcapteur=1;
         <option name ="piece" value="WC">WC</option><br>
         <input type="hidden" name ="idcapteur" value="<?php $idcapteur; ?>"/>
     </select>
-    <input type="submit" value="Envoyer" />
+    <input type="submit" value="Envoyer" name="envoyer" />
 
 </form>
 

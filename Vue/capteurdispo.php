@@ -1,13 +1,12 @@
 <?php
-session_start();
-include("../Controleur/BDD.php");
+include("Controleur/BDD.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <title>validerpanier</title>
-    <link rel="stylesheet" href="Vue/panier.css"/>
+    <link rel="stylesheet" href="css/panier.css"/>
 </head>
 <body>
 <?php
@@ -30,7 +29,7 @@ $requete->execute(array(
 
 
 ?>
-    <form action="formpiece.php" method="post" >
+    <form action="Vue/traitement.php" method="post" >
         <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
 
 

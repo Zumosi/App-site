@@ -7,7 +7,7 @@ include("Graphique.php");
 <head>
     <meta charset="UTF-8">
     <title>Statistiques</title>
-    <link rel="stylesheet" href="Vue/stat.css" />
+    <link rel="stylesheet" href="css/stat.css" />
 </head>
 
 
