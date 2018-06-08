@@ -1,34 +1,18 @@
 <?php
 include("Controleur/BDD.php");
+include("Modèle/requete.panier.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>validerpanier</title>
+    <title>Valider Panier</title>
     <link rel="stylesheet" href="css/panier.css"/>
 </head>
 <body>
-<?php
-$quantite = $_SESSION["quantite"];
-$object = new Bdd;
-$requete = $object->connect()->prepare('SELECT NombreCapteurInfrarouge FROM utilisateur WHERE id_utilisateur=:ID');
-$requete->execute(array(
-        "ID"=>$_SESSION["id"]
-));
-$quantitebdd = $requete->fetch();
-if($_SESSION["ajout"]==true){
-    $_SESSION["quantitetotale"] = $quantite + $quantitebdd[0];
-    $_SESSION["ajout"]=false;
-}
-$requete = $object->connect()->prepare('UPDATE utilisateur SET NombreCapteurInfrarouge=:quantitetotale WHERE id_utilisateur=:ID ');
-$requete->execute(array(
-    "quantitetotale"=>$_SESSION["quantitetotale"],
-    "ID"=>$_SESSION["id"]
-));
 
+<?php ajoutinfra($_SESSION['quantite']) ?>
 
-?>
     <form action="Vue/traitement.php" method="post" >
         <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
 
