@@ -12,9 +12,7 @@
 
 <body>
 
-
 <h1 id="titre">Voici vos utilisateurs Secondaires : </h1>
-
 
 <?php
 
@@ -28,22 +26,22 @@ $resultat = $requete->fetchAll();   ?>
 
 <table id="tablesecondaire">
    <tr>
-        
-        <td>Nom</td>
-        <td>Prénom</td>
-    
+        <th>Nom</th>
+        <th>Prénom</th>
+   </tr>
+
+   <tr>
 
 
 
     <?php for ($i = 0; $i < count($resultat); $i++) {  
 
-    echo '<td>'  . $resultat[$i]['nom'] . '</td>';
+
+    echo '<td align="center">'  . $resultat[$i]['nom'] . '</td>';
     echo '<br>';
     echo '<td>' . $resultat[$i]['prenom'] . '</td>';
     echo '<br>';
     echo '<tr/>';
-
-    
 
     } 
 
@@ -51,7 +49,6 @@ $resultat = $requete->fetchAll();   ?>
 
     ?>
     
-
 <section>
 
 <form method="post" action = "Controleur/UtilisateurSecondaireListe.php" id="formulaire" onsubmit="">
@@ -59,7 +56,7 @@ $resultat = $requete->fetchAll();   ?>
     <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder="Texte" /> <br>
 
     <input type="submit" value="Envoyer" />
-    <input type="submit" value="Ajouter"   />
+    <input type="submit" value="Ajouter" />
 
 </form>
 

@@ -13,10 +13,13 @@ if($_POST["nom"]!=""){
     $requete->execute(array("ID"=>$_SESSION["id"]));
     $newnum = $requete->fetch();
     $requete = $object->connect()->prepare('UPDATE utilisateur SET num_principal=:newnum WHERE mail=:mail ');
+
     $requete->execute(array("newnum"=>$newnum["id_utilisateur"],
         "mail"=>$mail));
+    
     $requetetype = $object->connect()->prepare('UPDATE utilisateur SET type="secondaire" WHERE mail=:mail ');
     $requetetype->execute(array("mail"=>$mail));
+
     echo "Vous avez bien ajouté " .$mail. " comme utilisateur secondaire";
 
 }
