@@ -4,6 +4,7 @@
 
 .mact,.jact,.aact{
     display: inline-block;
+    color:#666;
 }
 
 .jactuel{
@@ -42,11 +43,11 @@ a{
 }
 .titre{
     position:absolute;
+    left: 42vw;
+    top: 3vw;
     font-size:xx-large;
     color: #3c3f41;
     font-family: "AR BLANCA";
-    left:35%;
-    top: 2%;
 
 }
 .poster{
