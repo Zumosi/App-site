@@ -1,10 +1,10 @@
 <?php
-session_start();
-include("../Controleur/BDD.php");
+
+include("Controleur/BDD.php");
 
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT id_piece FROM piece WHERE type=:piece ');
-$requete->execute(array("piece"=>$_POST["piece"]));
+$requete->execute(array("piece"=>$_GET["piece"]));
 $idpiece=$requete->fetch();
 $object = new Bdd;
 $requete = $object->connect()->prepare(
@@ -20,7 +20,7 @@ $requete->execute(array("ID"=>$_SESSION["id"]));
 $nombrecapteur=$requete->fetch();
 $nombrecapteur=$nombrecapteur[0];
 $_SESSION["quantitetotale"]=$nombrecapteur;
-echo "Un capteur à été rajouté et est maintenant attribué à la pièce : " . $_POST["piece"] ;
+echo "Un capteur à été rajouté et est maintenant attribué à la pièce : " . $_GET["piece"] ;
 echo "<br>";
 echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)."
 ?>
@@ -39,7 +39,7 @@ echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)."
 
 
 
-<h1><a href="capteurdispo.php">Revenir a la page d'ajout</h1>
+<h1><a href="index.php?cible=formpiece">Revenir a la page d'ajout</h1>
 
 
 </body>

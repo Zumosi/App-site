@@ -42,7 +42,7 @@ $prixtotal = $_SESSION["quantite"]*$_SESSION["prix"];
 </table>
 
 <section>
-    <form method="post" action="vue/traitement.php">
+    <form method="post" action="capteurdispo.php">
         <input type="submit" name="retourshop" value="Continuer mes achats">
         <input type='hidden' name='quantite' value="<?php echo htmlspecialchars($_SESSION["quantite"]); ?>">
         <input type="submit" name="Validerpanier" value="Valider mon panier">
