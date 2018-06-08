@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contactez-nous</title>
-    <link rel="stylesheet" href="Vue/Contacteznous.css" />
+    <link rel="stylesheet" href="../css/Contacteznous.css" />
 </head>
 
 <body>

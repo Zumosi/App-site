@@ -3,8 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="Vue/profil.css"/>
     <script type="text/javascript" src="Controleur/NonVideProfil.js"></script>
+=======
+    <link rel="stylesheet" href="../css/profil.css"/>
+    <script type="text/javascript" src="Controleur/NonVide.js"></script>
+>>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
 </head>
 <body>
 

@@ -5,7 +5,7 @@ include("../Controleur/BDD.php");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="page18.css" />
+    <link rel="stylesheet" href="../css/page18.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {

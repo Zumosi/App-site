@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Forum</title>
-    <link rel="stylesheet" href="Vue/forum.css"/>
+    <link rel="stylesheet" href="../css/forum.css"/>
 
 </head>
 
@@ -23,10 +23,12 @@
 </form>
 
 
-<div class="jactuel">
-    <div class="jact"><?php recupjour(1) ?> </div>
-    <div class="mact"><?php recupmois(1) ?> </div>
-    <div class="aact"><?php recupan(1) ?> </div>
+<div class="jact">
+    <?php
+    $date = date("d/m/Y");
+    Print("Nous sommes le $date ");
+    ?>
+
 </div>
 <div class="sujet">
 <div class="titretoptic">

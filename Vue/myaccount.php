@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My_account</title>
-    <link rel="stylesheet" href="Vue/myaccount.css" />
+    <link rel="stylesheet" href="../css/myaccount.css" />
 </head>
 
 <body>
