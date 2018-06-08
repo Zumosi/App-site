@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("../Controleur/BDD.php");
+include("Controleur/BDD.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +29,7 @@ $requete->execute(array(
 
 
 ?>
-    <form action="formpiece.php" method="post" >
+    <form action="Vue/traitement.php" method="post" >
         <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
 
 
