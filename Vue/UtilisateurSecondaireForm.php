@@ -35,16 +35,18 @@ $resultat = $requete->fetchAll();   ?>
 
 
 
-    <?php for ($i = 0; $i < count($resultat); $i++) {  ?>
+    <?php for ($i = 0; $i < count($resultat); $i++) {  
 
-    echo <td align='center'>" . $resultat[$i]['nom'] . "</td>
-    echo <td>" . $resultat[$i]['prenom'] . "</td>
-    echo <tr/>
+    echo '<td>'  . $resultat[$i]['nom'] . '</td>';
+    echo '<br>';
+    echo '<td>' . $resultat[$i]['prenom'] . '</td>';
+    echo '<br>';
+    echo '<tr/>';
 
-    <?php 
+    
 
     } 
-    
+
     echo '</table>';
 
     ?>
@@ -55,7 +57,7 @@ $resultat = $requete->fetchAll();   ?>
 <form method="post" action = "Controleur/UtilisateurSecondaireListe.php" id="formulaire" onsubmit="">
 
     <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder="Texte" /> <br>
-    
+
     <input type="submit" value="Envoyer" />
     <input type="submit" value="Ajouter"   />
 
