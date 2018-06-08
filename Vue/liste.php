@@ -1,9 +1,12 @@
 <?php
 session_start();
+
 ?>
 
 <?php
-include("../Controleur/Securisation.php")
+include("../Controleur/Securisation.php");
+require "../Controleur/encryption_config.php";
+require "../Controleur/encryption.php";
 ?>
 
 
@@ -123,16 +126,20 @@ $reponse->execute(array(
     ));
 }
 ?>
+<<<<<<< HEAD
+=======
     //recup titre
+>>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=:id');
+if ($_POST['mdp']!=""){
 $reponse->execute(array(
-    'nvmdp' => $_POST['mdp'],
-    'id' => $_SESSION['id'],
-));
-
-$reponse->closeCursor();
+    'nvmdp' => Encryption::encrypt($_POST['mdp']),
+    'id' => $_SESSION['id']
+)
+);
+};
 ?>
 
 <?php
