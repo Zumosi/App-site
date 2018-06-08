@@ -3,8 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="Vue/profil.css"/>
+    <script type="text/javascript" src="Controleur/NonVideProfil.js"></script>
+=======
+    <link rel="stylesheet" href="../css/profil.css"/>
     <script type="text/javascript" src="Controleur/NonVide.js"></script>
+>>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
 </head>
 <body>
 
@@ -36,7 +41,7 @@ $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
-    <form method="post" action="Vue/liste.php" onsubmit="//return(NonVide());">
+    <form method="post" action="Vue/liste.php" onsubmit="return(NonVideProfil();)">
         <table class="prof">
             <tr>
                 <td id="top"><strong>Nom: </strong><br/><br/>
@@ -95,7 +100,16 @@ while ($donnees = $reponse->fetch()) {
                         echo '<input id="mdp" type="text" name="mdp" />';
                     } else {
                         echo '******';
-                    } ?>
+                    }
+                    /*
+$nombre_caracteres = strlen($chaine);
+$chaine = '';
+for($i = 1; $i <= $nombre_caracteres; $i ++)
+{
+    $chaine .= '*';
+}*/
+?>
+
                     <br/><br/>
                 </td>
             </tr>
@@ -105,7 +119,7 @@ while ($donnees = $reponse->fetch()) {
         <input id="bouton" type="submit" value="Modifier">
     </form>
 
-    
+
 
     <?php
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Forum</title>
-    <link rel="stylesheet" href="Vue/forum.css"/>
+    <link rel="stylesheet" href="../css/forum.css"/>
 
 </head>
 
