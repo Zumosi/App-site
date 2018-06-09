@@ -2,6 +2,8 @@
 include("..\Controleur\BDD.php");
 // RECUPERATION
 $tableautraduit=array();
+$object = new Bdd;
+$object->connect();
 function recuperation()
 {
     $ch = curl_init();
@@ -76,10 +78,17 @@ echo "<pre>";
 print_r($trame);
 echo "</pre>";
 
-function getpiece($trame){
-    $piece="";
+function getpiece($id_capteur){
+    $object = new Bdd;
+    $object->connect();
+    $requete = $object->connect()->prepare('SELECT nom FROM piece WHERE id_piece IN(SELECT id_place FROM capteur WHERE id_capteur=:id_capteur)');
+    $requete->execute(array("id_capteur"=>$id_capteur));
+    $piece = $requete->fetch();
+    return $piece[0];
 
-    if($trame[4]==1){
+
+
+    /*if($trame[4]==1){
         $piece="Chambre";
     }
     else if($trame[4]==2){
@@ -95,7 +104,7 @@ function getpiece($trame){
         $piece="SdB";
     }
     echo $piece;
-    return($piece);
+    return($piece);*/
 }
 function formerdate($trame){
     $date=$trame[8].".".$trame[9].".".$trame[10];
@@ -104,17 +113,40 @@ function formerdate($trame){
 }
 
 $date=formerdate($trame);
-$piece=getpiece($trame);
+$id_capteur=$trame[4];
+$piece=getpiece($id_capteur);
 $value=$trame[5];
-$object = new Bdd;
-$requete = $object->connect()->prepare('INSERT INTO consommation_jour(piece_name,consommation_value,consommation_date) 
-                                        VALUES (:piece_name,:consommation_value,:consommation_date);');
+$pseudo=$trame[1];
+$requete = $object->connect()->prepare('SELECT id_utilisateur FROM trame WHERE pseudo=:pseudo');
+$requete->execute(array(
+    "pseudo"=>$pseudo
+));
+$id_utilisateur = $requete->fetch();
+$id_utilisateur=$id_utilisateur[0];
+$requete = $object->connect()->prepare('INSERT INTO consommation_jour(piece_name,consommation_value,consommation_date,id_capteur) 
+                                        VALUES (:piece_name,:consommation_value,:consommation_date,:id_capteur);');
 $requete->execute(array(
     "piece_name"=>$piece,
     "consommation_value"=>$value,
     "consommation_date"=>$date,
+    "id_capteur"=>$id_capteur
 ));
+$requete = $object->connect()->prepare('SELECT type FROM habitation WHERE id_user=:id_user');
+$requete->execute(array(
+    "id_user"=>$id_utilisateur,
+));
+$type_maison=$requete->fetch();
+$type_maison=$type_maison[0];
+
+$requete = $object->connect()->prepare('SELECT prenom FROM utilisateur WHERE id_utilisateur=:id_user');
+$requete->execute(array(
+    "id_user"=>$id_utilisateur,
+));
+$prenom=$requete->fetch();
+$prenom=$prenom[0];
+
 echo "<br>";
+echo "Les informations concernant votre ".$type_maison." ont bien été mise à jour ".$prenom;
 echo "<br>";
 echo "<br>";
 echo "Les données de la pièce ".$piece." ont bien été mises à jour.";
