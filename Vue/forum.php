@@ -4,88 +4,57 @@
     <meta charset="utf-8"/>
     <title>Forum</title>
     <link rel="stylesheet" href="css/forum.css"/>
-
-</head>
-
-<?php include("Modèle/requete.topic.php"); ?>
-<?php $ttopic = numtitretopic() ?>
-<?php $nomuti1 = nomuti($ttopic-0) ?>
-<?php $uti2 = nomuti($ttopic - 1) ?>
-<?php $uti3 = nomuti($ttopic - 2) ?>
-<body>
-
-<p class="titre"> Forum</p>
-
-<a class="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>
-
-<form class="rechercher" action="liste.php" method="post">
-    <input type="text" name="titre" placeholder="rechercher dans le forum">
-</form>
-
-
-<div class="jact">
     <?php
-    $date = date("d/m/Y");
-    Print("Nous sommes le $date ");
+    include("../Controleur/BDD.php");
     ?>
-
-</div>
-<div class="sujet">
-<div class="titretoptic">
-    <a href="index.php?nt=topic1&cible=message"> <?php titretopic($ttopic - 2) ?></a>
-</div>
-
-<div class="text">
-    <?php textmess($ttopic - 2,$uti3) ?>
-</div>
-
-<p class="poster"> Poster par :</p>
-<div class="nom"><?php afficheuti($uti3) ?> </div>
-<p class="le">le </p>
-<div class="jtopic"><?php recupjour($ttopic - 2) ?> </div>
-<div class="mtopic"><?php recupmois($ttopic - 2) ?></div>
-<div class="atopic"><?php recupan($ttopic - 2) ?></div>
-</div>
-
-<div class="sujet">
-    <div class="titretoptic">
-        <a href="index.php?nt=topic3&cible=message"><?php titretopic($ttopic-1) ?></a>
-    </div>
-
-    <div class="text">
-        <?php textmess($ttopic-1,$uti2) ?>
-    </div>
-
-    <p class="poster"> Poster par :</p>
-    <div class="nom"><?php afficheuti($uti2) ?> </div>
-    <p class="le">le </p>
-    <div class="jtopic"><?php recupjour($ttopic-1) ?> </div>
-    <div class="mtopic"><?php recupmois($ttopic-1) ?></div>
-    <div class="atopic"><?php recupan($ttopic-1) ?></div>
-
-</div>
+</head>
+<body>
+<h1>FORUM</h1>
+<h2>Liste des sujets : </h2>
+<?php
 
 
+function trouvernom($id_utilisateur)
+{
+    $object = new Bdd;
+    $requete = $object->connect()->prepare('SELECT nom,prenom FROM utilisateur WHERE id_utilisateur=:id_utilisateur');
+    $requete->execute(array(
+            "id_utilisateur"=>$id_utilisateur
+    ));
+    $tablenom = $requete->fetchAll();
+    $tablenom=$tablenom[0];
+    return  $tablenom;
 
-<div class="sujet">
-<div class="titretoptic">
-    <a href="index.php?nt=topic3&cible=message"><?php titretopic($ttopic) ?></a>
-</div>
-
-<div class="text">
-    <?php textmess($ttopic,$nomuti1) ?>
-</div>
-
-<p class="poster"> Poster par :</p>
-<div class="nom"><?php afficheuti($nomuti1) ?> </div>
-<p class="le">le </p>
-<div class="jtopic"><?php recupjour($ttopic) ?> </div>
-<div class="mtopic"><?php recupmois($ttopic) ?></div>
-<div class="atopic"><?php recupan($ttopic) ?></div>
-
-</div>
-
-
-
-
+}
+$object = new Bdd;
+$requete = $object->connect()->prepare('SELECT titre,date_crea,id_utilisateur FROM topic');
+$requete->execute();
+$tabletopic=$requete->fetchAll();
+echo "<table border='2'>";
+echo"<th>Auteur</th>";
+echo"<th >Titre</th>" ;
+echo"<th >Date</th>" ;
+echo'<form method="post" action = "forumliste.php" id="formulairetopic" >';
+echo "<input type='hidden' name='taille' value='".sizeof($tabletopic)."'>";
+for($i=0;$i<sizeof($tabletopic);$i++) {
+    $prenom=trouvernom($tabletopic[$i]['id_utilisateur'])["prenom"];
+    $nom=trouvernom($tabletopic[$i]['id_utilisateur'])["nom"];
+    $nom_prenom=$nom." ".$prenom;
+    echo "<tr>";
+    echo "<th>";
+    echo $nom_prenom;
+    echo "</th>";
+    echo "<th>";
+    echo "<input type='submit' name='sujet$i' value='".$tabletopic[$i]['titre']."'>";
+    echo "</th>";
+    echo "<th>";
+    print $tabletopic[$i]['date_crea'] ; ;
+    echo "</th>";
+    echo "</tr>";
+}
+echo'</form>';
+?>
 </body>
+</html>
+
+
