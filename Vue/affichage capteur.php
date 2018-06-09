@@ -14,12 +14,23 @@
 
 <?php
 $infocapteur=idcapt();
+if($infocapteur==NULL){
+    echo "Vous n'avez pas de capteurs de ce type ! ";
+    echo'<table >
+    <tr id="plus">
+        <td ><a href = "index.php?cible=shop" > +</a ></td >
+        <th  > Acheter un capteur </th >
+    </tr >
+</table >
+    ';
 
- echo   '<table >';
- echo "<caption >";
- echo $_GET["capteur"];
- echo "</caption >";
- echo   "<tr >
+}
+else {
+    echo '<table >';
+    echo "<caption >";
+    echo $_GET["capteur"];
+    echo "</caption >";
+    echo "<tr >
         <th>";
     echo 'IdCapteur: ';
     echo ' ' . $infocapteur[0]["id_capteur"];
@@ -28,7 +39,7 @@ $infocapteur=idcapt();
         <th >';
     echo 'Admin: ';
     echo '<br>';
-    echo ' ' . $infocapteur[2]. ' '.$infocapteur[3];
+    echo ' ' . $infocapteur[2] . ' ' . $infocapteur[3];
     echo '
         </th >
         <th >
@@ -66,6 +77,7 @@ $infocapteur=idcapt();
     </tr >
 </table >
 ';
+}
 
 /*if ($_GET['capteur']== 'lux') {
     echo'
