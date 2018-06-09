@@ -24,7 +24,7 @@ include("Modèle/requete.panier.php");
         <tr>
             <td>Nom du capteur</td>
             <td>Quantité Disponible</td>
-            <td>Modifier</td>
+            <td>Ajouter des Capteurs issus de votre commande numéro :</td>
         </tr>
 
 <?php  tablestockuser($_SESSION['id']) ?>

@@ -29,8 +29,6 @@
 ?>
 
 
-
-
 <?php function listepiece($id)
 {
     $bdd = new Bdd();
@@ -68,43 +66,37 @@
     }
 } ?>
 
-
 <?php function tablestockuser($idsession)
 {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $req = $bdd->prepare('SELECT nom,id_quantite,id_stock FROM boutique INNER JOIN stockuser ON stockuser.id_captacheter=boutique.id_boutique WHERE id_acheteur=? ');
     $req->execute(array($idsession));
-    $donnees=$req->fetchAll();
-    for($i=0;$i<sizeof($donnees);$i++){
-        echo '<form method="post" action="traitement.php">';
-        echo '<tr>' ;
-        echo '<td>';
-        print_r($donnees[$i]["nom"]) ;
-        echo '</td>';
-        echo '<td>';
-        print_r($donnees[$i]['id_quantite'])  ;
-        echo '</td>';
-        echo "<input type='hidden' name='choix' value='$donnees[$i][id_stock]'/>";
-        echo '<td>' . '<input type="submit"  name="send" value=\'Modifier\'>' . '</td>';
-        echo '</form>';
-        echo '</tr>';
+    while ($donnees = $req->fetch()) {
+        echo '<tr>' .
+            '<td>' . $donnees['nom'] . '</td>' .
+            '<td>' . $donnees['id_quantite'] . '</td>' .
+            '<td>' . '<input type="submit"  name="send" value='.$donnees['id_stock'].'>' . '</td>' .
+            '</tr>';
     }
 }
 
 ?>
 
-<?php function idpiece($nompiece){
+
+<?php function idpiece($nompiece)
+{
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $reponse = $bdd->prepare('SELECT id_piece FROM piece WHERE nom=?');
     $reponse->execute(array($nompiece));
     while ($donnees = $reponse->fetch()) {
-        $idpiece=$donnees['id_piece'];
+        $idpiece = $donnees['id_piece'];
         return $idpiece;
     }
 }
+
 ?>
 
-<?php function ajoutcapteur()
+<?php function ajoutcapteur($idstk)
 {
     $type = typecapteur($_SESSION['nomcapteur']);
     $bdd = new Bdd;
@@ -115,8 +107,9 @@
         'etat' => 'off',
         'idplace' => $_GET['idpiece'],
     ));
-    $reponse=$bdd->connect()->prepare('UPDATE stockuser SET id_quantite=id_quantité-1 WHERE id_stock=?');
-    $reponse->execute(array());
+    $reponse = $bdd->connect()->prepare('UPDATE stockuser SET id_quantite=id_quantite-1 WHERE id_stock=?');
+    $reponse->execute(array($idstk));
 }
+
 ?>
 

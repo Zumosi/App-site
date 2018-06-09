@@ -36,10 +36,10 @@ echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)." */
 </head>
 <body>
 
-<?php ajoutcapteur() ?>
+<?php ajoutcapteur($_SESSION['idstock']) ?>
 
 
-<h1><a href="index.php?cible=formpiece">Revenir a la page d'ajout</h1>
+<h1><a href="index.php?cible=capteurdispo">Revenir au stock de vos capteurs</h1>
 
 
 </body>
