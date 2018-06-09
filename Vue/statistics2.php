@@ -10,17 +10,17 @@ include("Graphique.php");
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/stat.css" />
+    <link rel="stylesheet" href="Vue/stat.css"/>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Capteurs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/stat.css" />
+        <link rel="stylesheet" href="../css/stat.css"/>
     </head>
 <body>
 
-<?php if ($_GET['piece']== 'WC') {
+<?php if ($_GET['piece'] == 'WC') {
 
     echo '<div class="container">
     <canvas class="WCg" width="30" height="15"></canvas>
@@ -28,7 +28,7 @@ include("Graphique.php");
     echo '<script src="Vue/GraphiqueWC.js"></script>';
     echo '
 <section>
-    <caption class="titre">Statistiques</caption>
+    <p class="titre">Statistiques</p>
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
 <img class="wci" src="Vue/image/wc.png" >
 
@@ -43,12 +43,9 @@ include("Graphique.php");
 
 <a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
 <img class="cuisini" src="Vue/image/cuisine.jpg" ></section>';
-}
-
-
-elseif ($_GET['piece']== 'sdb') {
+} elseif ($_GET['piece'] == 'sdb') {
     echo '<div class="container">
-    <canvas class="SdBg" width="50" height="50"></canvas>
+    <canvas class="SdBg" width="30" height="15"></canvas>
 </div>';
     echo '<script src="Vue/GraphiqueSdB.js"></script>';
     echo '
@@ -68,15 +65,12 @@ elseif ($_GET['piece']== 'sdb') {
 
 <a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
 <img class="cuisini" src="Vue/image/cuisine.jpg" ></section> ';
-}
-
-
-elseif ($_GET['piece']== 'salon') {
-  echo '<div class="container">
-    <canvas class=Salong width="50" height="50"></canvas>
+} elseif ($_GET['piece'] == 'salon') {
+    echo '<div class="container">
+    <canvas class=Salong width="30" height="15"></canvas>
 </div>';
-    echo'<script src="Vue/GraphiqueSalon.js"></script>';
-    echo'
+    echo '<script src="Vue/GraphiqueSalon.js"></script>';
+    echo '
 <section>
     <p class="titre">Statistiques</p>
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
@@ -94,15 +88,12 @@ elseif ($_GET['piece']== 'salon') {
 <a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
 <img class="cuisini" src="Vue/image/cuisine.jpg" >
 </section>';
-}
-
-
-elseif ($_GET['piece']== 'chambre') {
+} elseif ($_GET['piece'] == 'chambre') {
     echo '<div class="container">
-    <canvas class="Chambreg" width="50" height="50"></canvas>
+    <canvas class="Chambreg" width="30" height="15"></canvas>
 </div>';
     echo '<script src="Vue/GraphiqueChambre.js"></script>';
-    echo'
+    echo '
 <section>
     <p class="titre">Statistiques</p>
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
@@ -120,15 +111,12 @@ elseif ($_GET['piece']== 'chambre') {
 <a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
 <img class="cuisini" src="Vue/image/cuisine.jpg" >
 </section>';
-}
-
-
-elseif ($_GET['piece']== 'cuisine') {
-     echo '<div class="container">
-    <canvas class="Cuisineg" width="50" height="50"></canvas>
+} elseif ($_GET['piece'] == 'cuisine') {
+    echo '<div class="container">
+    <canvas class="Cuisineg" width="30" height="15"></canvas>
 </div>';
-    echo'<script src="Vue/GraphiqueCuisine.js"></script>';
-    echo'
+    echo '<script src="Vue/GraphiqueCuisine.js"></script>';
+    echo '
    
 <section>
     <p class="titre">Statistiques</p>
