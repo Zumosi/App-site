@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2018 at 01:19 PM
+-- Generation Time: Jun 09, 2018 at 09:31 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -62,7 +62,7 @@ CREATE TABLE `boutique` (
 --
 
 INSERT INTO `boutique` (`id_boutique`, `nom`, `description`, `prix`, `id_personne`, `stock`) VALUES
-(1, 'infrarouge TSOP4838 38 kHz', 'Haute densité d\'assemblage par intégration de la diode réceptrice, du filtre et du préampli dans un boîtier. Insensibilité à la lumière du jour, compatibilité TTL et C-MOS, faible puissance absorbée et haute sécurité anti-parasite distinguent cette série.', '0.65', 1, 10),
+(1, 'infrarouge TSOP4838 38 kHz', 'Haute densité d\'assemblage par intégration de la diode réceptrice, du filtre et du préampli dans un boîtier. Insensibilité à la lumière du jour, compatibilité TTL et C-MOS, faible puissance absorbée et haute sécurité anti-parasite distinguent cette série.', '0.65', 1, 6),
 (2, 'CAPTEUR DE TEMPÉRATURE DS18B20', 'Le DS18B20 est composé des éléments suivant :\r\nun capteur de température, un convertisseur analogique - numérique, une zone mémoire de 8 octets et une EEPROM de 3 octets.\r\n\r\nCes zones de mémoire servent à communiquer avec le DS18B20 afin de :\r\n- récupérer les températures converties\r\n- de configurer le convertisseur\r\n- de configurer les valeurs de températures min et max pour la fonction \"thermostat\"', '3.50', 1, 8),
 (3, 'Capteur Photoélectrique / Mini Crépusculaire 1-10V', 'Avec une zone de détection de 360 ° et une plage de régulation 1-100%, ce capteur crépusculaire est compatible avec les luminaires équipés de driver dimmable 1-10V. Son mode de fonctionnement progressif, augmente et diminue l’éclairage du luminaire en fonction de la lumière ambiante préréglée (équipé d’un variateur qui modifie le comportement par rapport à la lumière ambiante), c’est à dire, quand la lumière ambiante diminue, le capteur augmente l\'intensité de la lumière et au contraire, quand la lumière ambiante augmente, le capteur réduit l\'intensité de la lumière, permettant toujours un éclairage adéquat d\'une manière efficace.', '17.29', 2, 15),
 (4, 'Capteur de Son RB-Wav-26', 'Amplificateur de puissance audio LM386 intégré\r\nGain du signal audio jusqu\'à 200\r\nPrécision ajustable\r\nIndicateur du signal en sortie', '3.92', 2, 70);
@@ -87,6 +87,7 @@ CREATE TABLE `capteur` (
 
 INSERT INTO `capteur` (`id_capteur`, `type`, `reference`, `etat`, `id_place`) VALUES
 (1, 'infrarouge', 'LHI 968', 'on', 2),
+(2, 'infrarouge', 'LHI 968', 'on', 4),
 (36, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 1),
 (35, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 2),
 (34, 'infrarouge TSOP4838 38 kHz', 'LHI 968', 'off', 2),
@@ -118,22 +119,13 @@ CREATE TABLE `consommation_jour` (
 --
 
 INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`, `consommation_date`, `id_capteur`) VALUES
-(1, 'Chambre', 25, '2018-06-08', 0),
-(2, 'Chambre', 25, '2018-06-08', 0),
-(3, 'Chambre', 25, '2018-06-08', 0),
-(4, 'Chambre', 25, '2018-06-08', 0),
+(2, 'Chambre', 25, '2018-06-09', 4),
+(4, 'Chambre', 25, '2018-06-07', 4),
 (5, 'Salon', 25, '2018-06-08', 0),
 (6, 'Salon', 25, '2018-06-08', 0),
-(7, 'Chambre', 25, '2018-06-08', 0),
-(8, 'Chambre', 25, '2018-06-08', 0),
-(9, 'Chambre', 25, '2018-06-08', 1),
-(10, 'Array', 25, '2018-06-08', 1),
+(8, 'Chambre', 25, '2018-06-08', 4),
+(9, 'Chambre', 25, '2018-06-06', 4),
 (11, 'Cuisine', 25, '2018-06-08', 1),
-(12, 'Cuisine', 25, '2018-06-08', 1),
-(13, 'Cuisine', 25, '2018-06-08', 1),
-(14, 'Cuisine', 25, '2018-06-08', 1),
-(15, 'Cuisine', 25, '2018-06-08', 1),
-(16, 'Cuisine', 25, '2018-06-08', 1),
 (17, 'Cuisine', 25, '2018-06-08', 1),
 (18, 'Cuisine', 25, '2018-06-08', 1),
 (19, 'Cuisine', 25, '2018-06-08', 1),
@@ -145,7 +137,12 @@ INSERT INTO `consommation_jour` (`piece_id`, `piece_name`, `consommation_value`,
 (25, 'Cuisine', 25, '2018-06-08', 1),
 (26, 'Cuisine', 25, '2018-06-08', 1),
 (27, 'Cuisine', 25, '2018-06-08', 1),
-(28, 'Cuisine', 25, '2018-06-08', 1);
+(28, 'Cuisine', 25, '2018-06-08', 1),
+(35, 'WC', 69, '2018-06-07', 2),
+(30, 'SdB', 50, '2018-06-07', 3),
+(31, 'SdB', 40, '2018-06-06', 3),
+(32, 'SdB', 50, '2018-06-07', 3),
+(34, 'WC', 86, '2018-06-06', 2);
 
 -- --------------------------------------------------------
 
@@ -208,8 +205,10 @@ CREATE TABLE `habitation` (
 --
 
 INSERT INTO `habitation` (`id_habitation`, `type`, `id_user`) VALUES
-(1, 'Appartement', 1),
-(2, 'Maison', 7);
+(1, 'Appartement', 3),
+(2, 'Maison', 7),
+(3, 'maison', 5),
+(4, 'Maison', 6);
 
 -- --------------------------------------------------------
 
@@ -256,7 +255,8 @@ CREATE TABLE `piece` (
 INSERT INTO `piece` (`id_piece`, `nom`, `superficie`, `id_maison`, `type`) VALUES
 (1, 'Chambre A', 15, 1, 'Chambre'),
 (2, 'Cuisine', 20, 1, 'Cuisine'),
-(3, 'Salon', 30, 1, 'Salon');
+(3, 'Salon', 30, 1, 'Salon'),
+(4, 'Salon', 45, 4, 'Salon');
 
 -- --------------------------------------------------------
 
@@ -482,7 +482,196 @@ INSERT INTO `topic` (`id_topic`, `titre`, `id_utilisateur`, `date_crea`) VALUES
 (154, '', 5, '2018-06-08 15:43:41'),
 (155, '', 5, '2018-06-08 15:43:42'),
 (156, '', 5, '2018-06-08 15:54:39'),
-(157, '', 5, '2018-06-08 15:54:41');
+(157, '', 5, '2018-06-08 15:54:41'),
+(158, '', 1, '2018-06-09 15:53:59'),
+(159, '', 6, '2018-06-09 16:55:41'),
+(160, '', 7, '2018-06-09 17:01:01'),
+(161, '', 6, '2018-06-09 19:18:50'),
+(162, '', 6, '2018-06-09 19:18:53'),
+(163, '', 6, '2018-06-09 19:18:59'),
+(164, '', 6, '2018-06-09 19:19:02'),
+(165, '', 6, '2018-06-09 19:21:46'),
+(166, '', 6, '2018-06-09 19:21:51'),
+(167, '', 6, '2018-06-09 19:22:51'),
+(168, '', 6, '2018-06-09 19:23:22'),
+(169, '', 6, '2018-06-09 19:32:54'),
+(170, '', 6, '2018-06-09 19:32:56'),
+(171, '', 6, '2018-06-09 19:33:10'),
+(172, '', 6, '2018-06-09 19:33:12'),
+(173, '', 6, '2018-06-09 19:33:15'),
+(174, '', 6, '2018-06-09 19:33:16'),
+(175, '', 6, '2018-06-09 19:33:21'),
+(176, '', 6, '2018-06-09 19:33:23'),
+(177, '', 6, '2018-06-09 19:33:32'),
+(178, '', 6, '2018-06-09 19:33:33'),
+(179, '', 6, '2018-06-09 19:33:35'),
+(180, '', 6, '2018-06-09 19:33:38'),
+(181, '', 6, '2018-06-09 19:34:02'),
+(182, '', 6, '2018-06-09 19:34:04'),
+(183, '', 6, '2018-06-09 19:35:00'),
+(184, '', 6, '2018-06-09 19:35:01'),
+(185, '', 6, '2018-06-09 19:35:03'),
+(186, '', 6, '2018-06-09 19:35:04'),
+(187, '', 6, '2018-06-09 19:35:31'),
+(188, '', 6, '2018-06-09 19:35:32'),
+(189, '', 6, '2018-06-09 19:36:04'),
+(190, '', 6, '2018-06-09 19:36:05'),
+(191, '', 6, '2018-06-09 19:44:49'),
+(192, '', 6, '2018-06-09 19:44:53'),
+(193, '', 6, '2018-06-09 19:49:39'),
+(194, '', 6, '2018-06-09 19:49:41'),
+(195, '', 6, '2018-06-09 19:50:37'),
+(196, '', 6, '2018-06-09 19:50:39'),
+(197, '', 6, '2018-06-09 19:50:51'),
+(198, '', 6, '2018-06-09 19:50:52'),
+(199, '', 6, '2018-06-09 19:52:32'),
+(200, '', 6, '2018-06-09 19:52:34'),
+(201, '', 6, '2018-06-09 19:52:41'),
+(202, '', 6, '2018-06-09 19:52:42'),
+(203, '', 6, '2018-06-09 20:03:50'),
+(204, '', 6, '2018-06-09 20:04:15'),
+(205, '', 6, '2018-06-09 20:04:17'),
+(206, '', 6, '2018-06-09 20:05:19'),
+(207, '', 6, '2018-06-09 20:05:29'),
+(208, '', 6, '2018-06-09 20:05:36'),
+(209, '', 6, '2018-06-09 20:07:26'),
+(210, '', 6, '2018-06-09 20:07:26'),
+(211, '', 6, '2018-06-09 20:07:32'),
+(212, '', 6, '2018-06-09 20:07:33'),
+(213, '', 6, '2018-06-09 20:08:53'),
+(214, '', 6, '2018-06-09 20:08:54'),
+(215, '', 6, '2018-06-09 20:09:00'),
+(216, '', 6, '2018-06-09 20:09:01'),
+(217, '', 6, '2018-06-09 20:09:06'),
+(218, '', 6, '2018-06-09 20:09:07'),
+(219, '', 6, '2018-06-09 20:09:59'),
+(220, '', 6, '2018-06-09 20:10:23'),
+(221, '', 6, '2018-06-09 20:10:31'),
+(222, '', 6, '2018-06-09 20:11:47'),
+(223, '', 6, '2018-06-09 20:11:55'),
+(224, '', 6, '2018-06-09 20:11:56'),
+(225, '', 6, '2018-06-09 20:12:03'),
+(226, '', 6, '2018-06-09 20:13:20'),
+(227, '', 6, '2018-06-09 20:13:24'),
+(228, '', 6, '2018-06-09 20:13:25'),
+(229, '', 6, '2018-06-09 20:13:34'),
+(230, '', 6, '2018-06-09 20:13:35'),
+(231, '', 6, '2018-06-09 20:15:01'),
+(232, '', 6, '2018-06-09 20:15:44'),
+(233, '', 6, '2018-06-09 20:15:51'),
+(234, '', 6, '2018-06-09 20:15:53'),
+(235, '', 6, '2018-06-09 20:15:56'),
+(236, '', 6, '2018-06-09 20:15:58'),
+(237, '', 6, '2018-06-09 20:16:02'),
+(238, '', 6, '2018-06-09 20:17:08'),
+(239, '', 6, '2018-06-09 20:17:15'),
+(240, '', 6, '2018-06-09 20:17:16'),
+(241, '', 6, '2018-06-09 20:17:43'),
+(242, '', 6, '2018-06-09 20:17:43'),
+(243, '', 6, '2018-06-09 20:18:10'),
+(244, '', 6, '2018-06-09 20:18:11'),
+(245, '', 6, '2018-06-09 20:18:13'),
+(246, '', 6, '2018-06-09 20:18:14'),
+(247, '', 6, '2018-06-09 20:18:16'),
+(248, '', 6, '2018-06-09 20:18:45'),
+(249, '', 6, '2018-06-09 20:18:53'),
+(250, '', 6, '2018-06-09 20:18:54'),
+(251, '', 6, '2018-06-09 20:20:12'),
+(252, '', 6, '2018-06-09 20:20:14'),
+(253, '', 6, '2018-06-09 20:20:19'),
+(254, '', 6, '2018-06-09 20:20:20'),
+(255, '', 6, '2018-06-09 20:20:23'),
+(256, '', 6, '2018-06-09 20:20:24'),
+(257, '', 6, '2018-06-09 20:21:47'),
+(258, '', 6, '2018-06-09 20:22:48'),
+(259, '', 6, '2018-06-09 20:22:50'),
+(260, '', 6, '2018-06-09 20:22:51'),
+(261, '', 6, '2018-06-09 20:22:52'),
+(262, '', 6, '2018-06-09 20:23:08'),
+(263, '', 6, '2018-06-09 20:23:22'),
+(264, '', 6, '2018-06-09 20:23:59'),
+(265, '', 6, '2018-06-09 20:24:02'),
+(266, '', 6, '2018-06-09 20:24:03'),
+(267, '', 6, '2018-06-09 20:24:10'),
+(268, '', 6, '2018-06-09 20:24:28'),
+(269, '', 6, '2018-06-09 20:24:28'),
+(270, '', 6, '2018-06-09 20:24:29'),
+(271, '', 6, '2018-06-09 20:24:30'),
+(272, '', 6, '2018-06-09 20:25:04'),
+(273, '', 6, '2018-06-09 20:25:07'),
+(274, '', 6, '2018-06-09 20:25:08'),
+(275, '', 6, '2018-06-09 20:25:15'),
+(276, '', 6, '2018-06-09 20:26:29'),
+(277, '', 6, '2018-06-09 20:26:46'),
+(278, '', 6, '2018-06-09 20:26:47'),
+(279, '', 6, '2018-06-09 20:29:14'),
+(280, '', 6, '2018-06-09 20:29:15'),
+(281, '', 6, '2018-06-09 20:29:17'),
+(282, '', 6, '2018-06-09 20:29:17'),
+(283, '', 6, '2018-06-09 20:29:20'),
+(284, '', 6, '2018-06-09 20:29:22'),
+(285, '', 6, '2018-06-09 20:29:24'),
+(286, '', 6, '2018-06-09 20:29:25'),
+(287, '', 6, '2018-06-09 20:29:35'),
+(288, '', 6, '2018-06-09 20:29:36'),
+(289, '', 6, '2018-06-09 20:31:41'),
+(290, '', 6, '2018-06-09 20:31:41'),
+(291, '', 6, '2018-06-09 20:33:59'),
+(292, '', 6, '2018-06-09 20:34:00'),
+(293, '', 6, '2018-06-09 20:34:01'),
+(294, '', 6, '2018-06-09 20:34:01'),
+(295, '', 6, '2018-06-09 20:35:18'),
+(296, '', 6, '2018-06-09 20:35:18'),
+(297, '', 6, '2018-06-09 20:35:23'),
+(298, '', 6, '2018-06-09 20:35:24'),
+(299, '', 6, '2018-06-09 20:35:26'),
+(300, '', 6, '2018-06-09 20:35:26'),
+(301, '', 6, '2018-06-09 20:36:11'),
+(302, '', 6, '2018-06-09 20:36:11'),
+(303, '', 6, '2018-06-09 20:36:13'),
+(304, '', 6, '2018-06-09 20:36:14'),
+(305, '', 6, '2018-06-09 20:36:20'),
+(306, '', 6, '2018-06-09 20:36:20'),
+(307, '', 6, '2018-06-09 20:36:23'),
+(308, '', 6, '2018-06-09 20:36:24'),
+(309, '', 6, '2018-06-09 20:36:26'),
+(310, '', 6, '2018-06-09 20:36:28'),
+(311, '', 6, '2018-06-09 20:38:19'),
+(312, '', 6, '2018-06-09 20:38:22'),
+(313, '', 6, '2018-06-09 20:38:24'),
+(314, '', 6, '2018-06-09 20:39:23'),
+(315, '', 6, '2018-06-09 20:39:25'),
+(316, '', 6, '2018-06-09 20:39:28'),
+(317, '', 6, '2018-06-09 20:39:30'),
+(318, '', 6, '2018-06-09 20:39:51'),
+(319, '', 6, '2018-06-09 20:39:51'),
+(320, '', 6, '2018-06-09 20:39:52'),
+(321, '', 6, '2018-06-09 20:39:52'),
+(322, '', 6, '2018-06-09 20:40:02'),
+(323, '', 6, '2018-06-09 20:40:09'),
+(324, '', 6, '2018-06-09 20:40:12'),
+(325, '', 6, '2018-06-09 20:40:14'),
+(326, '', 6, '2018-06-09 20:41:36'),
+(327, '', 6, '2018-06-09 20:41:37'),
+(328, '', 6, '2018-06-09 20:41:38'),
+(329, '', 6, '2018-06-09 20:41:38'),
+(330, '', 6, '2018-06-09 20:41:53'),
+(331, '', 6, '2018-06-09 20:43:57'),
+(332, '', 6, '2018-06-09 20:43:57'),
+(333, '', 6, '2018-06-09 20:44:29'),
+(334, '', 6, '2018-06-09 20:44:30'),
+(335, '', 6, '2018-06-09 20:44:35'),
+(336, '', 6, '2018-06-09 20:44:36'),
+(337, '', 6, '2018-06-09 20:44:37'),
+(338, '', 6, '2018-06-09 20:44:38'),
+(339, '', 6, '2018-06-09 20:45:27'),
+(340, '', 6, '2018-06-09 20:45:29'),
+(341, '', 6, '2018-06-09 20:45:29'),
+(342, '', 6, '2018-06-09 20:46:44'),
+(343, '', 6, '2018-06-09 20:47:08'),
+(344, '', 6, '2018-06-09 20:47:09'),
+(345, '', 6, '2018-06-09 20:47:24'),
+(346, '', 6, '2018-06-09 20:47:25');
 
 -- --------------------------------------------------------
 
@@ -526,13 +715,13 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `nom`, `prenom`, `numero`, `password`, `type`, `mail`, `num_principal`, `NombreCapteurInfrarouge`) VALUES
-(1, 'Robert', 'Franck', 0657848571, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0, 0),
+(1, 'Robert', 'Franck', 0000000000, 'Shizumo1', 'admin', 'nicolas.nguyen@isep.fr', 0, 0),
 (2, 'Picone', 'Valentin', 0658362479, '3ed7dceaf266cafef032b9d5db224717', 'admin', 'valentin.picone@isep.fr', 0, 0),
 (3, 'Bernard', 'Jean', 0685749612, '0360f275c2c5363482c0dc54fd98a33f', 'client principal', 'jean.bernard@jvc.com', 0, 0),
 (4, 'a', 'a', 0000000000, '', 'principal', 'a@a.fr', 0, 0),
-(5, 'b', 'aaa', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'b@b', 9, 0),
-(6, 'A', 'A', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'A@A', 9, 0),
-(7, 'B', 'Franck', 0000000000, '', 'client principal', 'n-franck@hotmail.fr', 0, 2),
+(5, 'b', 'aaa', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$zaTFM1lSC5CGViSiCUwIlxYQdcaZKr2o3qU2/61s6IPp7HO/7f.o6UwLzzYzAel0rnYtG4Ox6wGcDzhrxxLKw/', 'secondaire', 'b@b', 6, 0),
+(6, 'aaa', 'A', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$x1gYfLMX28tk4Ss/AydY6fZiqP6TzrJEpGAELeHSz2LC8UbBmODrwRkTuNsraSetVMCVZjV3bs6uQf1edHGOA1', 'secondaire', 'a@gmail.fr', 9, 0),
+(7, 'B', 'Franck', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$jrg1ytxDLna.At/3DjmkbZBWi5d062JvDypUL.wvnaQNBqSEopZso0U731xy6ncj20jEHAsR9L8CzV02WD5y.0', 'client principal', 'n-franck@hotmail.fr', 0, 2),
 (8, 'C', 'C', 0000000000, '', 'client principal', 'arnold.neuman@gmail.com', 0, 16),
 (9, 'c', 'c', 0000000000, '$6$rounds=3232$yRyJDM8YPUMMRAJF$pId92ve5Nj8X4eNv9EmcgVkhSQSs4oYVEd8h3jLyqfieNynO1KtG1VnWqNYdjG2ZhBftZbz7tkUTCxXKhr6AU1', 'client principal', 'c@c', 0, -1);
 
@@ -650,7 +839,7 @@ ALTER TABLE `capteur`
 -- AUTO_INCREMENT for table `consommation_jour`
 --
 ALTER TABLE `consommation_jour`
-  MODIFY `piece_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `piece_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `facture`
@@ -668,7 +857,7 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT for table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `id_habitation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_habitation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -680,7 +869,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `id_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_piece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `statistique`
@@ -692,7 +881,7 @@ ALTER TABLE `statistique`
 -- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
-  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id_topic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
 
 --
 -- AUTO_INCREMENT for table `utilisateur`
