@@ -78,9 +78,9 @@ $commentaire = securisation($_POST['message']);
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('INSERT INTO message(id_topic,id_user,commentaire,date_commentaire) VALUES (:idtopic, :iduser,:comm, NOW())');
 $reponse->execute(array(
-    'idtopic' => $_POST['titre'],
+    'idtopic' => securisation($_POST['titre']),
     'iduser' => $_SESSION['id'],
-    'comm' => $commentaire,
+    'comm' => securisation($commentaire),
 ));
 $reponse->closeCursor();
 ?>
@@ -91,7 +91,7 @@ if (ctype_alpha($_POST['nom'])) {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $reponse = $bdd->prepare('UPDATE utilisateur SET nom = :nvnom WHERE id_utilisateur=:id');
     $reponse->execute(array(
-        'nvnom' => $_POST['nom'],
+        'nvnom' => securisation($_POST['nom']),
         'id' => $_SESSION['id'],
     ));
 }
@@ -102,7 +102,7 @@ if (ctype_alpha($_POST['nom'])) {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $reponse = $bdd->prepare('UPDATE utilisateur SET prenom = :nvprenom WHERE id_utilisateur=:id');
     $reponse->execute(array(
-        'nvprenom' => $_POST['prenom'],
+        'nvprenom' => securisation($_POST['prenom']),
         'id' => $_SESSION['id'],
     ));
 }
@@ -112,7 +112,7 @@ if (ctype_alpha($_POST['nom'])) {
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('UPDATE utilisateur SET numero = :nvnum WHERE id_utilisateur=:id');
 $reponse->execute(array(
-    'nvnum' => $_POST['numero'],
+    'nvnum' => securisation($_POST['numero']),
     'id' => $_SESSION['id'],
 ));
 ?>
@@ -121,7 +121,7 @@ $reponse->execute(array(
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $reponse = $bdd->prepare('UPDATE utilisateur SET mail = :nvmail WHERE id_utilisateur=:id');
     $reponse->execute(array(
-        'nvmail' => $_POST['mail'],
+        'nvmail' => securisation($_POST['mail']),
         'id' => $_SESSION['id'],
     ));
 }
@@ -135,7 +135,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=:id');
 if ($_POST['mdp']!=""){
 $reponse->execute(array(
-    'nvmdp' => Encryption::encrypt($_POST['mdp']),
+    'nvmdp' => Encryption::encrypt(securisation($_POST['mdp'])),
     'id' => $_SESSION['id']
 )
 );
@@ -155,7 +155,7 @@ $reponse = $bdd->prepare('INSERT INTO message( id_topic, id_user,commentaire, da
 $reponse->execute(array(
     'id_topic' => $i,
     'id_user' => $_SESSION['id'],
-    'commentaire' => $_POST['message'],
+    'commentaire' => securisation($_POST['message']),
 ));
 ?>
 

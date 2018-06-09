@@ -1,11 +1,10 @@
 <?php
 session_start();
+include("securisation.php");
 include_once("BDD.php");
-//include("Securisation.php");
-
 
 if($_POST["nom"]!=""){
-    $mail = $_POST["nom"];
+    $mail = securisation($_POST["nom"]);
    // $name = securisation ($name);
 
     $object = new Bdd;
@@ -13,10 +12,8 @@ if($_POST["nom"]!=""){
     $requete->execute(array("ID"=>$_SESSION["id"]));
     $newnum = $requete->fetch();
     $requete = $object->connect()->prepare('UPDATE utilisateur SET num_principal=:newnum WHERE mail=:mail ');
-
     $requete->execute(array("newnum"=>$newnum["id_utilisateur"],
         "mail"=>$mail));
-    
     $requetetype = $object->connect()->prepare('UPDATE utilisateur SET type="secondaire" WHERE mail=:mail ');
     $requetetype->execute(array("mail"=>$mail));
 
