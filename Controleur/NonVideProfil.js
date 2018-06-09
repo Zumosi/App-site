@@ -17,6 +17,7 @@ function NonVideProfil() {
         return false
     }
     else if ((!regex.test((document.getElementById("mail").value))) && ((document.getElementById("mail").value) != "")) {
+        alert("Ceci n'est pas un mail!");
         return false;
     }
     else if ((document.getElementById("mdp").value).length<=4&&((document.getElementById("mdp").value) != "")){
