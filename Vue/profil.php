@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>Profil</title>
     <link rel="stylesheet" href="css/profil.css"/>
-    <script type="text/javascript" src="Controleur/NonVide.js"></script>
+    <script type="text/javascript" src="Controleur/NonVideProfil.js"></script>
 
 </head>
 <body>
@@ -37,7 +37,7 @@ $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = ? ');
 $reponse->execute(array($user));
 while ($donnees = $reponse->fetch()) {
     ?>
-    <form method="post" action="Vue/liste.php" onsubmit="return(NonVideProfil();)">
+    <form method="post" action="Vue/liste.php" autocomplete="off" onsubmit="return(NonVideProfil())">
         <table class="prof">
             <tr>
                 <td id="top"><strong>Nom: </strong><br/><br/>
