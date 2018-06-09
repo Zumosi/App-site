@@ -1,7 +1,7 @@
 <?php
 
 include("Controleur/BDD.php");
-
+/*
 $object = new Bdd;
 $requete = $object->connect()->prepare('SELECT id_piece FROM piece WHERE type=:piece ');
 $requete->execute(array("piece"=>$_GET["piece"]));
@@ -22,9 +22,8 @@ $nombrecapteur=$nombrecapteur[0];
 $_SESSION["quantitetotale"]=$nombrecapteur;
 echo "Un capteur à été rajouté et est maintenant attribué à la pièce : " . $_GET["piece"] ;
 echo "<br>";
-echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)."
+echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)." */
 ?>
-
 
 
 <!DOCTYPE html>

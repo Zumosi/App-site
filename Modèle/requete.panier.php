@@ -16,6 +16,19 @@
 
 ?>
 
+<?php function typecapteur($nomcapt)
+{
+    $bdd = new Bdd();
+    $reponse = $bdd->connect()->prepare('SELECT typeb FROM boutique WHERE nom = ?');
+    $reponse->execute(array($nomcapt));
+    while ($donnees = $reponse->fetch()) {
+        return $donnees['typeb'];
+    }
+}
+
+?>
+
+
 <?php function ajoutinfra($quanti)
 {
     $quantite = $quanti;
@@ -34,6 +47,18 @@
         "quantitetotale" => $_SESSION["quantitetotale"],
         "ID" => $_SESSION["id"]
     ));
+}
+
+?>
+
+<?php function listepiece($id)
+{
+    $bdd = new Bdd();
+    $reponse = $bdd->connect()->prepare('SELECT nom FROM piece INNER JOIN habitation ON piece.id_maison=habitation.id_habitation WHERE habitation.id_user=?');
+    $reponse->execute(array($id));
+    while ($donnees = $reponse->fetch()) {
+        echo '<option name="piece" >' . $donnees['nom'] . '</option>' . '</br>';
+    }
 }
 
 ?>

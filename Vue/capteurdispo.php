@@ -13,24 +13,26 @@ include("Modèle/requete.panier.php");
 
 <?php ajoutinfra($_SESSION['quantite']) ?>
 
-    <form action="Vue/traitement.php" method="post" >
-        <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
+
+<form action="Vue/traitement.php" method="post">
+    <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
 
 
-<table id="facture" border="2">
-    <tr><td>Nom du capteur</td>
-        <td>Quantité Disponible</td>
-        <td>Modifier</td>
-    </tr>
-    <tr>
-        <td><?php echo htmlspecialchars($_SESSION["nomcapteur"]); ?></td>
+        <table id="facture" border="2">
+            <tr>
+                <td>Nom du capteur</td>
+                <td>Quantité Disponible</td>
+                <td>Modifier</td>
+            </tr>
+            <tr>
+                <td><?php echo htmlspecialchars($_SESSION["nomcapteur"]); ?></td>
 
-        <td><?php echo htmlspecialchars($_SESSION["quantitetotale"]); ?></td>
+                <td><?php echo htmlspecialchars($_SESSION["quantitetotale"]); ?></td>
 
-        <td><input type="submit" name="send" value="Ajouter"/></td>
-    </tr>
-</table>
-    </form>
+                <td><input type="submit" name="send" value="Ajouter"/></td>
+            </tr>
+        </table>
+</form>
 
-</section>
+
 </body>
