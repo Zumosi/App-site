@@ -29,8 +29,6 @@
 ?>
 
 
-
-
 <?php function listepiece($id)
 {
     $bdd = new Bdd();
@@ -68,7 +66,6 @@
     }
 } ?>
 
-
 <?php function tablestockuser($idsession)
 {
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
@@ -85,18 +82,21 @@
 
 ?>
 
-<?php function idpiece($nompiece){
+
+<?php function idpiece($nompiece)
+{
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $reponse = $bdd->prepare('SELECT id_piece FROM piece WHERE nom=?');
     $reponse->execute(array($nompiece));
     while ($donnees = $reponse->fetch()) {
-        $idpiece=$donnees['id_piece'];
+        $idpiece = $donnees['id_piece'];
         return $idpiece;
     }
 }
+
 ?>
 
-<?php function ajoutcapteur()
+<?php function ajoutcapteur($idstk)
 {
     $type = typecapteur($_SESSION['nomcapteur']);
     $bdd = new Bdd;
@@ -107,8 +107,9 @@
         'etat' => 'off',
         'idplace' => $_GET['idpiece'],
     ));
-    $reponse=$bdd->connect()->prepare('UPDATE stockuser SET id_quantite=id_quantité-1 WHERE id_stock=?');
-    $reponse->execute(array());
+    $reponse = $bdd->connect()->prepare('UPDATE stockuser SET id_quantite=id_quantite-1 WHERE id_stock=?');
+    $reponse->execute(array($idstk));
 }
+
 ?>
 

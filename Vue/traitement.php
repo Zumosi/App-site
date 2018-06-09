@@ -24,8 +24,8 @@ if (isset($_POST['Validerpanier'])) {
 
 if (isset($_POST['send'])) {
 
-
-    header("location:../index.php?cible=formpiece&idstock=".$_POST['send']." ");
+    $_SESSION['idstock']=$_POST['send'];
+    header("location:../index.php?cible=formpiece");
 
 }
 
@@ -35,7 +35,7 @@ if (isset($_POST['send'])) {
 
 if (isset($_POST['envoyer'])) {
     $idpiece=idpiece($_POST['piece']);
-    header("location:../index.php?cible=formpieceliste&idpiece=". $idpiece . "&piece=" . $_POST["piece"] . " ");
+    header("location:../index.php?cible=formpieceliste&idstock=".$_SESSION['idstock']."&idpiece=". $idpiece . "&piece=" . $_POST["piece"] . " ");
 
 }
 

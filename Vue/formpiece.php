@@ -22,6 +22,7 @@ include("Modèle/requete.panier.php");
 
 
     </select>
+    
     <input type="submit" value="Envoyer" name="envoyer" />
 
 </form>
