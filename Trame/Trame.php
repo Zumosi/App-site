@@ -138,6 +138,7 @@ $requete->execute(array(
 $type_maison=$requete->fetch();
 $type_maison=$type_maison[0];
 
+
 $requete = $object->connect()->prepare('SELECT prenom FROM utilisateur WHERE id_utilisateur=:id_user');
 $requete->execute(array(
     "id_user"=>$id_utilisateur,
