@@ -24,36 +24,28 @@ $requete->execute(array("ID"=>$_SESSION["id"]));
 
 $resultat = $requete->fetchAll();   ?>
 
-<table id="tablesecondaire">
+<!-- <table id="tablesecondaire">
    <tr>
         <th>Nom</th>
         <th>Prénom</th>
    </tr>
-
    <tr>
-
-
-
-    <?php for ($i = 0; $i < count($resultat); $i++) {  
-
-
+    <?php for ($i = 0; $i < count($resultat); $i++) {
     echo '<td align="center">'  . $resultat[$i]['nom'] . '</td>';
     echo '<br>';
     echo '<td>' . $resultat[$i]['prenom'] . '</td>';
     echo '<br>';
     echo '<tr/>';
-
-    } 
-
+    }
     echo '</table>';
-
     ?>
     
 <section>
-
+-->
 <form method="post" action = "Controleur/UtilisateurSecondaireListe.php" id="formulaire" onsubmit="">
 
-    <label>Ajouter un utilisateur secondaire : </label><input name = "nom" id="champs" type="text" placeholder="Texte" /> <br>
+    <label>Ajouter un utilisateur secondaire: </label><br>
+    <input name = "nom" id="champs" type="email" placeholder="Texte" /> <br>
 
     <input type="submit" value="Envoyer" />
     <input type="submit" value="Ajouter" />
