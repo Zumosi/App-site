@@ -74,12 +74,20 @@
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
     $req = $bdd->prepare('SELECT nom,id_quantite,id_stock FROM boutique INNER JOIN stockuser ON stockuser.id_captacheter=boutique.id_boutique WHERE id_acheteur=? ');
     $req->execute(array($idsession));
-    while ($donnees = $req->fetch()) {
-        echo '<tr>' .
-            '<td>' . $donnees['nom'] . '</td>' .
-            '<td>' . $donnees['id_quantite'] . '</td>' .
-            '<td>' . '<input type="submit"  name="send" value='.$donnees['id_stock'].'>' . '</td>' .
-            '</tr>';
+    $donnees=$req->fetchAll();
+    for($i=0;$i<sizeof($donnees);$i++){
+        echo '<form method="post" action="traitement.php">';
+        echo '<tr>' ;
+        echo '<td>';
+        print_r($donnees[$i]["nom"]) ;
+        echo '</td>';
+        echo '<td>';
+        print_r($donnees[$i]['id_quantite'])  ;
+        echo '</td>';
+        echo "<input type='hidden' name='choix' value='$donnees[$i][id_stock]'/>";
+        echo '<td>' . '<input type="submit"  name="send" value=\'Modifier\'>' . '</td>';
+        echo '</form>';
+        echo '</tr>';
     }
 }
 
