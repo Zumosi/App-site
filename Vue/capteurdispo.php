@@ -11,27 +11,25 @@ include("Modèle/requete.panier.php");
 </head>
 <body>
 
-<?php ajoutinfra($_SESSION['quantite']) ?>
+
+<?php $idcapt = idcapteur($_SESSION["nomcapteur"]) ?>
+<?php insertstock($idcapt, $_SESSION['quantite']) ?>
 
 
 <form action="Vue/traitement.php" method="post">
     <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
 
 
-        <table id="facture" border="2">
-            <tr>
-                <td>Nom du capteur</td>
-                <td>Quantité Disponible</td>
-                <td>Modifier</td>
-            </tr>
-            <tr>
-                <td><?php echo htmlspecialchars($_SESSION["nomcapteur"]); ?></td>
+    <table id="facture" border="2">
+        <tr>
+            <td>Nom du capteur</td>
+            <td>Quantité Disponible</td>
+            <td>Modifier</td>
+        </tr>
 
-                <td><?php echo htmlspecialchars($_SESSION["quantitetotale"]); ?></td>
+<?php  tablestockuser($_SESSION['id']) ?>
 
-                <td><input type="submit" name="send" value="Ajouter"/></td>
-            </tr>
-        </table>
+    </table>
 </form>
 
 

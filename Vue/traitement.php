@@ -1,5 +1,6 @@
 <?php
-session_start()
+session_start();
+include("../Modèle/requete.panier.php");
 ?>
 <?php
 
@@ -22,7 +23,9 @@ if (isset($_POST['Validerpanier'])) {
 <?php
 
 if (isset($_POST['send'])) {
-    header("location:../index.php?cible=formpiece ");
+
+
+    header("location:../index.php?cible=formpiece&idstock=".$_POST['send']." ");
 
 }
 
@@ -31,19 +34,12 @@ if (isset($_POST['send'])) {
 <?php
 
 if (isset($_POST['envoyer'])) {
-    header("location:../index.php?cible=formpieceliste&piece=" . $_POST["piece"] . " ");
+    $idpiece=idpiece($_POST['piece']);
+    header("location:../index.php?cible=formpieceliste&idpiece=". $idpiece . "&piece=" . $_POST["piece"] . " ");
 
 }
 
 ?>
-<?php
-$bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-$reponse = $bdd->prepare('INSERT INTO stockuser( id_captacheter,id_acheteur,id_quantite) VALUES (:captacheter, :acheteur, :quantite)');
-$reponse->execute(array(
-    'captacheter' => 1,
-    'acheteur' => $_SESSION['id'],
-    'quantite' =>$_POST["quantite"],
-));
-$reponse->closeCursor();
 
-?>
+
+

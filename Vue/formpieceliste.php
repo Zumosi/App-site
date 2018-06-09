@@ -1,5 +1,5 @@
 <?php
-
+include("Modèle/requete.panier.php");
 include("Controleur/BDD.php");
 /*
 $object = new Bdd;
@@ -36,6 +36,7 @@ echo " Vous disposez maintenant de ".$nombrecapteur . " capteur(s)." */
 </head>
 <body>
 
+<?php ajoutcapteur() ?>
 
 
 <h1><a href="index.php?cible=formpiece">Revenir a la page d'ajout</h1>
