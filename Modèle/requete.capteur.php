@@ -4,11 +4,7 @@ function idcapt()
 {
 
     $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-    $reponse = $bdd->prepare('SELECT id_capteur,etat FROM capteur WHERE id_capteur 
-IN(SELECT id_piece FROM piece WHERE id_piece 
-IN(SELECT id_habitation FROM habitation WHERE id_maison 
-IN (SELECT id_user FROM habitation WHERE id_user=:id_utilisateur))) 
-AND type =:type_demande');
+    $reponse = $bdd->prepare('SELECT id_capteur,etat FROM capteur WHERE id_place IN(SELECT id_piece FROM piece WHERE id_piece IN(SELECT id_habitation FROM habitation WHERE id_maison IN (SELECT id_habitation FROM habitation WHERE id_user=:id_utilisateur))) AND type =:type_demande');
     $reponse->execute(array(
         "id_utilisateur"=>$_SESSION["id"],
         "type_demande"=>$_GET["capteur"],

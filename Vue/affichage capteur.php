@@ -1,10 +1,41 @@
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Capteurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#button").click(function () {
+                var etat = $('#etat').val();
+                if(document.getElementById('etat').value=="on"){
+                    etat="off";
+                    document.getElementById('etat').value="off";
+                    document.getElementById("etattext").innerHTML = "ON";
+                    alert("état : on ");
+                }
+                else if(document.getElementById('etat').value=="off"){
+                    etat="on";
+                    document.getElementById('etat').value="on";
+                    document.getElementById("etattext").innerHTML = "OFF";
+                    alert("état : off ");
+                }
+                var varData = 'etat=' + etat;
+                console.log(varData);
+
+                $.ajax({
+                    type:'POST',
+                    url:'Vue/CapteurBddliste.php',
+                    data:varData,
+                    success:function(){
+                        alert("L'état du capteur a été modifié")
+                    }
+
+
+                })
+            });
+        });
+    </script>
 
     <link rel="stylesheet" href="css/affichage%20capteur.css">
 </head>
@@ -26,6 +57,7 @@ if($infocapteur==NULL){
 
 }
 else {
+    $_SESSION["idcapteur"]= $infocapteur[0]["id_capteur"];
     echo '<table >';
     echo "<caption >";
     echo $_GET["capteur"];
@@ -40,7 +72,19 @@ else {
     echo 'Admin: ';
     echo '<br>';
     echo ' ' . $infocapteur[2] . ' ' . $infocapteur[3];
-    echo '
+    echo '<input type="hidden" name="etat" id="etat" value="on" />
+        <br>
+        <br>
+<br>
+  <div id="button"
+        <button id="button">
+<div class="" >
+    <input type="checkbox" name="onoffswitch" class="" id="myonoffswitch" >
+
+</div>
+    </div>
+</button>';
+   /* echo '
         </th >
         <th >
             <div class="onoffswitch" >
@@ -51,7 +95,8 @@ else {
                 </label >
             </div >
 
-        </th >
+        </th > */
+   echo '
         <td >
             <a href = "index.php?gestion=mic&cible=gestion capteurs" > Modifier</a >
         </td >
@@ -64,7 +109,9 @@ else {
         </th >
         <th >';
     echo 'Etat: ';
-    echo ' ' . $infocapteur[0]["etat"];
+    echo '<p id="etattext"> ';
+    echo $infocapteur[0]["etat"];
+    echo "</p>";
     echo '
         </th >
 
