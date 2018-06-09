@@ -2,7 +2,7 @@
 new Chart(document.getElementsByClassName("WCg"), {
     type: 'line',
     data: {
-        labels: date,
+        labels: dateWC,
         datasets: [{
             data: consoWC,
             label: "Consommation",

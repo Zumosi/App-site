@@ -2,7 +2,7 @@
 new Chart(document.getElementsByClassName("Chambreg"), {
     type: 'line',
     data: {
-        labels: date,
+        labels:datechambre,
         datasets: [{
             data: consoChambre,
             label: "Consommation",

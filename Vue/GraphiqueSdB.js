@@ -2,7 +2,7 @@
 new Chart(document.getElementsByClassName("SdBg"), {
     type: 'line',
     data: {
-        labels: date,
+        labels: dateSdB,
         datasets: [{
             data: consoSdB,
             label: "Consommation",

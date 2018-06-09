@@ -2,7 +2,7 @@
 new Chart(document.getElementsByClassName("Cuisineg"), {
     type: 'line',
     data: {
-        labels: date,
+        labels: datecuisine,
         datasets: [{
             data: consoCuisine,
             label: "Consommation",

@@ -2,7 +2,7 @@
     new Chart(document.getElementsByClassName("Salong"), {
         type: 'line',
         data: {
-            labels: date,
+            labels: datesalon,
             datasets: [{
                 data: consoSalon,
                 label: "Consommation",
