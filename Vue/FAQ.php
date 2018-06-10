@@ -12,7 +12,7 @@ include("Controleur/BDD.php");
     <body>
     <?php
     $object= new bdd;
-    $requete = $object->connect()->prepare('SELECT titre,reponse,auteur,date FROM faq');
+    $requete = $object->connect()->prepare('SELECT titre,reponse,auteur FROM faq');
     $requete->execute();
     $tablefaq=$requete->fetchAll();
     echo "<h1 > Foire aux Questions </h1 >";
@@ -31,9 +31,6 @@ include("Controleur/BDD.php");
         echo "</th>";
         echo "<th>";
         print $tablefaq[$i]['reponse'] ; ;
-        echo "</th>";
-        echo "<th>";
-        print $tablefaq[$i]['date'] ; ;
         echo "</th>";
         echo "</tr>";
         }
