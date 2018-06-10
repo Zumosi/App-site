@@ -5,7 +5,8 @@
     <title>Forum</title>
     <link rel="stylesheet" href="css/forum.css"/>
     <?php
-    include("../Controleur/BDD.php");
+    include("Controleur/BDD.php");
+    //include("../Controleur/BDD.php");
     ?>
 </head>
 <body>
