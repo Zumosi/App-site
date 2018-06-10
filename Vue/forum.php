@@ -4,6 +4,13 @@
     <meta charset="utf-8"/>
     <title>Forum</title>
     <link rel="stylesheet" href="css/forum.css"/>
+<<<<<<< HEAD
+    <?php
+    include("Controleur/BDD.php");
+    //include("../Controleur/BDD.php");
+    ?>
+=======
+>>>>>>> 730a70547140f084f3b58a1511bd807e6e1adab9
 </head>
 <?php
 include("Controleur/BDD.php");
