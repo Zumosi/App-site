@@ -9,7 +9,7 @@ $longueur="8";
 
 
 
-function sendmail($message_contact, $object_contact)
+function sendmail($message_contact, $object_contact,$client)
 {
     $mail = 'athomequipe@gmail.com'; // Déclaration de l'adresse de destination.
     if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui rencontrent des bogues.
@@ -32,7 +32,7 @@ function sendmail($message_contact, $object_contact)
 //=========
 
 //=====Création du header de l'e-mail.
-    $sender= "Athomequipe@gmail.com";
+    $sender= $client;
     $header = "From: $sender <noreplyequipeathome@gmail.com>" . $passage_ligne;
     $header .= "Reply-to: $sender <noreplyequipeathome@gmail.com>" . $passage_ligne;
     $header .= "MIME-Version: 1.0" . $passage_ligne;
