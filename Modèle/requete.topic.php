@@ -144,11 +144,10 @@ function blockmessage($id_top)
     $reponse->execute(array($id_top));
     while ($donnees = $reponse->fetch()) {
 
-        for ($i = 0; $i <= strlen($donnees['commentaire'])-1; $i++){
+        for ($i = 0; $i <= strlen($donnees['commentaire']) - 1; $i++) {
             if ($donnees['commentaire'][$i] == '-') {
                 echo '</br>';
-            }
-            else{
+            } else {
                 echo $donnees['commentaire'][$i];
             }
         }
@@ -156,7 +155,7 @@ function blockmessage($id_top)
         echo '</br>';
         $req = $bdd->prepare('SELECT nom,prenom, id_user FROM utilisateur, message WHERE id_utilisateur=?');
         $req->execute(array($donnees['id_user']));
-        while($don=$req->fetch()){
+        while ($don = $req->fetch()) {
             echo $don['nom'];
             echo $don['prenom'];
             $req->closeCursor();
@@ -172,9 +171,94 @@ function blockmessage($id_top)
 }
 
 ?>
+<?php
+function trouvernom($id_utilisateur)
+{
+    $object = new Bdd;
+    $requete = $object->connect()->prepare('SELECT nom,prenom FROM utilisateur WHERE id_utilisateur=:id_utilisateur');
+    $requete->execute(array(
+        "id_utilisateur" => $id_utilisateur
+    ));
+    $tablenom = $requete->fetchAll();
+    $tablenom = $tablenom[0];
+    return $tablenom;
 
+}
 
+?>
 
+<?php
+function listetopic()
+{
+    $object = new Bdd;
+    $requete = $object->connect()->prepare('SELECT titre,date_crea,id_utilisateur FROM topic');
+    $requete->execute();
+    $tabletopic = $requete->fetchAll();
+    echo "<table border='2'>";
+    echo "<th>Auteur</th>";
+    echo "<th >Titre</th>";
+    echo "<th >Date</th>";
+    echo '<form method="post" action = "index.php?cible=forumliste" id="formulairetopic" >';
+    echo "<input type='hidden' name='taille' value='" . sizeof($tabletopic) . "'>";
+    for ($i = 0; $i < sizeof($tabletopic); $i++) {
+        $prenom = trouvernom($tabletopic[$i]['id_utilisateur'])["prenom"];
+        $nom = trouvernom($tabletopic[$i]['id_utilisateur'])["nom"];
+        $nom_prenom = $nom . " " . $prenom;
+        echo "<tr>";
+        echo "<th>";
+        echo $nom_prenom;
+        echo "</th>";
+        echo "<th>";
+        echo "<input type='submit' name='sujet$i' value='" . $tabletopic[$i]['titre'] . "'>";
+        echo "</th>";
+        echo "<th>";
+        print $tabletopic[$i]['date_crea'];;
+        echo "</th>";
+        echo "</tr>";
+    }
+    echo '</form>';
+}
+
+?>
+
+<?php function listemessage()
+{
+
+    for ($i = 0; $i < $_POST["taille"]; $i++) {
+        if (($_POST["sujet$i"]) != NULL) {
+            $sujetchoisi = $i;
+            $object = new Bdd;
+            $requete = $object->connect()->prepare('SELECT id_user,commentaire,date_commentaire FROM message WHERE id_topic=:id_topic');
+            $requete->execute(array(
+                "id_topic" => $i
+            ));
+            $tablecom = $requete->fetchAll();
+        }
+    }
+
+    echo "<table border='2'>";
+    echo "<th>Auteur</th>";
+    echo "<th >Titre</th>";
+    echo "<th >Date</th>";
+    $tailletable = sizeof($tablecom);
+    for ($i = 0; $i < $tailletable; $i++) {
+        $prenom = trouvernom($tablecom[$i]['id_user'])["prenom"];
+        $nom = trouvernom($tablecom[$i]['id_user'])["nom"];
+        $nom_prenom = $nom . " " . $prenom;
+        echo "<tr>";
+        echo "<th>";
+        echo $nom_prenom;
+        echo "</th>";
+        echo "<th>";
+        print $tablecom[$i]['commentaire'];
+        echo "</th>";
+        echo "<th>";
+        print $tablecom[$i]['date_commentaire'];
+        echo "</th>";
+        echo "</tr>";
+    }
+}
+?>
 
 
 
