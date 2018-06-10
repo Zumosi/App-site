@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form method="post" action="css/liste.php">
+<form method="post" action="Vue/liste.php">
     <p>
         <label for="titre topic">Titre du topic :</label>
         <input type="text" name="titre" size="60" maxlength="50"/>
