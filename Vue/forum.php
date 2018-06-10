@@ -12,6 +12,7 @@ include("Modèle/requete.topic.php")
 
 <body>
 <h1>FORUM</h1>
+<a id="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>
 <h2>Liste des sujets : </h2>
 
 <?php  listetopic() ?>

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#button").click(function () {
                 var etat = $('#etat').val();
-                if(document.getElementById('etat').value=="on"){
-                    etat="off";
-                    document.getElementById('etat').value="off";
+                if (document.getElementById('etat').value == "on") {
+                    etat = "off";
+                    document.getElementById('etat').value = "off";
                     document.getElementById("etattext").innerHTML = "ON";
                     alert("état : on ");
                 }
-                else if(document.getElementById('etat').value=="off"){
-                    etat="on";
-                    document.getElementById('etat').value="on";
+                else if (document.getElementById('etat').value == "off") {
+                    etat = "on";
+                    document.getElementById('etat').value = "on";
                     document.getElementById("etattext").innerHTML = "OFF";
                     alert("état : off ");
                 }
@@ -24,10 +24,10 @@
                 console.log(varData);
 
                 $.ajax({
-                    type:'POST',
-                    url:'Vue/CapteurBddliste.php',
-                    data:varData,
-                    success:function(){
+                    type: 'POST',
+                    url: 'Vue/CapteurBddliste.php',
+                    data: varData,
+                    success: function () {
                         alert("L'état du capteur a été modifié")
                     }
 
@@ -40,14 +40,15 @@
     <link rel="stylesheet" href="css/affichage%20capteur.css">
 </head>
 
+
 <body>
 
 
 <?php
-$infocapteur=idcapt();
-if($infocapteur==NULL){
+$infocapteur = idcapt();
+if ($infocapteur == NULL) {
     echo "Vous n'avez pas de capteurs de ce type ! ";
-    echo'<table >
+    echo '<table >
     <tr id="plus">
         <td ><a href = "index.php?cible=shop" > +</a ></td >
         <th  > Acheter un capteur </th >
@@ -55,9 +56,8 @@ if($infocapteur==NULL){
 </table >
     ';
 
-}
-else {
-    $_SESSION["idcapteur"]= $infocapteur[0]["id_capteur"];
+} else {
+    $_SESSION["idcapteur"] = $infocapteur[0]["id_capteur"];
     echo '<table >';
     echo "<caption >";
     echo $_GET["capteur"];
@@ -84,19 +84,19 @@ else {
 </div>
     </div>
 </button>';
-   /* echo '
-        </th >
-        <th >
-            <div class="onoffswitch" >
-                <input type = "checkbox" name = "onoffswitch" class="onoffswitch-checkbox" id = "myonoffswitch" checked >
-                <label class="onoffswitch-label" for="myonoffswitch" >
-                    <span class="onoffswitch-inner" ></span >
-                    <span class="onoffswitch-switch" ></span >
-                </label >
-            </div >
+    /* echo '
+         </th >
+         <th >
+             <div class="onoffswitch" >
+                 <input type = "checkbox" name = "onoffswitch" class="onoffswitch-checkbox" id = "myonoffswitch" checked >
+                 <label class="onoffswitch-label" for="myonoffswitch" >
+                     <span class="onoffswitch-inner" ></span >
+                     <span class="onoffswitch-switch" ></span >
+                 </label >
+             </div >
 
-        </th > */
-   echo '
+         </th > */
+    echo '
         <td >
             <a href = "index.php?gestion=mic&cible=gestion capteurs" > Modifier</a >
         </td >
