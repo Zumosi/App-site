@@ -7,24 +7,24 @@ footer{
     position:fixed;
     bottom: 0;
     left: 0;
-    height: 4vw;
-    width: 100%;
+    right: 0;
+    height: 5vw;
     background-color: #9f9f9f;
 }
 #footer2 {
     position: fixed;
-    left: 5%;
+    padding: 0;
+    left: 2vw;
     bottom: -1vw;
-    width: 100%;
     background-color:transparent;
     color: #fff;
     text-align: left;
 }
 #footer1 {
     position:fixed;
-    right:5%;
+    padding: 0;
+    right:2vw;
     bottom: -1vw;
-    width: 100%;
     background-color: transparent;
     color: #fff;
     text-align: right;
