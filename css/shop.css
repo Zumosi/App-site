@@ -115,3 +115,9 @@ h1 {
     font-size: 1.3vw;
     font-family: Arial;
 }
+
+
+body {
+    background-image: url("../Vue/image/fond.jpg");
+    background-size: cover;
+}

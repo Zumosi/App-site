@@ -41,3 +41,7 @@ input {
     color: black;
     font-size: 2vw;
 }
+body {
+    background-image: url("../Vue/image/fond.jpg");
+    background-size: cover;
+}

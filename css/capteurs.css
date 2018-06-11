@@ -24,3 +24,7 @@ Body{
     border-spacing: 8vw 1vw;
     background-color: transparent;
 }
+body {
+    background-image: url("../Vue/image/fond.jpg");
+    background-size: cover;
+}

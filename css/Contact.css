@@ -28,3 +28,7 @@ img {
 #project3 {
     float: left;
 }
+body {
+    background-image: url("../Vue/image/fond.jpg");
+    background-size: cover;
+}
