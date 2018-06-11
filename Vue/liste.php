@@ -61,15 +61,16 @@ if (isset($_GET['session'])) {
 }
 ?>
 
-<?php
-$titre = securisation($_POST['titre']);
-$bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
-$reponse = $bdd->prepare('INSERT INTO topic( titre, id_utilisateur,date_crea) VALUES (:titre, :id, NOW())');
-$reponse->execute(array(
-    'titre' => $titre,
-    'id' => $_SESSION['id'],
-));
-$reponse->closeCursor();
+<?php if ($_POST['titre'] != NULL) {
+    $titre = securisation($_POST['titre']);
+    $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
+    $reponse = $bdd->prepare('INSERT INTO topic( titre, id_utilisateur,date_crea) VALUES (:titre, :id, NOW())');
+    $reponse->execute(array(
+        'titre' => $titre,
+        'id' => $_SESSION['id'],
+    ));
+    $reponse->closeCursor();
+}
 ?>
 
 
@@ -126,19 +127,19 @@ $reponse->execute(array(
     ));
 }
 ?>
-<<<<<<< HEAD
-=======
+    <<<<<<< HEAD
+    =======
     //recup titre
->>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
+    >>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=:id');
-if ($_POST['mdp']!=""){
-$reponse->execute(array(
-    'nvmdp' => Encryption::encrypt(securisation($_POST['mdp'])),
-    'id' => $_SESSION['id']
-)
-);
+if ($_POST['mdp'] != "") {
+    $reponse->execute(array(
+            'nvmdp' => Encryption::encrypt(securisation($_POST['mdp'])),
+            'id' => $_SESSION['id']
+        )
+    );
 };
 ?>
 

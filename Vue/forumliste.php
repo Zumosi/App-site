@@ -14,6 +14,19 @@ error_reporting(0);
         ?>
     </head>
 <body>
+
+
+
+
+    <h1>FORUM</h1>
+    <h2>Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
+
+
+    <form method="post" action="index.php?cible=ajoutcom" id="formulairecom" onsubmit="">
+        <input type="hidden" name="idtopic" value="<?php echo htmlspecialchars($sujetchoisi); ?>"/>
+        <input type="submit" name="commentaire" value="Ajouter un commentaire">
+    </form>
+
 <?php
 for ($i = 0; $i < $_POST["taille"]; $i++) {
     if (($_POST["sujet$i"]) != NULL) {
@@ -48,14 +61,5 @@ for ($i = 0; $i < $tailletable; $i++) {
     echo "</th>";
     echo "</tr>";
 }
+echo '</table>';
 ?>
-
-<?php blockmessage(44) ?>
-
-    <h1>FORUM</h1>
-    <h2>Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
-    <form method="post" action="index.php?cible=ajoutcom" id="formulairecom" onsubmit="">
-        <input type="hidden" name="idtopic" value="<?php echo htmlspecialchars($sujetchoisi); ?>"/>
-        <input type="submit" name="commentaire" value="Ajouter un commentaire">
-    </form>
-<?php

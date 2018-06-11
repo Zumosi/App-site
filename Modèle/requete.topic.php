@@ -217,6 +217,7 @@ function listetopic()
         echo "</tr>";
     }
     echo '</form>';
+    echo '</table>';
 }
 
 ?>
@@ -257,6 +258,7 @@ function listetopic()
         echo "</th>";
         echo "</tr>";
     }
+
 }
 ?>
 

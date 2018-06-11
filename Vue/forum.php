@@ -13,7 +13,12 @@ include("Modèle/requete.topic.php")
 
 <body>
 <h1>FORUM</h1>
+
 <a id="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>
+<?php
+$date = date("d/m/Y");
+Print("Date :  $date ");
+?>
 <h2>Liste des sujets : </h2>
 
 <?php  listetopic() ?>
