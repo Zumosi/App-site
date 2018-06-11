@@ -11,7 +11,7 @@ include("Controleur/BDD.php");
 include("Modèle/requete.topic.php")
 ?>
 
-<body>
+<body id="body">
 <h1>FORUM</h1>
 
 <a id="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>

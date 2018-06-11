@@ -18,15 +18,9 @@
         <td><p>Infra-rouge</p></td>
     </tr>
     <tr>
-<<<<<<< HEAD
         <td><p><a href="index.php?capteur=lux&cible=affichage capteur" title="Luminosité"><img src="Vue/image/brightness.png"></a></p></td>
         <td><p><a href="index.php?capteur=hum&cible=affichage capteur" title="Humidité"><img src="Vue/image/humidity.png"></a></p></td>
         <td><p><a href="index.php?capteur=ir&cible=affichage capteur" title="Infra-rouge"><img src="Vue/image/infrared.png"></a></p></td>
-=======
-        <td><p><a href="index.php?capteur=lumiere&cible=affichage capteur" title="Luminosité"><img src="Vue/image/brightness.png"></a></p></td>
-        <td><p><a href="index.php?capteur=humidite&cible=affichage capteur" title="Humidité"><img src="Vue/image/humidity.png"></a></p></td>
-        <td><p><a href="index.php?capteur=infrarouge&cible=affichage capteur" title="Infra-rouge"><img src="Vue/image/infrared.png"></a></p></td>
->>>>>>> 774b4b9277696b378354c9389f04ba27b75aeb0c
     </tr>
     <tr>
         <td><p>Micro</td>

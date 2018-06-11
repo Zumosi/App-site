@@ -3,12 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
+
     <title>AtHome</title>
-    <link rel="stylesheet" href="Vue/header_2.css">
-=======
     <link rel="stylesheet" href="css/header_2.css">
->>>>>>> 774b4b9277696b378354c9389f04ba27b75aeb0c
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>

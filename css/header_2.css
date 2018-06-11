@@ -23,8 +23,10 @@ header {
     text-align: justify;
 }
 
-.logo {
+.logo a{
     position: fixed;
+    color: white;
+    text-decoration: none;
 }
 
 img {
@@ -40,7 +42,7 @@ nav {
     z-index: 10;
 }
 
-nav ul {
+nav ul{
     line-height: 60px;
     list-style: none;
     background: rgba(0, 0, 0, 0);
@@ -57,7 +59,7 @@ nav ul {
     background: #3c3f41;
 }
 
-.wrapper nav.black ul li a{
+.wrapper nav.black ul li a {
     color: white;
 }
 
