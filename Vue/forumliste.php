@@ -18,7 +18,13 @@ error_reporting(0);
 
 
 
-    <h1>FORUM</h1>
+    <p class="titre">FORUM</p>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
     <h2>Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
 
 
@@ -39,10 +45,9 @@ for ($i = 0; $i < $_POST["taille"]; $i++) {
         $tablecom = $requete->fetchAll();
     }
 }
-
-echo "<table border='2'>";
-echo "<th>Auteur</th>";
-echo "<th >Titre</th>";
+echo "<table class='tableau' border='2'>";
+echo "<th >Auteur</th>";
+echo "<th >Topic</th>";
 echo "<th >Date</th>";
 $tailletable = sizeof($tablecom);
 for ($i = 0; $i < $tailletable; $i++) {

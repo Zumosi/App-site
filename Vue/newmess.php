@@ -3,9 +3,18 @@
     <title>Nouveau Message</title>
     <link rel="stylesheet"/>
     <script src="NonVide.js"></script>
+    <link rel="stylesheet" href="css/forum.css"/>
 </head>
 
 <body>
+<p class="titre">FORUM</p>
+<p>
+    <br>
+    <br>
+    <br>
+    <br>
+</p>
+
 <form method="post" action="Vue/liste.php">
     <p>
         <label for="titre topic">Titre du topic :</label>
