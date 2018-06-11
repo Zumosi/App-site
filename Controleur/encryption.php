@@ -15,3 +15,4 @@ abstract class Encryption {
         return crypt($toEncrypt, self::$salt);
     }
 }
+
