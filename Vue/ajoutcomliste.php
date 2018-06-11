@@ -2,6 +2,7 @@
 
 include("Controleur/BDD.php");
 include("Controleur/Securisation.php");
+
 $com=securisation($_POST["commentaire"]);
 $object = new Bdd;
 $requete = $object->connect()->prepare('INSERT INTO message(id_topic,id_user,commentaire,date_commentaire)

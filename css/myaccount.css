@@ -36,3 +36,8 @@ body {
     background-image: url("../Vue/image/fond.jpg");
     background-size: cover;
 }
+
+
+a{
+    color: rgb(0, 102, 196);
+}

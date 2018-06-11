@@ -127,10 +127,6 @@ $reponse->execute(array(
     ));
 }
 ?>
-    <<<<<<< HEAD
-    =======
-    //recup titre
-    >>>>>>> 8ec05fbfb4940e6302e05a8abe14077659c4e06d
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=athome;charset=utf8', 'root', '');
 $reponse = $bdd->prepare('UPDATE utilisateur SET password = :nvmdp WHERE id_utilisateur=:id');

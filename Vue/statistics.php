@@ -16,7 +16,7 @@ include("Graphique.php");
 <body>
 
 <p class="titre">Statistiques</p>
-
+<p class="instruction">Cliquez sur la pièce de votre choix pour observer la consommation des capteurs dans celle-ci.</p>
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
 <img class="wci" src="Vue/image/wc.png" >
 

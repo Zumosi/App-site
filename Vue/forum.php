@@ -25,14 +25,14 @@ include("Modèle/requete.topic.php")
 $date = date("d/m/Y");
 Print("Date :  $date ");
 ?>
-<p>
+<p class="nouveautopic">
     <br>
     Cliquez sur le lien suivant pour créer un nouveau topic:<a class="newmess" href="index.php?cible=newmess"> Nouveau Topic</a>
 </p>
 
 
 <div class="tableau">
-    <h2>Liste des sujets : </h2>
+    <h2>Liste des topics : </h2>
 <?php  listetopic() ?>
 </div>
 
