@@ -1,5 +1,5 @@
 <?php
-require("./Controleur/add.php");
+require("Controleur/add.php");
 ?>
 
 

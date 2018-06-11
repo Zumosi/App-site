@@ -1,7 +1,6 @@
 <?php
 
 require("./Modèle/login.php");
-session_start();
 
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 

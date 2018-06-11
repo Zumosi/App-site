@@ -2,7 +2,6 @@
 require("./Modèle/login.php");
 require("./Modèle/insertion_maison.php");
 
-session_start();
 $_SESSION['message'] = '';
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 
