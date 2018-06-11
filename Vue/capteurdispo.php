@@ -1,19 +1,36 @@
+<?php
+include("Controleur/BDD.php");
+include("Modèle/requete.panier.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>validerpanier</title>
-    <link rel="stylesheet" href="Vue/panier.css"/>
+    <title>Valider Panier</title>
+    <link rel="stylesheet" href="css/panier.css"/>
 </head>
 <body>
-<table id="facture">
-    <tr><td>Nom du capteur</td>
-        <td>Quantité</td>
-    </tr>
-    <tr>
-        <td> <a href="formpiece.php">Infrarouge</a> </td>
-        <td> 1</td>
-    </tr>
-</table>
-</section>
+
+
+<?php $idcapt = idcapteur($_SESSION["nomcapteur"]) ?>
+<?php insertstock($idcapt, $_SESSION['quantite']) ?>
+
+
+<form action="Vue/traitement.php" method="post">
+    <input type="hidden" name="quantitetotale" value="<?php echo htmlspecialchars($quantitetotale); ?>"/>
+
+
+    <table id="facture" border="2">
+        <tr>
+            <td>Nom du capteur</td>
+            <td>Quantité Disponible</td>
+            <td>Ajouter des Capteurs issus de votre commande numéro :</td>
+        </tr>
+
+<?php  tablestockuser($_SESSION['id']) ?>
+
+    </table>
+</form>
+
+
 </body>

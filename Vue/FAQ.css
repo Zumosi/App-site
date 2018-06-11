@@ -8,10 +8,8 @@ h1 {
     float: left;
 }
 
-#line{
-    margin-left: 5vw;
-    width:90vw;
-    height:10vw;
+.line{
+    margin-left: 100px;
 }
 
 #question1 {
@@ -21,16 +19,14 @@ h1 {
 
 #question2 {
     margin-left: 100px;
+    margin-top: 15px;
     float: left;
 }
 #project1 {
+
     float: left;
-    width:4vw;
-    height:4vw;
 }
 
 #project2 {
     float: left;
-    width:4vw;
-    height:4vw;
 }

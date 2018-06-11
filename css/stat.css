@@ -1,122 +1,106 @@
-/*body{
-    background: url("encadre.png") no-repeat left;
-    background: url("encadre.png") no-repeat top;
-    top:5%;
-    left:1%;
-    width: 20%;
-    height: 50%;
 
-
-}*/
 .titre{
+    font-family: "AR BLANCA";
     position: absolute;
-    top: -10%;
-    Left:35%;
-    font-size:7vw;
+    top: 7%;
+    Left:40%;
+    font-size:4vw;
+    margin-bottom: 10%;
 }
 .chambre{
     position:absolute;
-    top:20%;
-    Left:30%;
-    font-size:3vw;
+    top:15%;
+    Left:3%;
+    font-size:x-large;
+    margin-right: 55%;
+    margin-bottom: 55%;
+
 }
 .sdb{
     position:absolute;
-    top:20%;
-    Left:45%;
-    font-size:3vw;
+    top:35%;
+    Left:3%;
+    font-size:x-large;
+    margin-right: 35%;
+
+
 }
 .cuisine{
     position:absolute;
-    top:20%;
-    Left:65%;
-    font-size:3vw;
+    top:55%;
+    Left:3%;
+    font-size:x-large;
+
+
 }
 .salon{
     position:absolute;
-    top:50%;
-    Left:30%;
-    font-size:3vw;
+    top:75%;
+    Left:3%;
+    font-size:x-large;
+
+
 }
 .wc{
     position:absolute;
-    top:50%;
-    Left:45%;
-    font-size:3vw;
+    top:95%;
+    Left:3%;
+    font-size:x-large;
+
+
 }
 
 .chambri{
     position:absolute;
-    top:33%;
-    Left:30%;
-    width:10%;
-    height:10%;
+    top:20%;
+    Left:0%;
+    width:12%;
+    height:12%;
 }
 .sdbi{
     position:absolute;
-    top:33%;
-    Left:45%;
-    width:10%;
-    height:10%;
+    top:40%;
+    Left:0%;
+    width:12%;
+    height:12%;
 }
 .cuisini{
     position:absolute;
-    top:33%;
-    Left:65%;
-    width:10%;
-    height:10%;
+    top:60%;
+    Left:0%;
+    width:12%;
+    height:12%;
 }
 .saloni{
     position:absolute;
-    top:63%;
-    Left:30%;
-    width:10%;
-    height:10%;
+    top:80%;
+    Left:0%;
+    width:12%;
+    height:12%;
 }
 .wci{
     position:absolute;
-    top:63%;
-    Left:45%;
-    width:10%;
-    height:13%;
-}
-.stat{
-    font-size:3vw;
-    position:absolute;
-    top:5%;
-    left:2%;
-
-}
-.consommation{
-    font-size:2vw;
-    position:absolute;
-    top:20%;
-    left:5%;
-
-}
-.puissance{
-    font-size:2vw;
-    position:absolute;
-    top:35%;
-    left:5%;
+    top:100%;
+    Left:0%;
+    width:12%;
+    height:12%;
 }
 
-.consoValue{
-    font-size:2vw;
-    position:absolute;
-    top:30%;
-    left:5%
+
+body {
+    background-image: url("../Vue/image/fond.jpg");
+    background-size: cover;
 }
-.powerValue{
-    font-size:2vw;
-    position:absolute;
-    top:45%;
-    left:5%
+
+.container{
+    position: absolute;
+    left: 25%;
+    top:23%;
+
+    width: 70%;
 }
-.cadre{
-    position:absolute;
-    top:2vw;
-    left:0vw;
-    width: 25vw;
-    height: 40vw;
+
+.active{
+    color:orange;
+    font-size:x-large;
 }

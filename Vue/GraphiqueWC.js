@@ -1,8 +1,8 @@
 
-new Chart(document.getElementById("WC"), {
+new Chart(document.getElementsByClassName("WCg"), {
     type: 'line',
     data: {
-        labels: date,
+        labels: dateWC,
         datasets: [{
             data: consoWC,
             label: "Consommation",
@@ -19,7 +19,7 @@ new Chart(document.getElementById("WC"), {
     options: {
         title: {
             display: true,
-            text: 'Consomation de vos WC'
+            text: 'Consomation et puissance généré par les capteurs de vos WC'
         }
     }
 });

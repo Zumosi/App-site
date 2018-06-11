@@ -4,7 +4,7 @@ require("../controleur/form.php");
 
 
 
-<link rel="stylesheet" href="../connexion/css/form.css" type="text/css">
+<link rel="stylesheet" href="form.css" type="text/css">
 <div class="body-content">
   <div class="module">
     <h1>S'inscrire</h1>

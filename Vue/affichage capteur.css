@@ -8,7 +8,7 @@ table
 {
     border: 1px solid black;
     border-radius: 1vw;
-    width: 75vw;
+    width: 70vw;
     border-spacing: 8vw 1vw;
     margin-left: auto;
     margin-right: auto;
@@ -22,7 +22,6 @@ th
     font-size: 1.5vw;
     text-align: left
 }
-
 td
 {
     border: 1px solid black;
@@ -30,22 +29,12 @@ td
     border-radius: 10px;
     font-style: normal;
     text-decoration: none;
-    padding: 1vw;
 }
-
-
 a
 {
     text-decoration: none;
     font-weight: bold;
     font-family: Arial;
-
-}
-#plus{
-    font-size: 2vw;
-}
-#plus td{
-    padding: 0;
 }
 a:visited
 {

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <title>Capteurs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="gestion capteur utilisateur secondaire.css" />
+    <link rel="stylesheet" href="css/gestion%20capteur%20utilisateur%20secondaire.css" />
 </head>
 <body>
 

@@ -11,7 +11,7 @@ require("../controlleur/reset.php");
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
-    <link rel="stylesheet" href="Vue/profil.css"/>
+    <link rel="stylesheet" href="css/profil.css"/>
     <script type="text/javascript" src="Controleur/NonVide.js"></script>
 </head>
 <body>

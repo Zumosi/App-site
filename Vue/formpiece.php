@@ -1,3 +1,7 @@
+<?php
+include("Controleur/BDD.php");
+include("Modèle/requete.panier.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +12,18 @@
 </head>
 <body>
 
-<h1>Sur quelle pièce souhaitez vous agir (choisissez une pièce): </h1>
 
-<form method="post" action = "formpieceliste.php" onsubmit="">
+
+<h1>Sur quelle pièce souhaitez vous agir (choisissez une pièce): </h1>
+<form method="post" action = "Vue/traitement.php" onsubmit="">
     <select name="piece">
-        <option value="">Aucune</option><br>
-        <option value="Cuisine">Cuisine</option><br>
-        <option value="Chambre">Chambre</option><br>
-        <option value="SdB">SdB</option><br>
-        <option value="Salon">Salon</option><br>
-        <option value="WC">WC</option><br>
+
+        <?php listepiece($_SESSION['id']) ?>
+
+
     </select>
-    <input type="submit" value="Envoyer" />
+    
+    <input type="submit" value="Envoyer" name="envoyer" />
 
 </form>
 

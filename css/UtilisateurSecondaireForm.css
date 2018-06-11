@@ -1,19 +1,24 @@
+#formulaire {
 
-section {
     text-align: center;
-    margin-top: 25vw;
-}
-
-input {
+    margin-top: 20vw;
     width: 15vw;
     height: 3vw;
     margin-right: auto;
     margin-left: auto;
     font-size: 1.3vw;
     color: black;
+
 }
 
-#facture {
+#titre {
+    text-align: center;
+
+
+}
+
+#tablesecondaire {
+
     border: 1px solid black;
     border-collapse: collapse;
     background-color: transparent;
@@ -21,9 +26,11 @@ input {
     margin-right: auto;
     margin-left: auto;
     color: black;
+
 }
 
-#facture td{
+#tablesecondaire td{
+
     border: 1px solid black;
     padding-top: 1vw;
     padding-bottom: 1vw;
@@ -32,12 +39,4 @@ input {
 
 }
 
-#facture tr {
 
-}
-
-#prix{
-    text-align: center;
-    color: black;
-    font-size: 2vw;
-}

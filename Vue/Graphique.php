@@ -13,29 +13,92 @@ include_once("Controleur/BDD.php");
 </head>
 <body>
 
-<h1>Statistiques</h1>
 
 <?php
 
-function trouverdate(){
+function trouverdatesalon(){
     $object = new Bdd;
-    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="Salon" ');
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="salon" ');
     $requetedate->execute();
-    $tabledate = $requetedate->fetchAll();
-    $date=array();
-    for ($i=0;$i<sizeof($tabledate);$i++){
-        array_push($date,$tabledate[$i]["consommation_date"]);
+    $tabledatesalon = $requetedate->fetchAll();
+    $datesalon=array();
+    for ($i=0;$i<sizeof($tabledatesalon);$i++){
+        array_push($datesalon,$tabledatesalon[$i]["consommation_date"]);
     }
 /*  echo "<pre>";
 print_r($date) ;
     echo "</pre>";*/
-    return $date;
+    return $datesalon;
+}
+
+function trouverdateSdB()
+{
+    $object = new Bdd;
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="SdB" ');
+    $requetedate->execute();
+    $tabledateSdB= $requetedate->fetchAll();
+    $dateSdB = array();
+    for ($i = 0; $i < sizeof($tabledateSdB); $i++) {
+        array_push($dateSdB, $tabledateSdB[$i]["consommation_date"]);
+    }
+    /*  echo "<pre>";
+    print_r($date) ;
+        echo "</pre>";*/
+    return $dateSdB;
+}
+
+function trouverdatecuisine()
+{
+    $object = new Bdd;
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="cuisine" ');
+    $requetedate->execute();
+    $tabledatecuisine = $requetedate->fetchAll();
+    $datecuisine = array();
+    for ($i = 0; $i < sizeof($tabledatecuisine); $i++) {
+        array_push($datecuisine, $tabledatecuisine[$i]["consommation_date"]);
+    }
+    /*  echo "<pre>";
+    print_r($date) ;
+        echo "</pre>";*/
+    return $datecuisine;
+}
+
+function trouverdateWC()
+{
+    $object = new Bdd;
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="WC" ');
+    $requetedate->execute();
+    $tabledateWC = $requetedate->fetchAll();
+    $dateWC = array();
+    for ($i = 0; $i < sizeof($tabledateWC); $i++) {
+        array_push($dateWC, $tabledateWC[$i]["consommation_date"]);
+    }
+    /*  echo "<pre>";
+    print_r($date) ;
+        echo "</pre>";*/
+    return $dateWC;
+}
+
+function trouverdatechambre()
+{
+    $object = new Bdd;
+    $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="chambre" ');
+    $requetedate->execute();
+    $tabledatechambre = $requetedate->fetchAll();
+    $datechambre = array();
+    for ($i = 0; $i < sizeof($tabledatechambre); $i++) {
+        array_push($datechambre, $tabledatechambre[$i]["consommation_date"]);
+    }
+    /*  echo "<pre>";
+    print_r($date) ;
+        echo "</pre>";*/
+    return $datechambre;
 }
 
 function consoSalon()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="Salon" ');
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="salon" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=array();
@@ -56,7 +119,7 @@ function consoSalon()
 function puissanceSalon()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="Salon" ');
+    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="salon" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $puissance=array();
@@ -98,7 +161,7 @@ function puissanceChambre()
 function consoSdB()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="SdB" ');
+    $requete = $object->connect()->prepare('SELECT consommation_value FROM consommation_jour WHERE piece_name="sdb" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $value=array();
@@ -114,7 +177,7 @@ function consoSdB()
 function puissanceSdB()
 {
     $object = new Bdd;
-    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="SdB" ');
+    $requete = $object->connect()->prepare('SELECT puissance_value FROM puissance_jour WHERE piece_name="sdb" ');
     $requete->execute();
     $conso = $requete->fetchAll();
     $puissance=array();
@@ -195,7 +258,12 @@ $consoSalon = consoSalon();
 $puissanceSalon = puissanceSalon();
 $consoChambre = consoChambre();
 $puissanceChambre = puissanceChambre();
-$date = trouverdate();
+$datesalon = trouverdatesalon();
+$datechambre = trouverdatechambre();
+$datecuisine = trouverdatecuisine();
+$dateWC = trouverdateWC();
+$dateSdB = trouverdateSdB();
+
 echo '<script>';
 echo 'var consoWC = ' .json_encode($consoWC) . ';';
 echo 'var puissanceWC = ' .json_encode($puissanceWC) . ';';
@@ -207,19 +275,16 @@ echo 'var consoSalon = ' .json_encode($consoSalon) . ';';
 echo 'var puissanceSalon = ' .json_encode($puissanceSalon) . ';';
 echo 'var consoChambre = ' .json_encode($consoChambre) . ';';
 echo 'var puissanceChambre = ' .json_encode($puissanceChambre) . ';';
-echo 'var date = ' .json_encode($date) . ';';
+echo 'var datesalon= ' .json_encode($datesalon) . ';';
+echo 'var datechambre= ' .json_encode($datechambre) . ';';
+echo 'var datecuisine= ' .json_encode($datecuisine) . ';';
+echo 'var dateWC= ' .json_encode($dateWC) . ';';
+echo 'var dateSdB= ' .json_encode($dateSdB) . ';';
 echo '</script>';
 
 ?>
 
 
-<!--<div class="container">
-    <canvas id="Salon" width="800" height="450"></canvas>
-</div>';
-<div class="container">
-    <canvas id="Chambre" width="800" height="450"></canvas>
-</div>
-<script src="Courbure.js"></script> -->
 </body>
 </html>
 

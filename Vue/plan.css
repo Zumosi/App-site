@@ -14,7 +14,9 @@ grid-column: auto;
     grid-row: auto;
 
 }
+img{
 
+    width:50%;
+}
 p{
-    text-align: center;
 }

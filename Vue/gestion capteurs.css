@@ -1,7 +1,5 @@
 .onoffswitch {
     position: relative; width: 90px;
-    top: 2vw;
-    left:10vw;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -48,17 +46,13 @@
 }
 form {
     background-color:transparent;
-    width:30vw;
-    line-height: 5vw;
-    margin-left: 37vw;
+    padding:20px;
+    width:280px;
+    line-height: 50px;
+    margin-left: 15vw;
 }
 fieldset{
-    border:1px solid black;
-    border-radius: 2vw;
-    padding: 1vw;
-    font-size: 2vw;
-    font-family: Arial;
-    height: 25vw;
+    border:1px solid;
 
 }
 #form label {
@@ -67,7 +61,4 @@ fieldset{
 }
 legend{
     text-align: center;
-}
-option{
-    width: 10vw;
 }

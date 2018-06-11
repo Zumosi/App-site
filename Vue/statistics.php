@@ -7,7 +7,7 @@ include("Graphique.php");
 <head>
     <meta charset="UTF-8">
     <title>Statistiques</title>
-    <link rel="stylesheet" href="Vue/stat.css" />
+    <link rel="stylesheet" href="css/stat.css" />
 </head>
 
 
@@ -15,8 +15,8 @@ include("Graphique.php");
 
 <body>
 
-<h1>Statistiques</h1>
-<img class="cadre" src="Vue/image/encadre.png" >
+<p class="titre">Statistiques</p>
+
 <a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
 <img class="wci" src="Vue/image/wc.png" >
 

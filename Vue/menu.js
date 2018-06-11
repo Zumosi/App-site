@@ -1,4 +1,4 @@
-// Menu-toggle button
+// menu icon
 
 $(document).ready(function() {
     $(".menu-icon").on("click", function() {
@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 });
 
-// Scrolling Effect
+// effet de scroll transparent/black
 
 $(window).on("scroll", function() {
     if($(window).scrollTop()) {
