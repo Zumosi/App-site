@@ -7,6 +7,7 @@
 
 
 
+
 }
 .box2{
     display: inline-block;
@@ -77,10 +78,11 @@ h1 {
 }
 
 #txt1 {
-    position:relative;
+    position:absolute;
     left:15vw;
     text-align: justify;
     padding-bottom: 2vw;
+
 }
 
 
@@ -110,11 +112,14 @@ h1 {
 
 
 .aside p{
+    position:relative;
     text-decoration: none;
     top: 0;
-    font-size: 1.3vw;
+    font-size: x-small;
     font-family: Arial;
+    margin-bottom:70%;
 }
+
 
 
 body {
