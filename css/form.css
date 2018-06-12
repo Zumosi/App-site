@@ -291,3 +291,7 @@ a{
   }
   
   }
+body {
+  background-image: url("../Vue/image/fond.jpg");
+  background-size: cover;
+}

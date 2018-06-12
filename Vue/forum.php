@@ -12,18 +12,29 @@ include("Modèle/requete.topic.php")
 ?>
 
 <body id="body">
-<h1>FORUM</h1>
+<p class="titre">FORUM</p>
+<p>
+    <br>
+    <br>
+    <br>
+    <br>
+</p>
 
-<a id="newmess" href="index.php?cible=newmess"> Nouveau Sujet</a>
 
 <?php
 $date = date("d/m/Y");
 Print("Date :  $date ");
 ?>
-<h2>Liste des sujets : </h2>
+<p class="nouveautopic">
+    <br>
+    Cliquez sur le lien suivant pour créer un nouveau topic:<a class="newmess" href="index.php?cible=newmess"> Nouveau Topic</a>
+</p>
 
+
+<div class="tableau">
+    <h2>Liste des topics : </h2>
 <?php  listetopic() ?>
-
+</div>
 
 </body>
 </html>

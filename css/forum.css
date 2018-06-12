@@ -2,49 +2,24 @@
     padding-top: 5vw;
 }
 
-.mact,.jact,.aact{
-    display: inline-block;
-    color:#666;
+.newmess{
+    text-decoration: sienna;
 }
 
-.jactuel{
-    font-size: x-large;
-    text-align: right;
-    color:blue;
 
-}
-.newmess,.jactuel,.rechercher{
-    display: inline-block;
-}
-
-.titretoptic, .newmess{
-    text-decoration: none;
-}
-
-.titretoptic{
-    color : rgb( 155,207,249);
-    font-size: x-large;
-    margin-top: 5%;
-}
-
-.jtopic,.mtopic,.atopic,.le,.nom{
-    display: inline-block;
-}
 
 a:visited{
-    color: rgb( 155,207,249);
+    color: orangered;
 }
-a{
-    color:#3c3f41;
-}
+
 
 .sujet{
     border:2px solid darkblue;
 }
 .titre{
     position:absolute;
-    left: 42vw;
-    top: 3vw;
+    left: 43vw;
+    top: 7vw;
     font-size:xx-large;
     color: #3c3f41;
     font-family: "AR BLANCA";
@@ -67,4 +42,16 @@ body {
 input{
     width: 13vw;
 }
-
+.tableau{
+    position:absolute;
+    left:30%;
+    top:40%;
+}
+.block{
+    position:absolute;
+    top:25%;
+    left:30%;
+}
+.nouveautopic{
+    margin-right:70%;
+}

@@ -71,19 +71,12 @@ if ($infocapteur == NULL) {
         <th >';
     echo 'Admin: ';
     echo '<br>';
-    echo ' ' . $infocapteur[2] . ' ' . $infocapteur[3];
-    echo '<input type="hidden" name="etat" id="etat" value="on" />
-        <br>
-        <br>
-<br>
-  <div id="button"
-        <button id="button">
-<div class="" >
-    <input type="checkbox" name="onoffswitch" class="" id="myonoffswitch" >
 
-</div>
-    </div>
-</button>';
+    echo ' ' . $infocapteur[2] . ' ' . $infocapteur[3];
+    echo '<br>';
+    echo '<br>';
+    echo '<br>';
+
     /* echo '
          </th >
          <th >
@@ -111,7 +104,18 @@ if ($infocapteur == NULL) {
     echo 'Etat: ';
     echo '<p id="etattext"> ';
     echo $infocapteur[0]["etat"];
-    echo "</p>";
+    echo "</p>
+   <input type=\"hidden\" name=\"etat\" id=\"etat\" value=\"on\" />
+     
+  <div id=\"button\"
+        <button id=\"button\">
+<div class=\"myonoffswitch\" >
+    <input type=\"checkbox\" name=\"onoffswitch\" class=\"myonoffswitch\" id=\"myonoffswitch\" >
+
+</div>
+    </div>
+</button>";
+
     echo '
         </th >
 

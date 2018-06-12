@@ -39,7 +39,11 @@ function formetableau($data)
 
 function decodage($data_tab,$i)
 {
+<<<<<<< HEAD
     $trame = $data_tab[$i];
+=======
+    $trame = $data_tab[2];
+>>>>>>> b70f6f71f73478273e05d98dd8a00bb9990d2ba6
 // décodage avec des substring
     $t = substr($trame, 0, 1);
     $o = substr($trame, 1, 4);
