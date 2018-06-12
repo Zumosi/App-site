@@ -38,7 +38,7 @@ function formetableau($data)
 
 function decodage($data_tab)
 {
-    $trame = $data_tab[0];
+    $trame = $data_tab[2];
 // décodage avec des substring
     $t = substr($trame, 0, 1);
     $o = substr($trame, 1, 4);
