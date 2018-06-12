@@ -1,0 +1,19 @@
+1=>Capteur de distance modèle 1
+2=>Capteur de distance modèle 2
+3=>Capteur de température
+4=>Capteur d’humidité
+5=>Capteur de lumière modèle 1
+6=>Capteur de couleur
+7=>Capteur de présence
+8=>Capteur de lumière modèle 2
+9=>Capteur de mouvement
+A=>Capteur présence son modèle 1
+B=>Envoi de la date JJ:MM
+C=>Envoi de l’année AAAA
+D=>Envoi valeur potentiomètre
+a=>Requête actionneur 1
+H=>Requête Heure 1 (La réponse attendue sera HH:MM
+h=>Requête Heure 2 (La réponse attendue sera MM:SS
+p=>Requête date (La réponse attendue sera JJ:MM
+q=>Requête année (la réponse attendue sera AAAA)
+
