@@ -14,7 +14,7 @@
                 if (document.getElementById('etatform').value == "on") {
                     etatform = "off";
                     document.getElementById('etatform').value = "off";
-                    
+
                     $('#formulairemail').hide();
                 }
                 else if (document.getElementById('etatform').value == "off") {
