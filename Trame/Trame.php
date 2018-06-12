@@ -42,8 +42,6 @@ function decodage($data_tab,$i)
 
     $trame = $data_tab[$i];
 
-    $trame = $data_tab[2];
-
 // décodage avec des substring
     $t = substr($trame, 0, 1);
     $o = substr($trame, 1, 4);
