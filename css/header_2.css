@@ -25,9 +25,10 @@ header {
 
 .logo a{
     position: fixed;
-    color: white;
+    color: black;
     text-decoration: none;
 }
+
 
 img {
     display: block;
@@ -42,7 +43,7 @@ nav {
     z-index: 10;
 }
 
-nav ul{
+nav ul {
     line-height: 60px;
     list-style: none;
     background: rgba(0, 0, 0, 0);
@@ -60,6 +61,9 @@ nav ul{
 }
 
 .wrapper nav.black ul li a {
+    color: white;
+}
+.wrapper nav.black a{
     color: white;
 }
 

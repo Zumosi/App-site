@@ -31,9 +31,9 @@ table{
     width: 22%;
 }
 
-a:visited
+.mamaison a:visited
 {
-    color: black;
+    color: rgb(0, 102, 196);
 }
 
 

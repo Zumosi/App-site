@@ -28,7 +28,10 @@ img {
 #project3 {
     float: left;
 }
-body {
-    background-image: url("../Vue/image/fond.jpg");
-    background-size: cover;
+input {
+    text-decoration: none;
+    margin-left: 10vw;
+    margin-top: 1vw;
+    width: 10vw;
+    font-family: Arial;
 }

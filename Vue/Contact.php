@@ -39,7 +39,7 @@
 <br>
 <div id="question2">Adresse Email</p></div>
 <br>
-<form method='post' action='vue/ajoutmail.php' id='formulairemail'>
+<form method='post' action='index.php?cible=ajoutmail' id='formulairemail'>
     <input type='hidden' name='etatform' id="etatform" value='off'/>
     <input type='submit' name='commentaire' value='Envoyer un mail'/>
 </form>
