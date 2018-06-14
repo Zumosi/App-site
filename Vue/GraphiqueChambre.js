@@ -1,4 +1,3 @@
-
 new Chart(document.getElementsByClassName("Chambreg"), {
     type: 'line',
     data: {
@@ -9,7 +8,7 @@ new Chart(document.getElementsByClassName("Chambreg"), {
             borderColor: "#3e95cd",
             fill: false
         }, {
-            data: puissanceSalon,
+            data: puissanceChambre,
             label: "Puissance",
             borderColor: "#8e5ea2",
             fill: false
@@ -19,7 +18,7 @@ new Chart(document.getElementsByClassName("Chambreg"), {
     options: {
         title: {
             display: true,
-            text: 'Consomation et puissance généré par les capteurs de votre Salon'
+            text: 'Consomation et puissance généré par les capteurs de votre Chambre'
         }
     }
 });

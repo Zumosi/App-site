@@ -1,5 +1,6 @@
 <?php
 include("Graphique.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,14 @@ include("Graphique.php");
     <link rel="stylesheet" href="css/stat.css" />
 </head>
 
+<?php
+$object = new Bdd;
+$_SESSION["id"];
+$requete = $object->connect()->prepare('SELECT nom FROM piece WHERE id_maison IN(SELECT id_habitation FROM habitation WHERE id_user=:id_user )');
+$requete->execute(array("id_user"=>$_SESSION["id"]));
+$tablepiece = $requete->fetchAll();
+$_SESSION["piece"]=$tablepiece;
+?>
 
 
 
@@ -17,22 +26,21 @@ include("Graphique.php");
 
 <p class="titre">Statistiques</p>
 <p class="instruction">Cliquez sur la pièce de votre choix pour observer la consommation des capteurs dans celle-ci.</p>
-<a href="index.php?cible=statistics2&piece=WC&cible=statistics2" class="wc">WC</a>
-<img class="wci" src="Vue/image/wc.png" >
+<?php
 
-<a href="index.php?cible=statistics2&piece=sdb&cible=statistics2" class="sdb">salle de bain</a>
-<img class="sdbi" src="Vue/image/sdb.png" >
-
-<a href="index.php?cible=statistics2&piece=salon&cible=statistics2" class="salon">salon</a>
-<img class="saloni" src="Vue/image/salon.png" >
-
-
-<a href="index.php?cible=statistics2&piece=chambre&cible=statistics2" class="chambre">chambre</a>
-<img class="chambri" src="Vue/image/chambre.png" >
-
-<a href="index.php?cible=statistics2&piece=cuisine&cible=statistics2" class="cuisine">cuisine</a>
-<img class="cuisini" src="Vue/image/cuisine.jpg" >
-</body>
-</html>
-
+for ($i=0;$i<sizeof($tablepiece);$i++) {
+    $requete = $object->connect()->prepare('SELECT type FROM piece WHERE nom=:piecename ');
+    $requete->execute(array("piecename" => $tablepiece[$i]["nom"]));
+    $typepiece = $requete->fetchAll();
+    $typepiece = $typepiece[0][0];
+   // $typepiecei = $typepiece."i";
+    $nom = $tablepiece[$i]["nom"];
+    echo "<a href='index.php?cible=statistics2&piece=$typepiece&cible=statistics2&nompiece=$nom' class='$typepiece.i'>";
+    echo $tablepiece[$i]["nom"];
+    echo "<img class='$typepiece.i' src='Vue/image/$typepiece.png'>";
+    echo "<br>";
+}
+echo '</body>';
+echo '</html>';
+?>
 
