@@ -29,7 +29,7 @@ for ($i = 0; $i < $_POST["taille"]; $i++) {
 }
 
 
-echo "<table class='tableau' border='2'>;
+echo "<table class='tab2' border='2'>;
 <th >Auteur</th>;
 <th >Commmentaires</th>;
 <th >Date</th>";
@@ -50,6 +50,8 @@ for ($i = 0; $i < $tailletable; $i++) {
     echo "</th>";
     echo "</tr>";
 }
+
+
 echo '</table>';
 ?>
 <p class="titre">FORUM</p>
@@ -57,12 +59,12 @@ echo '</table>';
     <br>
     <br>
     <br>
-    <br>
 </p>
-<h2>Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
-
-
+<h2 class="sujet">Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
 <form method="post" action="index.php?cible=ajoutcom" id="formulairecom" onsubmit="">
+   <div class="add">
     <input type="hidden" name="idtopic" value="<?php echo htmlspecialchars($sujetchoisi); ?>"/>
     <input type="submit" name="commentaire" value="Ajouter un commentaire">
-</form>
+</div>
+</form>\';
+

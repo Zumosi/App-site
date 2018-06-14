@@ -23,7 +23,7 @@ $home = $maison->fetchAll();
 <head>
     <meta charset="utf-8"/>
     <title>Maison</title>
-    <link rel="stylesheet" href="Vue/plan.css">
+    <link rel="stylesheet" href="css/forum.plan"/>
 </head>
 <body>
 <div id="content">

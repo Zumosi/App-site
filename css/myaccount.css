@@ -28,9 +28,9 @@ table{
     width: 20%;
 }
 
-a:visited
+.section a:visited
 {
-    color: black;
+    color: rgb(0, 102, 196);
 }
 body {
     background-image: url("../Vue/image/fond.jpg");

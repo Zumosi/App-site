@@ -112,7 +112,7 @@ for($i = 1; $i <= $nombre_caracteres; $i ++)
 
 
         </table>
-        <input id="bouton" type="submit" value="Modifier">
+        <input id="bouton" type="submit" value="Modifier / Valider">
     </form>
 
 

@@ -44,8 +44,8 @@ input{
 }
 .tableau{
     position:absolute;
-    left:30%;
-    top:40%;
+    left:10%;
+    top:45%;
 }
 .block{
     position:absolute;
@@ -54,4 +54,26 @@ input{
 }
 .nouveautopic{
     margin-right:70%;
+}
+.titreTopic{
+
+
+}
+.tab{
+    width:200%;
+}
+.tab2{
+    position:absolute;
+    top:50%;
+    left:23%;
+    width:50%;
+}
+
+.sujet{
+    position:absolute;
+}
+.add{
+    position:absolute;
+    top: 55%;
+    left:2%;
 }
