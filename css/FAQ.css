@@ -1,3 +1,18 @@
+.titre {
+    position: absolute;
+    left: 43vw;
+    top: 7vw;
+    font-size: xx-large;
+    color: #3c3f41;
+    font-family: "AR BLANCA";
+}
+
+.tableau{
+    position:absolute;
+    left:15%;
+    top:45%;
+}
+
 h1 {
     border-bottom: 6px solid black;
 
