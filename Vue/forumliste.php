@@ -15,18 +15,6 @@ error_reporting(0);
     </head>
 <body>
 
-
-
-
-    <h1>FORUM</h1>
-    <h2>Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
-
-
-    <form method="post" action="index.php?cible=ajoutcom" id="formulairecom" onsubmit="">
-        <input type="hidden" name="idtopic" value="<?php echo htmlspecialchars($sujetchoisi); ?>"/>
-        <input type="submit" name="commentaire" value="Ajouter un commentaire">
-    </form>
-
 <?php
 for ($i = 0; $i < $_POST["taille"]; $i++) {
     if (($_POST["sujet$i"]) != NULL) {
@@ -40,10 +28,11 @@ for ($i = 0; $i < $_POST["taille"]; $i++) {
     }
 }
 
-echo "<table border='2'>";
-echo "<th>Auteur</th>";
-echo "<th >Titre</th>";
-echo "<th >Date</th>";
+
+echo "<table class='tab2' border='2'>;
+<th >Auteur</th>;
+<th >Commmentaires</th>;
+<th >Date</th>";
 $tailletable = sizeof($tablecom);
 for ($i = 0; $i < $tailletable; $i++) {
     $prenom = trouvernom($tablecom[$i]['id_user'])["prenom"];
@@ -61,5 +50,21 @@ for ($i = 0; $i < $tailletable; $i++) {
     echo "</th>";
     echo "</tr>";
 }
+
+
 echo '</table>';
 ?>
+<p class="titre">FORUM</p>
+<p>
+    <br>
+    <br>
+    <br>
+</p>
+<h2 class="sujet">Sujet : <?php echo htmlspecialchars($_POST["sujet$sujetchoisi"]); ?></h2>
+<form method="post" action="index.php?cible=ajoutcom" id="formulairecom" onsubmit="">
+   <div class="add">
+    <input type="hidden" name="idtopic" value="<?php echo htmlspecialchars($sujetchoisi); ?>"/>
+    <input type="submit" name="commentaire" value="Ajouter un commentaire">
+</div>
+</form>\';
+

@@ -10,7 +10,8 @@ function recuperation()
     curl_setopt(
         $ch,
         CURLOPT_URL,
-        "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G10C");
+    //    "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=AAAA");
+    "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G10C");
     curl_setopt($ch, CURLOPT_HEADER, FALSE);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     $data = curl_exec($ch);
@@ -36,9 +37,11 @@ function formetableau($data)
 }
 //  DECODAGE
 
-function decodage($data_tab)
+function decodage($data_tab,$i)
 {
-    $trame = $data_tab[0];
+
+    $trame = $data_tab[$i];
+
 // décodage avec des substring
     $t = substr($trame, 0, 1);
     $o = substr($trame, 1, 4);
@@ -73,10 +76,6 @@ $data=recuperation();
 echo "<br>";
 $data_tab = formetableau($data);
 echo "<br>";
-$trame = decodage($data_tab);
-echo "<pre>";
-print_r($trame);
-echo "</pre>";
 
 function getpiece($id_capteur){
     $object = new Bdd;
@@ -86,72 +85,62 @@ function getpiece($id_capteur){
     $piece = $requete->fetch();
     return $piece[0];
 
-
-
-    /*if($trame[4]==1){
-        $piece="Chambre";
-    }
-    else if($trame[4]==2){
-        $piece="Salon";
-    }
-    else if($trame[4]==3){
-        $piece="Cuisine";
-    }
-    else if($trame[4]==4){
-        $piece="WC";
-    }
-    else if($trame[4]==5){
-        $piece="SdB";
-    }
-    echo $piece;
-    return($piece);*/
 }
 function formerdate($trame){
     $date=$trame[8].".".$trame[9].".".$trame[10];
     echo $date;
     return $date;
 }
+for($i=70;$i<80;$i++) {
+    $trame = decodage($data_tab,$i);
+    $date = formerdate($trame);
+    $id_capteur = $trame[4];
+    $piece = getpiece($id_capteur);
+    $value = $trame[5];
+    $pseudo = $trame[1];
+    $requete = $object->connect()->prepare('SELECT id_utilisateur FROM trame WHERE pseudo=:pseudo');
+    $requete->execute(array(
+        "pseudo" => $pseudo
+    ));
+    $id_utilisateur = $requete->fetch();
+    $id_utilisateur = $id_utilisateur[0];
+    $requete = $object->connect()->prepare('SELECT id_place FROM capteur WHERE id_capteur=:id_capteur');
+    $requete->execute(array(
+        "id_capteur" => $id_capteur
+    ));
+    $id_piece = $requete->fetch();
+    $id_piece = $id_piece[0];
+    $requete = $object->connect()->prepare('INSERT INTO consommation_jour(piece_id,piece_name,consommation_value,consommation_date,id_capteur) 
+                                        VALUES (:piece_id,:piece_name,:consommation_value,:consommation_date,:id_capteur);');
+    $requete->execute(array(
+        "piece_id"=>$id_piece,
+        "piece_name" => $piece,
+        "consommation_value" => $value,
+        "consommation_date" => $date,
+        "id_capteur" => $id_capteur
+    ));
 
-$date=formerdate($trame);
-$id_capteur=$trame[4];
-$piece=getpiece($id_capteur);
-$value=$trame[5];
-$pseudo=$trame[1];
-$requete = $object->connect()->prepare('SELECT id_utilisateur FROM trame WHERE pseudo=:pseudo');
-$requete->execute(array(
-    "pseudo"=>$pseudo
-));
-$id_utilisateur = $requete->fetch();
-$id_utilisateur=$id_utilisateur[0];
-$requete = $object->connect()->prepare('INSERT INTO consommation_jour(piece_name,consommation_value,consommation_date,id_capteur) 
-                                        VALUES (:piece_name,:consommation_value,:consommation_date,:id_capteur);');
-$requete->execute(array(
-    "piece_name"=>$piece,
-    "consommation_value"=>$value,
-    "consommation_date"=>$date,
-    "id_capteur"=>$id_capteur
-));
-$requete = $object->connect()->prepare('SELECT type FROM habitation WHERE id_user=:id_user');
-$requete->execute(array(
-    "id_user"=>$id_utilisateur,
-));
-$type_maison=$requete->fetch();
-$type_maison=$type_maison[0];
+    $requete = $object->connect()->prepare('SELECT type FROM habitation WHERE id_user=:id_user');
+    $requete->execute(array(
+        "id_user" => $id_utilisateur,
+    ));
+    $type_maison = $requete->fetch();
+    $type_maison = $type_maison[0];
 
 
-$requete = $object->connect()->prepare('SELECT prenom FROM utilisateur WHERE id_utilisateur=:id_user');
-$requete->execute(array(
-    "id_user"=>$id_utilisateur,
-));
-$prenom=$requete->fetch();
-$prenom=$prenom[0];
+    $requete = $object->connect()->prepare('SELECT prenom FROM utilisateur WHERE id_utilisateur=:id_user');
+    $requete->execute(array(
+        "id_user" => $id_utilisateur,
+    ));
+    $prenom = $requete->fetch();
+    $prenom = $prenom[0];
 
-echo "<br>";
-echo "Les informations concernant votre ".$type_maison." ont bien été mise à jour ".$prenom;
-echo "<br>";
-echo "<br>";
-echo "Les données de la pièce ".$piece." ont bien été mises à jour.";
-echo "<br>";
-echo "La consommation de votre ".$piece." est de ".$value." le ".$date;
-
+    echo "<br>";
+    echo "Les informations concernant votre " . $type_maison . " ont bien été mise à jour " . $prenom;
+    echo "<br>";
+    echo "<br>";
+    echo "Les données de la pièce " . $piece . " ont bien été mises à jour.";
+    echo "<br>";
+    echo "La consommation de votre " . $piece . " est de " . $value . " le " . $date;
+}
 ?>

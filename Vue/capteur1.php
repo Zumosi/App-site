@@ -54,6 +54,13 @@ if ($_GET['nc'] == 1) {
         <p id="prix"> Prix : <?php prix($i) ?> </p>
         <p id="quanti"> Quantité disponible : <?php quanti($i) ?> </p>
 
+<<<<<<< HEAD
+=======
+        <form method="post" action="vue/traitement.php">
+
+
+
+>>>>>>> eef7d40dfbe8ef932db116ac787422dc4a3251bd
 
         <form method="post" action="vue/traitement.php">
 

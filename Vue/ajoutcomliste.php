@@ -15,7 +15,7 @@ $requete->execute(array(
 echo "Votre commentaire  $com a bien été ajouté";
 ?>
 
-<form method="POST" action="forum.php">
-<input type="submit" name="Ok" value="Retourner sur le forum" >
+<form method="POST" action="index.php?cible=forum">
+    <input type="submit" name="Ok" value="Retourner sur le forum" >
 </form>
 
