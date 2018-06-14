@@ -194,9 +194,9 @@ function listetopic()
     $requete = $object->connect()->prepare('SELECT titre,date_crea,id_utilisateur FROM topic');
     $requete->execute();
     $tabletopic = $requete->fetchAll();
-    echo "<table border='2'>";
+    echo "<table class='tab' border='2'>";
     echo "<th>Auteur</th>";
-    echo "<th >Titre</th>";
+    echo "<th class='titreTopic'>Titre</th>";
     echo "<th >Date</th>";
     echo '<form method="post" action = "index.php?cible=forumliste" id="formulairetopic" >';
     echo "<input type='hidden' name='taille' value='" . sizeof($tabletopic) . "'>";
@@ -237,7 +237,7 @@ function listetopic()
         }
     }
 
-    echo "<table border='2'>";
+    echo "<table class='tab2' border='2'>";
     echo "<th>Auteur</th>";
     echo "<th >Titre</th>";
     echo "<th >Date</th>";

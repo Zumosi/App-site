@@ -16,8 +16,6 @@ include("Modèle/requete.topic.php")
 <p>
     <br>
     <br>
-    <br>
-    <br>
 </p>
 
 
