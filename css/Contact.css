@@ -35,3 +35,18 @@ input {
     width: 10vw;
     font-family: Arial;
 }
+.titre{
+position:absolute;
+left: 43vw;
+top: 7vw;
+font-size:xx-large;
+color: #3c3f41;
+font-family: "AR BLANCA";
+}
+
+.coord{
+    position:absolute;
+    left:10%;
+    top:20%;
+    font-size:x-large;
+}
