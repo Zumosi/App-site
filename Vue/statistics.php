@@ -1,8 +1,3 @@
-<?php
-include("Graphique.php");
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +7,7 @@ include("Graphique.php");
 </head>
 
 <?php
+include("Controleur/BDD.php");
 $object = new Bdd;
 $_SESSION["id"];
 $requete = $object->connect()->prepare('SELECT nom FROM piece WHERE id_maison IN(SELECT id_habitation FROM habitation WHERE id_user=:id_user )');
@@ -35,7 +31,7 @@ for ($i=0;$i<sizeof($tablepiece);$i++) {
     $typepiece = $typepiece[0][0];
    // $typepiecei = $typepiece."i";
     $nom = $tablepiece[$i]["nom"];
-    echo "<a href='index.php?cible=statistics2&piece=$typepiece&cible=statistics2&nompiece=$nom' class='$typepiece.i'>";
+    echo "<a href='index.php?cible=statistics2&piece=$typepiece&cible=statistics2&nompiece=$nom' class='Piece'>";
     echo $tablepiece[$i]["nom"];
     echo "<img class='$typepiece.i' src='Vue/image/$typepiece.png'>";
     echo "<br>";
