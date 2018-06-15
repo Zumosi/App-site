@@ -91,7 +91,7 @@ function formerdate($trame){
     echo $date;
     return $date;
 }
-for($i=70;$i<80;$i++) {
+for($i=90;$i<100;$i++) {
     $trame = decodage($data_tab,$i);
     $date = formerdate($trame);
     $id_capteur = $trame[4];

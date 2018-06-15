@@ -79,9 +79,10 @@ function trouverdateWC()
     return $dateWC;
 }
 
-function trouverdatechambre()
+function trouverdatechambre($id_piece)
 {
     $object = new Bdd;
+    //$requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="chambre" ');
     $requetedate = $object->connect()->prepare('SELECT consommation_date FROM consommation_jour WHERE piece_name="chambre" ');
     $requetedate->execute();
     $tabledatechambre = $requetedate->fetchAll();
