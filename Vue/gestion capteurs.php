@@ -1,37 +1,41 @@
 <?php
 ?>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Gestion Capteur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/gestion capteurs.css" />
+    <link rel="stylesheet" href="css/gestion capteurs.css"/>
 </head>
 
+<?php
+include_once("Modèle/requete.panier.php");
+include_once ("Controleur/BDD.php");
+?>
 
 
-<body>
-<?php if ($_GET['gestion']== 'lux') {
-    echo'
-<form method="post">
+
+<?php /* if ($_GET['gestion']== 'lux') { */
+echo '<form method="post" action="traitement.php">
     <fieldset>
         <FORM id="Form"><legend> Mon capteur</legend>
             <p>
-                <label for="Type">Type : Luminosité</label>
-                <br>
-            <label for="Localisation">Localisation :</label>
-            <SELECT name="Localisation"  id="Localisation">
-                <option>Salon
-                <option>Chambre
-                <option>Couloir
-            </SELECT><br>
+                <label for="Type">Type :' . $_GET['type'] . '</label>
+                <br>' .
+
+    '<label for="Localisation">Localisation :</label>
+            <SELECT name="Localisation"  id="Localisation">' ?>
+    <?php listepiece($_SESSION['id']); ?>
+
+    '</SELECT><br>
             <label for="Utilisateur">Utilisateur :</label>
             <SELECT name="Utilisateur"  id="Utilisateur">
             <option>Principal
             <option>Secondaire
             </SELECT><br>
             </p>
-        </FORM>
+        </FORM>'
+<?php /*
             <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
                 <label class="onoffswitch-label" for="myonoffswitch">
@@ -196,5 +200,5 @@ elseif ($_GET['gestion']== 'temp') {
     </fieldset>
         ';
 }
-
+*/
 ?>
