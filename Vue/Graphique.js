@@ -1,7 +1,7 @@
 new Chart(document.getElementsByClassName("Piece"), {
     type: 'line',
     data: {
-        labels:date,
+        labels: date,
         datasets: [{
             data: conso,
             label: "Consommation",
@@ -11,9 +11,24 @@ new Chart(document.getElementsByClassName("Piece"), {
         ]
     },
     options: {
-        title: {
-            display: true,
-            text: 'Consomation et puissance généré par les capteurs de votre pièce'
+        scales: {
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Consommation en Watt'
+                }
+            }],
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Date'
+                }
+            }]
         }
     }
 });
+
+    /*     title: {
+            display: true,
+            text: 'Consomation et puissance généré par les capteurs de votre pièce'
+*/

@@ -11,7 +11,7 @@
             <p> </p>
     </div>
     <div id="footer2">
-        <p> 10 rue de Vanves, <br/>92130 Issy-les-Moulineaux </p>
+        <p> 10 rue de Vanves, 92130 Issy-les-Moulineaux </p>
     </div>
     <div id="footer1">
         <p> Contact information: <a href="mailto:athome@gmail.com" title="Envoyer un mail">athome@gmail.com</a></p>
