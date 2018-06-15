@@ -12,13 +12,13 @@
                     etat = "off";
                     document.getElementById('etat').value = "off";
                     document.getElementById("etattext").innerHTML = "ON";
-                    alert("état : on ");
+                   // alert("état : on ");
                 }
                 else if (document.getElementById('etat').value == "off") {
                     etat = "on";
                     document.getElementById('etat').value = "on";
                     document.getElementById("etattext").innerHTML = "OFF";
-                    alert("état : off ");
+                   // alert("état : off ");
                 }
                 var varData = 'etat=' + etat;
                 console.log(varData);
@@ -28,7 +28,7 @@
                     url: 'Vue/CapteurBddliste.php',
                     data: varData,
                     success: function () {
-                        alert("L'état du capteur a été modifié")
+                       // alert("L'état du capteur a été modifié")
                     }
 
 
@@ -76,19 +76,6 @@ if ($infocapteur == NULL) {
     echo '<br>';
     echo '<br>';
     echo '<br>';
-
-    /* echo '
-         </th >
-         <th >
-             <div class="onoffswitch" >
-                 <input type = "checkbox" name = "onoffswitch" class="onoffswitch-checkbox" id = "myonoffswitch" checked >
-                 <label class="onoffswitch-label" for="myonoffswitch" >
-                     <span class="onoffswitch-inner" ></span >
-                     <span class="onoffswitch-switch" ></span >
-                 </label >
-             </div >
-
-         </th > */
     echo '
         <td >
             <a href = "index.php?gestion=mic&cible=gestion capteurs" > Modifier</a >
