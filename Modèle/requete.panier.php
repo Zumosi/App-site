@@ -32,7 +32,7 @@
 <?php function listepiece($id)
 {
     $bdd = new Bdd();
-    $reponse = $bdd->connect()->prepare('SELECT nom FROM piece INNER JOIN habitation ON piece.id_maison=habitation.id_habitation WHERE habitation.id_user=?');
+    $reponse = $bdd->connect()->prepare('SELECT piece.nom FROM piece INNER JOIN habitation ON piece.id_maison=habitation.id_habitation WHERE habitation.id_user=?');
     $reponse->execute(array($id));
     while ($donnees = $reponse->fetch()) {
         echo '<option name="piece" >' . $donnees['nom'] . '</option>' . '</br>';

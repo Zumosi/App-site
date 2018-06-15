@@ -8,10 +8,18 @@
 
 <?php
 include("Controleur/BDD.php");
+require("Modèle/login.php");
 $object = new Bdd;
-$_SESSION["id"];
+
+$userinfo=verify_User($_SESSION["email"]);
+$id_demande=$_SESSION["id"];
+if($userinfo["num_principal"]!=0) {
+    $id_demande=$userinfo["num_principal"];
+}
+
+
 $requete = $object->connect()->prepare('SELECT nom FROM piece WHERE id_maison IN(SELECT id_habitation FROM habitation WHERE id_user=:id_user )');
-$requete->execute(array("id_user"=>$_SESSION["id"]));
+$requete->execute(array("id_user"=>$id_demande));
 $tablepiece = $requete->fetchAll();
 $_SESSION["piece"]=$tablepiece;
 ?>

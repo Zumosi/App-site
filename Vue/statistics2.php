@@ -5,7 +5,7 @@
     <script src="Vue/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Vue/stat.css"/>
+    <link rel="stylesheet" href="css/stat.css"/>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
