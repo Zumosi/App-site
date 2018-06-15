@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+
     <link rel="stylesheet" type="text/css" href="css/Contact.css">
     <script src="Vue/jquery-3.3.1.min.js"></script>
     <script src="Vue/Contact.js"></script>
@@ -28,8 +28,10 @@
     </script>
 </head>
 <body>
-<h1>Contact</h1>
+<p class="titre">Contact</p>
 
+<br><br><br>
+<p class="coord">Nos coordonnées:</p>
 <br><br><br>
 <img id="project1" src="Vue/image/Minus.png" width="50" height="50" onclick="changeImage1()" alt=""/>
 <br>
