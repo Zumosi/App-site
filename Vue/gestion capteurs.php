@@ -10,13 +10,13 @@
 
 <?php
 include_once("Modèle/requete.panier.php");
-include_once ("Controleur/BDD.php");
+include_once("Controleur/BDD.php");
 ?>
 
 
 
 <?php /* if ($_GET['gestion']== 'lux') { */
-echo '<form method="post" action="traitement.php">
+echo '<form method="post" action="Vue/traitement.php?idcapt='.$_GET['idcapt'].'  ">
     <fieldset>
         <FORM id="Form"><legend> Mon capteur</legend>
             <p>
@@ -25,16 +25,17 @@ echo '<form method="post" action="traitement.php">
 
     '<label for="Localisation">Localisation :</label>
             <SELECT name="Localisation"  id="Localisation">' ?>
-    <?php listepiece($_SESSION['id']); ?>
+<?php listepiece($_SESSION['id']); ?>
 
-    '</SELECT><br>
-            <label for="Utilisateur">Utilisateur :</label>
-            <SELECT name="Utilisateur"  id="Utilisateur">
-            <option>Principal
-            <option>Secondaire
-            </SELECT><br>
-            </p>
-        </FORM>'
+</SELECT><br>
+<label for="Utilisateur">Utilisateur :</label>
+<SELECT name="Utilisateur" id="Utilisateur">
+    <option>Principal
+    <option>Secondaire
+</SELECT><br>
+</p>
+<input id="bouton" type="submit" value="Modifier">
+</FORM>
 <?php /*
             <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>

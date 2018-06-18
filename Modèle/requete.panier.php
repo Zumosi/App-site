@@ -113,3 +113,12 @@
 
 ?>
 
+<?php function changendroit($idplace,$idcapteur){
+    $bdd = new Bdd;
+    $reponse = $bdd->connect()->prepare('UPDATE capteur SET id_place=:place WHERE id_capteur=:idcapt');
+    $reponse->execute(array(
+        'place'=>$idplace,
+        'idcapt'=>$idcapteur,
+    ));
+} ?>
+

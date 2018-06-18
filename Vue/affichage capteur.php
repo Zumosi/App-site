@@ -78,7 +78,7 @@ if ($infocapteur == NULL) {
     echo '<br>';
     echo '
         <td >
-            <a href = "index.php?cible=gestion capteurs&type='.$_GET['capteur'].'"> Modifier</a >
+            <a href = "index.php?cible=gestion capteurs&type='.$_GET['capteur'].'&idcapt='.$_SESSION['idcapteur'].' "> Modifier</a >
         </td >
     </tr >
     <tr >

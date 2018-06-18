@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("../Modèle/requete.panier.php");
+include_once ("../Controleur/BDD.php")
 ?>
 <?php
 
@@ -40,6 +41,12 @@ if (isset($_POST['envoyer'])) {
 }
 
 ?>
+
+<?php if(isset($_POST['Localisation'])){
+    $idpiece=idpiece($_POST['Localisation']);
+    changendroit($idpiece,$_GET['idcapt']);
+    header("location:../index.php?cible=capteurs&loca=".$_POST['Localisation']."&idplace=".$idpiece."&idcapt=".$_GET['idcapt']." ");
+}
 
 
 
