@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accueil</title>
     <link rel="stylesheet" href="css/acceuil.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="vue/JS/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -77,10 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quib
 </div>
 
 
-<script type="text/javascript" src="vue/menu.js">
-
-
-</script>
+<script type="text/javascript" src="vue/JS/menu.js"></script>
 
 </body>
 </html>
