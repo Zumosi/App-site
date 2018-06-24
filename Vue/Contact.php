@@ -3,8 +3,8 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="css/Contact.css">
-    <script src="Vue/jquery-3.3.1.min.js"></script>
-    <script src="Vue/Contact.js"></script>
+    <script src="Vue/JS/jquery-3.3.1.min.js"></script>
+    <script src="Vue/JS/Contact.js"></script>
     <script>
 
         $(document).ready(function () {

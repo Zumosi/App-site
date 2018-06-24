@@ -6,8 +6,8 @@ include("Controleur/BDD.php");
     <head>
         <title>FAQ</title>
         <link rel="stylesheet" type="text/css" href="css/FAQ.css">
-        <script src="Vue/jquery-3.3.1.min.js"></script>
-        <script src="Vue/FAQ.js"></script>
+        <script src="Vue/JS/jquery-3.3.1.min.js"></script>
+        <script src="Vue/JS/FAQ.js"></script>
     </head>
     <body>
     <?php

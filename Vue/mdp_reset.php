@@ -12,7 +12,7 @@ require("../controlleur/reset.php");
     <meta charset="utf-8"/>
     <title>Profil</title>
     <link rel="stylesheet" href="css/profil.css"/>
-    <script type="text/javascript" src="Controleur/NonVide.js"></script>
+    <script type="text/javascript" src="vue/JS/NonVide.js"></script>
 </head>
 <body>
 <?php

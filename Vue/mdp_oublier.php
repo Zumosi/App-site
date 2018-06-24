@@ -9,7 +9,7 @@ require("../controlleur/forgot.php");
     <title>Profil</title>
     <link rel="stylesheet" href="css/profil.css"/>
     <link rel="stylesheet" href="../css/form.css" type="text/css">
-    <script type="text/javascript" src="Controleur/NonVide.js"></script>
+    <script type="text/javascript" src="vue/JS/NonVide.js"></script>
 </head>
 <body>
 

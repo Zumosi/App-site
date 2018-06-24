@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>Profil</title>
     <link rel="stylesheet" href="css/profil.css"/>
-    <script type="text/javascript" src="Controleur/NonVideProfil.js"></script>
+    <script type="text/javascript" src="Vue/JS/NonVideProfil.js"></script>
 
 </head>
 <body>

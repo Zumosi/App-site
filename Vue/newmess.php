@@ -2,7 +2,7 @@
     <meta charset="utf-8"/>
     <title>Nouveau Message</title>
     <link rel="stylesheet"/>
-    <script src="NonVide.js"></script>
+    <script src="Vue/JS/NonVide.js"></script>
     <link rel="stylesheet" href="css/forum.css"/>
 </head>
 

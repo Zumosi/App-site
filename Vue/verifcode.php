@@ -11,9 +11,8 @@ $longueur="8";
     <meta charset="utf-8"/>
     <title>verification</title>
     <link rel="stylesheet" href="css/profil.css"/>
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script type="text/javascript" src="TestEmail.js"></script>
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="JS/TestEmail.js"></script>
 </head>
 <body>
 <?php

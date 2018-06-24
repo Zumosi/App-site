@@ -11,8 +11,8 @@
     <h1>Nom de l'utilisateur secondaire</h1>
 </div>
 
-<div id="Authoriser">
-    <h2>Authoriser la gestion</h2>
+<div id="Autoriser">
+    <h2>Autoriser la gestion</h2>
 </div>
 
 <table>

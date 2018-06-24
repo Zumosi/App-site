@@ -4,8 +4,6 @@
 <head>
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="css/ajoutmail.css">
-    <script src=""></script>
-    <script src=""></script>
 </head>
 <body>
 <h1 id="send2">Envoie de mail</h1>

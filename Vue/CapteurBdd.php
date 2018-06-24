@@ -8,7 +8,7 @@ include("../Controleur/BDD.php");
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/page18.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vue/JS/jquery-3.3.1.min.js"></script>
     <script>
       $(document).ready(function() {
             $("#button").click(function () {
@@ -43,24 +43,6 @@ include("../Controleur/BDD.php");
 </head>
 <body>
 
-
-  <?php
-  /*
-   $etat="off";
-   echo 'var etat = ' .json_encode($etat) . ';';
-   $id=1;
-   ?>
-
-   <?php
-   $object = new Bdd;
-   $requete='UPDATE capteur SET etat=:newetat WHERE id_capteur=:ID';
-  /* if ("button is pressed"){
-       $requete = $object->connect()->prepare('UPDATE capteur SET etat=:etat WHERE id_capteur=:ID');
-       $requete->execute(array("newetat"=>$etat,
-           "ID"=>$id));
-       echo "Le capteur avec l'id " .$id. " a maintenant l'état : " . $newetat;
-   }*/
-?>
 <input type="hidden" name="etat" id="etat" value="on" />
 <br>
 <br>
