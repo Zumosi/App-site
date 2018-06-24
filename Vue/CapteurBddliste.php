@@ -19,24 +19,8 @@ else if($etat=="on"){
     $requete->execute(array("etat"=>$etat,
         "ID"=>$id));
     echo "Le capteur avec l'id" . $id . " a maintenant l'état : " . $etat;
-}/*
-if(isset($button)){
-    if($etat=="off"){
-    $etat="on";
-    $requete='UPDATE capteur SET etat=:newetat WHERE id_capteur=:ID';
-    $requete = $object->connect()->prepare('UPDATE capteur SET etat=:etat WHERE id_capteur=:ID');
-    $requete->execute(array("etat"=>$etat,
-        "ID"=>$id));
-    echo "Le capteur avec l'id" . $id . " a maintenant l'état : " . $etat;
 }
-    else{$etat="off";
-        $requete='UPDATE capteur SET etat=:newetat WHERE id_capteur=:ID';
-        $requete = $object->connect()->prepare('UPDATE capteur SET etat=:etat WHERE id_capteur=:ID');
-        $requete->execute(array("etat"=>$etat,
-            "ID"=>$id));
-        echo "Le capteur avec l'id" . $id . " a maintenant l'état : " . $etat;
-    }
-}*/
+
 else{
     header("CapteurBdd.php");
 }
