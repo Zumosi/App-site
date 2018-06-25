@@ -20,7 +20,7 @@ $room = $piece->fetchAll();
 <head>
     <meta charset="utf-8"/>
     <title>Maison</title>
-    <link rel="stylesheet" href="Vue/plan.css">
+    <link rel="stylesheet" href="css/plan.css">
 </head>
 <body>
 <div id="content">
@@ -28,7 +28,7 @@ $room = $piece->fetchAll();
         $id = $m['id_maison'];
         ?>
         <div id="maison">
-            <?php echo '<a href="./index.php?piece='.$id.'&cible=info_piece"> <img src="image/piece.png" alt="maison"></a>' ?>
+            <?php echo '<a href="./index.php?piece='.$id.'&cible=info_piece"> <img src="Vue/image/piece.png" alt="maison"></a>' ?>
             <p><?php echo $m['type'] ?> de <?php echo $user['prenom'] ?></p>
         </div>
         <?php
