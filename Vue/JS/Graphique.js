@@ -27,8 +27,3 @@ new Chart(document.getElementsByClassName("Piece"), {
         }
     }
 });
-
-    /*     title: {
-            display: true,
-            text: 'Consomation et puissance généré par les capteurs de votre pièce'
-*/
