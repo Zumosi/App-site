@@ -54,7 +54,7 @@ Pourquoi?
     <section class="section section-dark">
         <h2>Pourquoi ?</h2>
         <p>
-            Nous, fondateur d'Athome, avons pour missions de vous rendre la vie plus belle. </p>
+            Nous, fondateur d'Athome, avons pour missions de vous rendre la vie plus belle.
         </p>
     </section>
 </div>
