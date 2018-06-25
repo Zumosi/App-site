@@ -1,5 +1,5 @@
 <?php
-require("../controlleur/forgot.php");
+require("../controleur/forgot.php");
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,6 @@ require("../controlleur/forgot.php");
 <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
-    <link rel="stylesheet" href="css/profil.css"/>
     <link rel="stylesheet" href="../css/form.css" type="text/css">
     <script type="text/javascript" src="vue/JS/NonVide.js"></script>
 </head>

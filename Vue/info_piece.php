@@ -1,5 +1,6 @@
 <?php
 
+
 require("./Modèle/login.php");
 
 
@@ -7,6 +8,7 @@ require("./Modèle/login.php");
 $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 
 $user = verify_User($_SESSION['email']);
+
 
 $piece = $bdd->prepare("SELECT * FROM capteur WHERE id_piece=:id");
 $piece->execute([
@@ -30,6 +32,7 @@ $capteur = $piece->fetchAll();
 
 
     <?php foreach ($capteur as $m) {
+
         ?>
         <div id="maison">
             <?php if ($m['type']='infrarouge'){ ?>

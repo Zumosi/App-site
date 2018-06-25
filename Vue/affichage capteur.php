@@ -46,6 +46,7 @@
 
 <?php
 $infocapteur = idcapt();
+$_SESSION["idcapteur"] = $infocapteur[0]["id_capteur"];
 if ($infocapteur == NULL) {
     echo "Vous n'avez pas de capteurs de ce type ! ";
     echo '<table >
@@ -57,7 +58,7 @@ if ($infocapteur == NULL) {
     ';
 
 } else for($i=0;$i<sizeof($infocapteur)-3;$i++){
-    $_SESSION["idcapteur"] = $infocapteur[$i]["id_capteur"];
+
     echo '<table >';
     echo "<caption >";
     echo $_GET["capteur"];

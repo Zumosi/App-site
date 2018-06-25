@@ -23,7 +23,7 @@ $room = $piece->fetchAll();
 <head>
     <meta charset="utf-8"/>
     <title>Maison</title>
-    <link rel="stylesheet" href="Vue/plan.css">
+    <link rel="stylesheet" href="css/plan.css">
 </head>
 <body>
 <h1> <?php echo $maison['type']?> de <?php echo $user['prenom'] ?></h1>

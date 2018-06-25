@@ -1,5 +1,5 @@
 <?php
-
+require ("./Controleur/verify_admin.php");
 
 
 try {
@@ -8,6 +8,7 @@ try {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
+if(verify_admin($_SESSION['email'])==true){
 
 
 $user = $bdd->prepare('SELECT * FROM utilisateur');
@@ -184,6 +185,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <a href="index.php?cible=acceuil_admin" ><button type="button">retour menu</button></a>
 </body>
-
+<?php }
+else{
+    $_SESSION['message']="vous n'avez pas accès à cette page désolé";
+}
+?>
 </html>
 

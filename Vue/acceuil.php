@@ -23,14 +23,7 @@ AtHome <?php echo $_SESSION['prenom'].'&nbsp'.$_SESSION['nom'];?>
     <section class="section section-dark">
         <h2>Qui sommes nous ?</h2>
         <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
-            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
-            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
-            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
-            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
-            dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt
-            nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum
-            temporibus. Laborum ad temporibus ex, omnis!
+            Fondée en 2018, Athome est une entreprise de domotique fondée par de jeunes étudiant dynamique et dont l'esprit est tourné vers l'avenir.
         </p>
     </section>
 
@@ -45,12 +38,8 @@ Que faisons nous?
     <section class="section section-dark">
         <h2>Que faisons nous ?</h2>
         <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
-            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
-            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
-            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
-            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
-            dolor repellendus ratione in.
+            Athome, en tant que nouvelle acteur dans le domaine de la domotique connectée, s'engage à vous proposer un service de qualité dans l'optique de rendre votre maison connecté de par ses installation à la pointe de la technologie.
+
         </p>
     </section>
 
@@ -65,12 +54,7 @@ Pourquoi?
     <section class="section section-dark">
         <h2>Pourquoi ?</h2>
         <p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus,
-            commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis
-            eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus
-            voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga
-            laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat
-            dolor repellendus ratione in.
+            Nous, fondateur d'Athome, avons pour missions de vous rendre la vie plus belle.
         </p>
     </section>
 </div>

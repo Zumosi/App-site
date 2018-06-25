@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // on sait si l'utilisateur est connecter
         $_SESSION['logged_in'] = true;
-        if($user['type']='admin'){
+        if($user['type']=='admin'){
             header('Location: ../index.php?cible=acceuil_admin');
         }
         else {

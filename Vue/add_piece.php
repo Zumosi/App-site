@@ -6,7 +6,7 @@ require("Controleur/add.php");
 <link rel="stylesheet" href="css/form.css" type="text/css">
 <div class="body-content">
     <div class="module">
-        <h1>Ajouter une maison</h1>
+        <h1>Ajouter une piece</h1>
         <form class="form" action="add_maison.php" method="post" enctype="multipart/form-data" autocomplete="off">
             <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
             <input type="text" placeholder="nom de la piece" name="piece" required />
