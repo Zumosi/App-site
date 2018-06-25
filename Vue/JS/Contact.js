@@ -33,7 +33,8 @@ function changeImage3() {
     if (document.getElementById("project3").src.indexOf("Vue/image/Minus.png") != -1)
     {
         document.getElementById('project3').src = "Vue/image/Plus.jpg";
-        $('#question3').html("Adresse Postale :  666 Rue de la 6666");
+        $('#question3').html("Adresse Postale :  10 rue de Vanves, \n" +
+            "92130 Issy-les-Moulineaux");
     }
 
     else

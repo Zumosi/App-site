@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <title>Statistiques</title>
     <script src="Vue/JS/jquery-3.3.1.min.js"></script>
+    <script src="Vue/JS/Graphique-chart.bundle.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/stat.css"/>
     </head>
@@ -68,7 +70,7 @@ $pieceaffiche=$_GET['piece'];
 
 echo '<div class="container">';
 echo "<canvas class='piece' width='30' height='15'></canvas></div>";
-echo "<script src='Vue/Graphique.js'></script>";
+echo "<script src='Vue/JS/Graphique.js'></script>";
 echo "<section><p class='titre'>Statistiques</p>";
 for($i=0;$i<sizeof($tablepiece);$i++){
     $requete = $object->connect()->prepare('SELECT type FROM piece WHERE nom=:piecename ');

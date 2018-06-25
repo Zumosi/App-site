@@ -35,7 +35,7 @@
     </header>
 </div>
 
-    <script type="text/javascript" src="Vue/menu.js">
+    <script type="text/javascript" src="Vue/JS/menu.js">
 
 
     </script>
