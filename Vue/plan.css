@@ -1,0 +1,40 @@
+body{
+    background: url("image/maison_add.png") no-repeat fixed ;
+    background-size: cover;
+
+}
+
+
+
+#content {
+    display: grid;
+    grid-template-columns:25% 25% 25% 1fr;
+    animation-duration: 0.7s;
+    animation-name: glisser;
+
+}
+#maison{
+grid-column: auto;
+    grid-row: auto;
+}
+#newmaison{
+    grid-column: auto;
+    grid-row: auto;
+
+}
+img{
+
+    width:50%;
+}
+p{
+}
+
+@keyframes glisser {
+    0% {
+        margin-left: 100%;
+    }
+    100% {
+        margin-left: 5%;
+    }
+
+}

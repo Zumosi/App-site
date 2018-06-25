@@ -1,0 +1,122 @@
+/*body{
+    background: url("encadre.png") no-repeat left;
+    background: url("encadre.png") no-repeat top;
+    top:5%;
+    left:1%;
+    width: 20%;
+    height: 50%;
+
+
+}*/
+.titre{
+    position: absolute;
+    top: -10%;
+    Left:35%;
+    font-size:7vw;
+}
+.chambre{
+    position:absolute;
+    top:20%;
+    Left:30%;
+    font-size:3vw;
+}
+.sdb{
+    position:absolute;
+    top:20%;
+    Left:45%;
+    font-size:3vw;
+}
+.cuisine{
+    position:absolute;
+    top:20%;
+    Left:65%;
+    font-size:3vw;
+}
+.salon{
+    position:absolute;
+    top:50%;
+    Left:30%;
+    font-size:3vw;
+}
+.wc{
+    position:absolute;
+    top:50%;
+    Left:45%;
+    font-size:3vw;
+}
+
+.chambri{
+    position:absolute;
+    top:33%;
+    Left:30%;
+    width:10%;
+    height:10%;
+}
+.sdbi{
+    position:absolute;
+    top:33%;
+    Left:45%;
+    width:10%;
+    height:10%;
+}
+.cuisini{
+    position:absolute;
+    top:33%;
+    Left:65%;
+    width:10%;
+    height:10%;
+}
+.saloni{
+    position:absolute;
+    top:63%;
+    Left:30%;
+    width:10%;
+    height:10%;
+}
+.wci{
+    position:absolute;
+    top:63%;
+    Left:45%;
+    width:10%;
+    height:13%;
+}
+.stat{
+    font-size:3vw;
+    position:absolute;
+    top:5%;
+    left:2%;
+
+}
+.consommation{
+    font-size:2vw;
+    position:absolute;
+    top:20%;
+    left:5%;
+
+}
+.puissance{
+    font-size:2vw;
+    position:absolute;
+    top:35%;
+    left:5%;
+}
+
+.consoValue{
+    font-size:2vw;
+    position:absolute;
+    top:30%;
+    left:5%
+}
+.powerValue{
+    font-size:2vw;
+    position:absolute;
+    top:45%;
+    left:5%
+}
+.cadre{
+    position:absolute;
+    top:2vw;
+    left:0vw;
+    width: 25vw;
+    height: 40vw;
+}

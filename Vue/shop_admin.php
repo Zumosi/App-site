@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 <html>
-<link rel="stylesheet" href="../Vue/shop_admin.css" type="text/css">
+<link rel="stylesheet" href="Vue/shop_admin.css" type="text/css">
 <body>
 <div class="content">
     <div class="tab1">
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </table>
 
     </div>
-    <form action="shop_admin.php" method="post">
+    <form action="Vue/shop_admin.php" method="post">
         id_boutique :<input type="number" name="id" id="id">
         nom :<input type="text" name="nom" id="nom">
         description :<input type="text" name="description" id="description">
@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-
+<a href="index.php?cible=acceuil_admin" ><button type="button">retour menu</button></a>
 
 </body>
 

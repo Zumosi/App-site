@@ -55,7 +55,6 @@ if ($_GET['nc'] == 1) {
         <p id="quanti"> Quantité disponible : <?php quanti($i) ?> </p>
 
 
-
         <form method="post" action="vue/traitement.php">
 
 

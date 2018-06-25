@@ -4,7 +4,7 @@ require("../controleur/form.php");
 
 
 
-<link rel="stylesheet" href="../css/form.css" type="text/css">
+<link rel="stylesheet" href="form.css" type="text/css">
 <div class="body-content">
   <div class="module">
     <h1>S'inscrire</h1>
@@ -13,7 +13,7 @@ require("../controleur/form.php");
       <input type="text" placeholder="Nom " name="nom" required />
       <input type="text" placeholder="Prenom " name="prenom" required />
       <input type="email" placeholder="Email" name="email" required />
-      <input type="email" placeholder="Confirmer l'email" name="email" required />
+      <input type="email" placeholder="Confirmer l'email" name="confirmemail" required />
       <input type="password" placeholder="Mot de passe" name="password" autocomplete="new-password" required />
       <input type="password" placeholder="Confirmé le mot de passe" name="confirmpassword" autocomplete="new-password" required />
       <input type="tel" placeholder="Numero de telephone" name="telNo" required/>

@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+
     if (Encryption::compare($_POST['password'], $user['password'])) {
 
         $_SESSION['email'] = $user['mail'];
@@ -24,8 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // on sait si l'utilisateur est connecter
         $_SESSION['logged_in'] = true;
-
-        header('Location: ../index.php?cible=acceuil');
+        if($user['type']='admin'){
+            header('Location: ../index.php?cible=acceuil_admin');
+        }
+        else {
+            header('Location: ../index.php?cible=acceuil');
+        }
     } else {
         $_SESSION['message'] = "Le mot de passe est incorrect!";
 

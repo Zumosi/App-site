@@ -1,0 +1,88 @@
+#content{
+    z-index: -1;
+}
+
+
+
+aside, article {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+article {
+    text-align: center;
+    width: 40vw;
+    margin-left: 20vw;
+}
+
+h1 {
+    color: rgb(0, 102, 196);
+    text-transform: uppercase;
+    margin-top: 7%;
+}
+
+aside {
+    position: relative;
+    margin-top: 5vw;
+    margin-left: 5vw;
+
+}
+
+#image img {
+    border: 1px solid black;
+    margin-left: 5vw;
+    padding: 1vw;
+    width: 10vw;
+}
+#image2 img  {
+    border: 1px solid black;
+    margin-left: 5vw;
+    padding: 1vw;
+    width: 10vw;
+}
+#image3 img  {
+    border: 1px solid black;
+    margin-left: 5vw;
+    padding: 1vw;
+    width: 10vw;
+}
+#image4 img  {
+    border: 1px solid black;
+    margin-left: 5vw;
+    padding: 1vw;
+    width: 10vw;
+}
+
+#txtim1 {
+
+    margin: 12%;
+    text-align: left;
+}
+
+#nombre {
+    margin-bottom: 10%;
+    margin-right: 35%;
+    width: 15%;
+    height: 35px;
+    text-align: center;
+}
+
+input[type=text], select {
+    text-align: center;
+    text-align-last: center;
+}
+
+#bouton{
+    font-size: 20px;
+}
+
+#prix{
+    font-size: x-large;
+}
+#quanti{
+    font-size: x-large;
+    margin-top: 10%;
+    text-align: left;
+    padding-left: 8%;
+}

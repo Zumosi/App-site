@@ -2,6 +2,7 @@
 
 
 
+
 try {
     $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 } catch (PDOException $e) {
@@ -10,21 +11,19 @@ try {
 }
 
 
-$user = $bdd->prepare('SELECT * FROM utilisateur');
-$user->execute();
+$element_shop = $bdd->prepare('SELECT * FROM habitation');
+$element_shop->execute();
 
 // get values from the form
 function getPosts()
 {
     $posts = array();
-    $posts[0] = $_POST['id'];
-    $posts[1] = $_POST['nom'];
-    $posts[2] = $_POST['prenom'];
-    $posts[3] = $_POST['pnumero'];
-    $posts[4] = $_POST['password'];
-    $posts[5] = $_POST['type'];
-    $posts[6] = $_POST['mail'];
-    $posts[7] = $_POST['num_principal'];
+    $posts[0] = $_POST['id_habitation'];
+    $posts[1] = $_POST['type'];
+    $posts[2] = $_POST['nom'];
+    $posts[3] = $_POST['adresse'];
+    $posts[4] = $_POST['nb_piece'];
+    $posts[5] = $_POST['id_user'];
     return $posts;
 }
 
@@ -35,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['search'])) {
         $data = getPosts();
 
-        $search_Query = "SELECT * FROM utilisateur WHERE id = $data[0]";
+        $search_Query = "SELECT * FROM habitation WHERE id_habitation = $data[0]";
 
         $search_Result = $bdd->prepare($search_Query);
         $search_Result->execute();
@@ -44,12 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($search_Result) {
             if ($count) {
                 while ($row = $result) {
-                    $id = $row['id'];
+                    $id_habitation = $row['id_habitation'];
                     $nom = $row['nom'];
-                    $prenom = $row['prenom'];
-                    $numero = $row['numero'];
-                    $password = $row['password'];
-                    $stock = $row['type'];
+                    $type = $row['type'];
+                    $adresse = $row['adresse'];
+                    $nb_piece = $row['nb_piece'];
+                    $id_user = $row['id_user'];
                 }
             } else {
                 echo 'No Data For This Id';
@@ -63,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Insert
     if (isset($_POST['insert'])) {
         $data = getPosts();
-        $insert_Query = "INSERT INTO utilisateur (id, nom, prenom,numero,password,type) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]')";
+        $insert_Query = "INSERT INTO habitation (id_habitation, nom, type,adresse,nb_piece,id_user) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]')";
 
         $insert_Result = $bdd->prepare($insert_Query);
         $insert_Result->execute();
@@ -82,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Delete
     if (isset($_POST['delete'])) {
         $data = getPosts();
-        $delete_Query = "DELETE FROM utilisateur WHERE id = $data[0]";
+        $delete_Query = "DELETE FROM habitation WHERE id_habitation = $data[0]";
 
         $delete_Result = $bdd->prepare($delete_Query);
         $delete_Result->execute();
@@ -100,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Edit
     if (isset($_POST['update'])) {
         $data = getPosts();
-        $update_Query = "UPDATE utilisateur SET nom=$data[1],prenom=$data[2],numero=$data[3],password=$data[4],type=$data[5] WHERE id = $data[0]";
+        $update_Query = "UPDATE habitation SET nom=$data[1],type=$data[2],adresse=$data[3],nb_piece=$data[4],id_user=$data[5] WHERE id_habitation = $data[0]";
 
         $update_Result = $bdd->prepare($update_Query,[PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
         $update_Result->execute();
@@ -124,29 +123,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="tab1">
         <table id="shop">
             <tr>
-                <th>id</th>
+                <th>id_habitation</th>
                 <th>nom</th>
-                <th>prenom</th>
-                <th>numero</th>
-                <th>password</th>
                 <th>type</th>
-                <th>mail</th>
-                <th>num_principal</th>
+                <th>adresse</th>
+                <th>nb_piece</th>
+                <th>id_user</th>
             </tr>
             <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
-            foreach ($user as $u) {
+            foreach ($element_shop as $element) {
 
 
                 ?>
                 <tr>
-                    <td><?php echo $u['id']; ?></td>
-                    <td><?php echo $u['nom']; ?></td>
-                    <td><?php echo $u['prenom']; ?></td>
-                    <td><?php echo $u['numero']; ?></td>
-                    <td><?php echo $u['password']; ?></td>
-                    <td><?php echo $u['type']; ?></td>
-                    <td><?php echo $u['mail']; ?></td>
-                    <td><?php echo $u['num_principal']; ?></td>
+                    <td><?php echo $element['id_habitation']; ?></td>
+                    <td><?php echo $element['nom']; ?></td>
+                    <td><?php echo $element['type']; ?></td>
+                    <td><?php echo $element['adresse']; ?></td>
+                    <td><?php echo $element['nb_piece']; ?></td>
+                    <td><?php echo $element['id_user']; ?></td>
 
                 </tr>
                 <?php
@@ -159,13 +154,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </table>
 
     </div>
-    <form action="Vue/users_admin.php" method="post">
-        id :<input type="number" name="id" id="id">
+    <form action="Vue/habitation_admin.php" method="post">
+        id_habitation :<input type="number" name="id_habitation" id="id_habitation">
         nom :<input type="text" name="nom" id="nom">
-        prenom:<input type="text" name="prenom" id="prenom">
-        numero :<input type="number" name="numero" id="numero">
-        password :<input type="number" name="idp" id="idp">
-        type :<input type="number" name="type" id="type">
+        type :<input type="text" name="type" id="type">
+        adresse :<input type="text" name="adresse" id="adresse">
+        nb_piece :<input type="number" name="nb_piece" id="nb_piece">
+        id_user :<input type="number" name="id_user" id="id_user">
         <!-- Input For Add Values To Database-->
         <input type="submit" name="insert" value="Add">
 
@@ -181,9 +176,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-
 <a href="index.php?cible=acceuil_admin" ><button type="button">retour menu</button></a>
+
 </body>
 
 </html>
-

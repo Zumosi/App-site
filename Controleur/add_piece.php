@@ -1,6 +1,6 @@
 <?php
-require("../Modèle/login.php");
-require("../Modèle/insertion_piece.php");
+require("./Modèle/login.php");
+require("./Modèle/insertion_piece.php");
 
 session_start();
 $_SESSION['message'] = '';
@@ -9,7 +9,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=atHome;charset=utf8', 'root', '');
 //le formulaire a bien été envoyer
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $user = verify_User('clement.phu@hotmail.fr');
+    $user = verify_User($_SESSION['email']);
 
     //definit toute les variables POST qu'il faut enregistrer dans la basse de données
     $nom = $_POST['piece'];
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (isset($piece)) {
-        header("location:../Vue/plan_piece.php");
+        header('location:./index.php?maison='.$id.'&cible=plan_piece');
 
 
     } else {

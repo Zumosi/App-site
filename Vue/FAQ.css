@@ -1,0 +1,32 @@
+h1 {
+    border-bottom: 6px solid black;
+
+
+}
+
+#body img {
+    float: left;
+}
+
+.line{
+    margin-left: 100px;
+}
+
+#question1 {
+    margin-left: 100px;
+    float: left;
+}
+
+#question2 {
+    margin-left: 100px;
+    margin-top: 15px;
+    float: left;
+}
+#project1 {
+
+    float: left;
+}
+
+#project2 {
+    float: left;
+}
